@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mohammad Ishmam Bin Aslam | Portfolio</title>
+  <!-- Google Fonts & Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+      line-height: 1.5;
+      padding: 2rem 1rem;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 2rem;
+      box-shadow: 0 20px 40px -10px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      padding: 2.5rem 3rem;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: white;
+    }
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #38bdf8;
+      background: #94a3b8;
+    }
+    .header-text h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.25rem;
+    }
+    .header-text .tagline {
+      font-size: 1.2rem;
+      color: #94a3b8;
+      margin-bottom: 1rem;
+    }
+    .contact-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+    }
+    .contact-links a {
+      color: #cbd5e1;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.2s;
+    }
+    .contact-links a:hover {
+      color: #38bdf8;
+    }
+    .contact-links i {
+      font-size: 1.1rem;
+    }
+    .main {
+      padding: 2rem 3rem;
+    }
+    .section {
+      margin-bottom: 2.5rem;
+    }
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      letter-spacing: -0.01em;
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: #0f172a;
+    }
+    .section-title i {
+      color: #38bdf8;
+      font-size: 1.4rem;
+    }
+    .card {
+      background: #f1f5f9;
+      border-radius: 1rem;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px -10px rgba(0,0,0,0.15);
+    }
+    .card-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 0.75rem;
+    }
+    .card-title {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: #0f172a;
+    }
+    .card-subtitle {
+      font-weight: 500;
+      color: #475569;
+    }
+    .card-date {
+      font-size: 0.9rem;
+      color: #64748b;
+      background: #e2e8f0;
+      padding: 0.2rem 0.8rem;
+      border-radius: 20px;
+    }
+    .card-links {
+      margin: 0.75rem 0 0.25rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      font-size: 0.9rem;
+    }
+    .card-links a {
+      color: #2563eb;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+    .card-links a:hover {
+      text-decoration: underline;
+    }
+    .bullet-list {
+      list-style: none;
+      margin-top: 0.75rem;
+    }
+    .bullet-list li {
+      margin-bottom: 0.5rem;
+      display: flex;
+      gap: 0.75rem;
+    }
+    .bullet-list i {
+      color: #38bdf8;
+      font-size: 0.9rem;
+      margin-top: 0.2rem;
+    }
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    .skill-tag {
+      background: white;
+      padding: 0.5rem 1rem;
+      border-radius: 30px;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: #1e293b;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+      display: inline-block;
+      margin: 0.25rem;
+    }
+    .project-item {
+      border-bottom: 1px dashed #cbd5e1;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+    }
+    .project-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
+    }
+    .project-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .project-name {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+    .project-links {
+      display: flex;
+      gap: 0.75rem;
+    }
+    .project-links a {
+      color: #475569;
+    }
+    .project-links a:hover {
+      color: #2563eb;
+    }
+    .project-tech {
+      font-size: 0.85rem;
+      color: #64748b;
+      margin-top: 0.2rem;
+    }
+    @media (max-width: 700px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.5rem;
+      }
+      .contact-links {
+        justify-content: center;
+      }
+      .main {
+        padding: 2rem 1.5rem;
+      }
+      .grid-2 {
+        grid-template-columns: 1fr;
+      }
+      .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <!-- Header with photo -->
+  <div class="header">
+    <img src="profile.jpg" alt="Mohammad Ishmam Bin Aslam" class="profile-pic" onerror="this.src='https://via.placeholder.com/140?text=Photo'">
+    <div class="header-text">
+      <h1>Mohammad Ishmam Bin Aslam</h1>
+      <div class="tagline">Computer Science Engineer • Researcher • Full‑Stack Developer</div>
+      <div class="contact-links">
+        <a href="mailto:ishmam2001@gmail.com"><i class="fas fa-envelope"></i> ishmam2001@gmail.com</a>
+        <a href="tel:+8801617378078"><i class="fas fa-phone-alt"></i> +880 1617 378078</a>
+        <a href="https://www.linkedin.com/in/ishmamaslam/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        <a href="https://github.com/ishmamCodes" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+      </div>
+      <div style="margin-top: 0.5rem; color:#94a3b8;"><i class="fas fa-map-marker-alt"></i> Dhaka, Bangladesh</div>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="main">
+    <!-- Experience -->
+    <section class="section">
+      <div class="section-title"><i class="fas fa-briefcase"></i> Experience</div>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Bard College (OSUN Student Exchange Program)</span>
+          <span class="card-date">2023</span>
+        </div>
+        <div class="card-subtitle">Exchange Student & CS Club Instructor • New York, USA</div>
+        <ul class="bullet-list">
+          <li><i class="fas fa-chevron-right"></i> Selected for fully funded OSUN Exchange from 19+ countries; covered visa, travel, accommodation.</li>
+          <li><i class="fas fa-chevron-right"></i> Conducted <a href="https://drive.google.com/file/d/1K7ggGR8-gp2eSyCIAeldPAgAriUnU6cb/view?usp=sharing" target="_blank">“Introduction to Python”</a> classes for Bard students.</li>
+          <li><i class="fas fa-chevron-right"></i> Represented Bangladesh at NYCTechWeek & Supermomos; engaged with global founders and researchers.</li>
+          <li><i class="fas fa-chevron-right"></i> Coordinated logistics for tech events in NYC from Annandale-on-Hudson.</li>
+          <li><i class="fas fa-chevron-right"></i> Earned grade A in all courses; wrote three HRI review papers.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">BRAC University</span>
+          <span class="card-date">Nov 2024 – Dec 2025</span>
+        </div>
+        <div class="card-subtitle">Student Tutor • Dhaka, Bangladesh</div>
+        <ul class="bullet-list">
+          <li><i class="fas fa-chevron-right"></i> Mentored undergraduates in core CS courses through tutoring and problem‑solving.</li>
+          <li><i class="fas fa-chevron-right"></i> Assisted faculty with evaluation, grading, and lab classes.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+      <div class="section-title"><i class="fas fa-graduation-cap"></i> Education</div>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">BRAC University</span>
+          <span class="card-date">Nov 2021 – Jan 2026</span>
+        </div>
+        <div class="card-subtitle">B.Sc. in Computer Science and Engineering • Dhaka, Bangladesh</div>
+        <ul class="bullet-list">
+          <li><i class="fas fa-chevron-right"></i> CGPA: 3.96/4.00 – Vice Chancellor’s List, 75% Merit Scholarship.</li>
+          <li><i class="fas fa-chevron-right"></i> Selected as “Student Tutor” for academic excellence.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Admajee Cantonment College</span>
+          <span class="card-date">2020</span>
+        </div>
+        <div class="card-subtitle">Higher Secondary Certificate (Science, English Version)</div>
+        <ul class="bullet-list">
+          <li><i class="fas fa-chevron-right"></i> GPA: 5.00 (Golden).</li>
+          <li><i class="fas fa-chevron-right"></i> House Captain among 6,500+ students; led academic & cultural events.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Bangladesh International School & College</span>
+          <span class="card-date">2018</span>
+        </div>
+        <div class="card-subtitle">Secondary School Certificate (Science, English Version)</div>
+        <ul class="bullet-list">
+          <li><i class="fas fa-chevron-right"></i> GPA: 5.00 (Golden).</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Research Experience -->
+    <section class="section">
+      <div class="section-title"><i class="fas fa-flask"></i> Research Experience</div>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Final Year Thesis: Heritage Defect Detection Under Data Scarcity</span>
+          <span class="card-date">2025</span>
+        </div>
+        <div class="card-subtitle">Computer Vision (YOLO, Faster R‑CNN, Weighted Box Fusion) • Dhaka, Bangladesh</div>
+        <ul class="bullet-list">
+          <li><i class="fas fa-chevron-right"></i> First AI‑driven heritage defect detection on historic Sonargaon architecture.
+            <a href="https://drive.google.com/file/d/1GWTjPTDRmOq2PtCzYXzTl8UKcjJqeVST/view?usp=sharing" target="_blank">IEEE Report</a> |
+            <a href="https://drive.google.com/file/d/1goa8WXnErs40auYA-t9aNybWxmJhkUrG/view?usp=sharing" target="_blank">Thesis Paper</a>
+          </li>
+          <li><i class="fas fa-chevron-right"></i> Supervisor: <a href="https://scholar.google.com/citations?user=I69QEZQAAAAJ&hl=en&oi=ao" target="_blank">Dr. Muhammad Iqbal Hossain</a>, Associate Professor, BRACU.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Human–Robot Interaction Review Papers</span>
+          <span class="card-date">2023</span>
+        </div>
+        <div class="card-subtitle">Bard College, USA</div>
+        <ul class="bullet-list">
+          <li><i class="fas fa-chevron-right"></i> Three analytical reviews on HRI in space missions:
+            <a href="https://drive.google.com/file/d/1c9WZ16-kEFpIoZdW81sVgzynY0ESvxtF/view?usp=sharing" target="_blank">Paper 1 (ML vs. Cognitive Arch.)</a> |
+            <a href="https://drive.google.com/file/d/1DY1weVQl1aZRWXl3WqL6z7I_Nc-zgKUB/view?usp=sharing" target="_blank">Paper 2 (Human-Robot Team)</a> |
+            <a href="https://drive.google.com/file/d/1bnup7nAz2JGE7wEkQtMMcQMW1DwumNzO/view?usp=sharing" target="_blank">Paper 3 (Design Factors)</a>
+          </li>
+          <li><i class="fas fa-chevron-right"></i> Contributor: <a href="https://www.linkedin.com/in/theresa-law-9aa98a160/" target="_blank">Dr. Theresa Law</a>, Assistant Professor, Bard College.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section">
+      <div class="section-title"><i class="fas fa-code"></i> Projects</div>
+      <div class="grid-2">
+        <!-- Shikkha -->
+        <div class="card project-item">
+          <div class="project-header">
+            <span class="project-name">Shikkha – AI Educational Platform</span>
+            <span class="project-links">
+              <a href="https://shikkhacom.vercel.app/login" target="_blank"><i class="fas fa-external-link-alt"></i></a>
+            </span>
+          </div>
+          <div class="project-tech">Node.js, React, JavaScript, AI</div>
+          <ul class="bullet-list">
+            <li><i class="fas fa-chevron-right"></i> Full‑stack platform with course management, exams, messaging, marketplace.</li>
+            <li><i class="fas fa-chevron-right"></i> AI assistant for academic support.</li>
+          </ul>
+        </div>
+        <!-- KrishiNetwork -->
+        <div class="card project-item">
+          <div class="project-header">
+            <span class="project-name">KrishiNetwork – Agri AI</span>
+            <span class="project-links">
+              <a href="https://github.com/ishmamCodes/KrishiNetwork.git" target="_blank"><i class="fab fa-github"></i></a>
+              <a href="https://drive.google.com/file/d/15Jw1KPXb8FYVZk3aRogIixRrqH2JzKqU/view?usp=sharing" target="_blank"><i class="fas fa-video"></i></a>
+            </span>
+          </div>
+          <div class="project-tech">Full‑Stack Web, AI</div>
+          <ul class="bullet-list">
+            <li><i class="fas fa-chevron-right"></i> Connects farmers with experts; AI query & disease detection.</li>
+          </ul>
+        </div>
+        <!-- Medicine Robot -->
+        <div class="card project-item">
+          <div class="project-header">
+            <span class="project-name">Medicine Dispensing Robot</span>
+            <span class="project-links">
+              <a href="https://drive.google.com/file/d/1d4Wk5K8WHORhP9A4rr8r1qp31SqTKBLR/view?usp=sharing" target="_blank"><i class="fas fa-file-alt"></i></a>
+            </span>
+          </div>
+          <div class="project-tech">Embedded Systems, Automation</div>
+          <ul class="bullet-list">
+            <li><i class="fas fa-chevron-right"></i> Automated medication dispenser for elderly.</li>
+          </ul>
+        </div>
+        <!-- Mandelbulb -->
+        <div class="card project-item">
+          <div class="project-header">
+            <span class="project-name">Mandelbulb Visualization</span>
+            <span class="project-links">
+              <a href="https://github.com/ishmamCodes/Mandlebulb-Project.git" target="_blank"><i class="fab fa-github"></i></a>
+            </span>
+          </div>
+          <div class="project-tech">Python, C++, OpenGL</div>
+          <ul class="bullet-list">
+            <li><i class="fas fa-chevron-right"></i> Real‑time fractal rendering.</li>
+          </ul>
+        </div>
+        <!-- Sydney Rail -->
+        <div class="card project-item">
+          <div class="project-header">
+            <span class="project-name">Sydney Rail Network</span>
+            <span class="project-links">
+              <a href="https://drive.google.com/drive/folders/142e1qJeSehQPX7Rm7wrOEs_wqvoXTH1Q?usp=sharing" target="_blank"><i class="fas fa-folder-open"></i></a>
+            </span>
+          </div>
+          <div class="project-tech">Cisco Packet Tracer, VLSM, RIP</div>
+          <ul class="bullet-list">
+            <li><i class="fas fa-chevron-right"></i> Metropolitan rail communication design.</li>
+          </ul>
+        </div>
+        <!-- 3D Shooter -->
+        <div class="card project-item">
+          <div class="project-header">
+            <span class="project-name">3D Shooter Game</span>
+            <span class="project-links">
+              <a href="https://github.com/ishmamCodes/3D-Shooter-Game.git" target="_blank"><i class="fab fa-github"></i></a>
+            </span>
+          </div>
+          <div class="project-tech">OpenGL, Python</div>
+          <ul class="bullet-list">
+            <li><i class="fas fa-chevron-right"></i> Interactive 3D shooter with lighting, collision.</li>
+          </ul>
+        </div>
+        <!-- Memory Game -->
+        <div class="card project-item">
+          <div class="project-header">
+            <span class="project-name">Advanced Memory Game</span>
+            <span class="project-links">
+              <a href="https://github.com/ishmamCodes/Memory-Game-Using-Processing.git" target="_blank"><i class="fab fa-github"></i></a>
+            </span>
+          </div>
+          <div class="project-tech">Processing</div>
+          <ul class="bullet-list">
+            <li><i class="fas fa-chevron-right"></i> Memory game with dynamic difficulty.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section">
+      <div class="section-title"><i class="fas fa-cogs"></i> Skills</div>
+      <div>
+        <span class="skill-tag">Python</span>
+        <span class="skill-tag">Java</span>
+        <span class="skill-tag">C/C++</span>
+        <span class="skill-tag">HTML/CSS</span>
+        <span class="skill-tag">React</span>
+        <span class="skill-tag">Node.js</span>
+        <span class="skill-tag">Figma</span>
+        <span class="skill-tag">YOLO</span>
+        <span class="skill-tag">Faster R‑CNN</span>
+        <span class="skill-tag">Weighted Boxes Fusion</span>
+        <span class="skill-tag">Arduino</span>
+        <span class="skill-tag">Raspberry Pi</span>
+        <span class="skill-tag">STM32</span>
+        <span class="skill-tag">Full‑Stack Dev</span>
+        <span class="skill-tag">Game Dev</span>
+        <span class="skill-tag">Research Writing</span>
+      </div>
+    </section>
+
+    <!-- Additional Info (no references) -->
+    <section class="section">
+      <div class="section-title"><i class="fas fa-heart"></i> Additional Information</div>
+      <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+        <div><strong>Languages:</strong> English (Fluent), Bengali (Native)</div>
+        <div><strong>Interests:</strong> Human‑Robot Interaction, Photography, Fencing, Hiking, Museums, Tennis</div>
+      </div>
+    </section>
+  </div> <!-- end main -->
+</div> <!-- end container -->
+</body>
+</html>
