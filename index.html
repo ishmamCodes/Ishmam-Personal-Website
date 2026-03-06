@@ -12,10 +12,10 @@
    <title>Ishmam Bin Aslam - Personal Portfolio</title>
 
    <!-- Place favicon.ico in the root directory -->
-   <link rel="apple-touch-icon" href="./assets/img/logo/Ishmam Logo.png" />
-   <link rel="shortcut icon" type="image/png" href="./assets/img/logo/Ishmam Logo.png" />
-   <!-- Additional favicon for better browser support -->
-   <link rel="icon" type="image/png" href="./assets/img/logo/Ishmam Logo.png" />
+   <!-- ===== FIXED: spaces encoded for better browser compatibility ===== -->
+   <link rel="apple-touch-icon" href="./assets/img/logo/Ishmam%20Logo.png" />
+   <link rel="shortcut icon" type="image/png" href="./assets/img/logo/Ishmam%20Logo.png" />
+   <link rel="icon" type="image/png" href="./assets/img/logo/Ishmam%20Logo.png" />
 
    <!-- CSS here -->
    <link rel="stylesheet" href="assets/css/animate.min.css" />
@@ -521,7 +521,7 @@
             <div class="col-12 d-flex flex-wrap align-items-center">
                <div class="logo-box">
                   <a href="index.html">
-                     <img src="assets/img/logo/Ishmam Logo.png" alt="Ishmam Bin Aslam" />
+                     <img src="assets/img/logo/Ishmam%20Logo.png" alt="Ishmam Bin Aslam" />
                   </a>
                </div>
 
@@ -539,7 +539,8 @@
                         <li><a href="#research-section">Research</a></li>
                         <li><a href="#activities-section">ECA</a></li>
                         <li><a href="#skills-section">Skills</a></li>
-                        <li><a href="#contact-section">Contact</a></li>
+                        <!-- ===== CHANGED: Contact now links to footer ID ===== -->
+                        <li><a href="#contact-footer">Contact</a></li>
                      </ul>
                   </nav>
                </div>
@@ -567,7 +568,7 @@
             <div class="col-12 d-flex flex-wrap align-items-center">
                <div class="logo-box">
                   <a href="index.html">
-                     <img src="assets/img/logo/Ishmam Logo.png" alt="Ishmam Bin Aslam" />
+                     <img src="assets/img/logo/Ishmam%20Logo.png" alt="Ishmam Bin Aslam" />
                   </a>
                </div>
 
@@ -586,7 +587,8 @@
                         <li><a href="#research-section">Research</a></li>
                         <li><a href="#activities-section">ECA</a></li>
                         <li><a href="#skills-section">Skills</a></li>
-                        <li><a href="#contact-section">Contact</a></li>
+                        <!-- ===== CHANGED: Contact now links to footer ID ===== -->
+                        <li><a href="#contact-footer">Contact</a></li>
                      </ul>
                   </nav>
                </div>
@@ -629,7 +631,7 @@
                      <span class="hero-sub-title wow fadeInUp" data-wow-delay=".1s">Hi, I am Ishmam</span>
                      <h1 class="hero-title wow fadeInUp" data-wow-delay=".15s">CSE Graduate +<br />Data Analyst</h1>
                      <div class="hero-image-box d-md-none text-center">
-                        <img src="assets/img/hero/Ishmam Photo.png" alt="Ishmam" />
+                        <img src="assets/img/hero/Ishmam%20Photo.png" alt="Ishmam" />
                      </div>
 
                      <!-- Hero paragraph inside bubble -->
@@ -667,7 +669,7 @@
                </div>
                <div class="col-md-6 d-none d-md-block">
                   <div class="hero-image-box text-center" style="transform: translateX(30px);">
-                     <img src="assets/img/hero/Ishmam Photo.png" alt="Ishmam" />
+                     <img src="assets/img/hero/Ishmam%20Photo.png" alt="Ishmam" />
                   </div>
                </div>
             </div>
@@ -720,8 +722,8 @@
                            <div class="time">2023</div>
                            <h3 class="resume-title">Exchange Student & CS Club Instructor</h3>
                            <div class="institute">Bard College, NY, USA</div>
-                           <br> Selected for the fully funded OSUN Student Exchange Program from applicants across 19+ countries with full funding
-                           and conducted “Introduction to Python” classes. (CGPA 4.00)
+                           <br> CGPA 4.00/4.00 <br> Selected for the fully funded OSUN Student Exchange Program from applicants across 19+ countries with full funding
+                           and conducted “Introduction to Python” classes. 
                         </div>
                      </a>
                      <!-- BRAC University Tutor -->
@@ -781,7 +783,7 @@
                            <h3 class="resume-title">Secondary School Certificate</h3>
                            <div class="institute">Bangladesh International School & College 
                               
-                           <br>  (Golden GPA 5.00)</div>
+                           <br>  Golden GPA 5.00</div>
                            Participated in Debate, Science Olympiad and Computer Science competitions
                         </div>
                      </a>
@@ -1296,10 +1298,36 @@
       </section>
    </main>
 
-   <!-- FOOTER START -->
-   <footer class="tj-footer-area">
+   <!-- ===== FOOTER START – enhanced with contact info ===== -->
+   <footer class="tj-footer-area" id="contact-footer">
       <div class="container">
+         <!-- Contact information row (new) -->
          <div class="row">
+            <div class="col-md-12">
+               <div class="contact-info-list">
+                  <ul class="ul-reset d-flex flex-wrap justify-content-center">
+                     <li>
+                        <span class="icon-box"><i class="fa-regular fa-envelope"></i></span>
+                        <span class="text-box"><a href="mailto:ishmam2001@gmail.com">ishmam2001@gmail.com</a></span>
+                     </li>
+                     <li>
+                        <span class="icon-box"><i class="fa-brands fa-linkedin-in"></i></span>
+                        <span class="text-box"><a href="https://www.linkedin.com/in/ishmamaslam/" target="_blank" rel="noopener noreferrer">LinkedIn</a></span>
+                     </li>
+                     <li>
+                        <span class="icon-box"><i class="fa-brands fa-github"></i></span>
+                        <span class="text-box"><a href="https://github.com/ishmamCodes" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+                     </li>
+                     <li>
+                        <span class="icon-box"><i class="fa-solid fa-globe"></i></span>
+                        <span class="text-box"><a href="http://ishmamcodes.github.io/" target="_blank" rel="noopener noreferrer">Personal Website</a></span>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <!-- Copyright row (existing, slightly adjusted margin) -->
+         <div class="row mt-3">
             <div class="col-md-12 text-center">
                <p>© 2026 Ishmam Bin Aslam. All rights reserved.</p>
             </div>
