@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 
@@ -544,8 +545,8 @@
                </div>
                <div class="header-button">
 
-                  <a href="https://drive.google.com/file/d/1SaxoGfoGJ4vXCMbCabBO36kTZ9hMImtq/view?usp=drive_link" class="btn tj-btn-primary" target="_blank" rel="noopener noreferrer">Professional CV <i class="flaticon-search"></i></i></a>
-                  <a href="https://drive.google.com/file/d/1k44i7D_Xyz_uhXUfzNuqlNVlLVM9EQWE/view?usp=drive_link" class="btn tj-btn-primary" target="_blank" rel="noopener noreferrer">Academic CV <i class="flaticon-search"></i></a>
+                  <a href="https://drive.google.com/file/d/1SaxoGfoGJ4vXCMbCabBO36kTZ9hMImtq/view?usp=drive_link" class="btn tj-btn-primary" target="_blank" rel="noopener noreferrer">Resume <i class="flaticon-search"></i></i></a>
+                  <a href="https://drive.google.com/file/d/1Jha_2DqX2kdNdI7pDCl4T7KXI2H2qNpC/view?usp=sharing" class="btn tj-btn-primary" target="_blank" rel="noopener noreferrer">Academic CV <i class="flaticon-search"></i></a>
                   
                </div>
                <div class="menu-bar d-lg-none">
@@ -592,8 +593,8 @@
 
                <div class="header-button">
                   
-                  <a href="https://drive.google.com/file/d/1SaxoGfoGJ4vXCMbCabBO36kTZ9hMImtq/view?usp=drive_link" class="btn tj-btn-primary" target="_blank" rel="noopener noreferrer">Professional CV <i class="flaticon-search"></i></i></a>
-                  <a href="https://drive.google.com/file/d/1k44i7D_Xyz_uhXUfzNuqlNVlLVM9EQWE/view?usp=drive_link" class="btn tj-btn-primary" target="_blank" rel="noopener noreferrer">Academic CV <i class="flaticon-search"></i></i></a>
+                  <a href="https://drive.google.com/file/d/1SaxoGfoGJ4vXCMbCabBO36kTZ9hMImtq/view?usp=drive_link" class="btn tj-btn-primary" target="_blank" rel="noopener noreferrer">Resume <i class="flaticon-search"></i></i></a>
+                  <a href="https://drive.google.com/file/d/1NPYG_hhRB6V2sPfqaUIWHc7qAOorJAnb/view?usp=drive_link" class="btn tj-btn-primary" target="_blank" rel="noopener noreferrer">Academic CV <i class="flaticon-search"></i></i></a>
                   
                </div>
 
@@ -1323,19 +1324,37 @@
    <script src="assets/js/magnific-popup.min.js"></script>
    <script src="assets/js/main.js"></script>
    <script>
-      // Video autoplay on scroll and mute toggle
+      // Video play/pause on scroll visibility + mute toggle
       document.addEventListener('DOMContentLoaded', function() {
          const video = document.getElementById('teachingVideo');
          const muteToggle = document.getElementById('muteToggle');
-         if(video && muteToggle) {
-            // Autoplay when in view (you can add intersection observer if needed)
-            video.play().catch(e => console.log('Autoplay failed', e));
+         if (video && muteToggle) {
+            // Ensure video is initially paused (no autoplay on load)
+            video.pause();
+
+            // Mute toggle functionality
             muteToggle.addEventListener('click', function() {
                video.muted = !video.muted;
                muteToggle.innerHTML = video.muted ? '<i class="fa fa-volume-mute"></i>' : '<i class="fa fa-volume-up"></i>';
             });
+
+            // Intersection Observer to play/pause based on visibility
+            const observer = new IntersectionObserver((entries) => {
+               entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                     // Video is visible: play (muted autoplay allowed)
+                     video.play().catch(e => console.log('Play failed', e));
+                  } else {
+                     // Video is out of view: pause
+                     video.pause();
+                  }
+               });
+            }, { threshold: 0.5 }); // 50% visibility triggers play
+
+            observer.observe(video);
          }
       });
    </script>
 </body>
 </html>
+```
