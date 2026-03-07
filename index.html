@@ -1404,13 +1404,13 @@
 
          const container = document.getElementById('teachingVideoContainer');
 
-         // Show controls on hover (mouseenter) and hide on mouseleave
-         container.addEventListener('mouseenter', () => {
-            video.setAttribute('controls', 'controls');
-         });
-         container.addEventListener('mouseleave', () => {
-            video.removeAttribute('controls');
-         });
+         // // Show controls on hover (mouseenter) and hide on mouseleave
+         // container.addEventListener('mouseenter', () => {
+         //    video.setAttribute('controls', 'controls');
+         // });
+         // container.addEventListener('mouseleave', () => {
+         //    video.removeAttribute('controls');
+         // });
 
          // Play video when in view, pause when out of view (muted autoplay)
          const observer = new IntersectionObserver((entries) => {
