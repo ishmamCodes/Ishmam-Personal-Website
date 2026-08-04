@@ -5,7 +5,12 @@
    <meta charset="utf-8" />
    <meta http-equiv="x-ua-compatible" content="ie=edge" />
    <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <meta name="description" content="" />
+   <meta name="description" content="Ishmam Bin Aslam - CSE Graduate & Data Analyst. Portfolio featuring AI/ML, Computer Vision, and full-stack web development projects." />
+
+   <!-- Security headers (client-side hardening; GitHub Pages cannot set HTTP response headers) -->
+   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" />
+   <meta name="referrer" content="strict-origin-when-cross-origin" />
+   <meta http-equiv="Permissions-Policy" content="geolocation=(), camera=(), microphone=(), payment=(), usb=()" />
 
    <!-- Site Title -->
    <title>Ishmam Bin Aslam - Personal Portfolio</title>
@@ -30,8 +35,6 @@
    <link rel="stylesheet" href="assets/css/main.css" />
    <link rel="stylesheet" href="assets/css/light-mode.css" />
    <link rel="stylesheet" href="assets/css/responsive.css" />
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-   <link rel="stylesheet" href="style.css">
    <!-- Bubble Animation CSS + faster wow + violet gradient background + card link style + header + section bubbles -->
    <style>
       /* ===== GLOBAL BACKGROUND ===== */
@@ -519,7 +522,7 @@
                </div>
                <div class="header-button">
 
-                  <a href="https://drive.google.com/file/d/1O4jT5WKq-r9tUvkOHGBSvHdnD0cm-CQH/view?usp=drive_link" class="btn tj-btn-primary" target="_blank" rel="noopener noreferrer">View CV<i class="flaticon-search"></i></a>
+                  <a href="assets/cv/Ishmam-Bin-Aslam-CV.pdf" class="btn tj-btn-primary" target="_blank" rel="noopener noreferrer">View CV<i class="flaticon-search"></i></a>
                   <a href="https://drive.google.com/file/d/1883oiZSlmF8sikUIP5bphD1g9BW0CtLi/view?usp=drive_link" class="btn tj-btn-primary" target="_blank" rel="noopener noreferrer">Academic <i class="flaticon-search"></i></a>
                
 
@@ -568,7 +571,7 @@
 
                <div class="header-button">
                   
-                  <a href="https://drive.google.com/file/d/1O4jT5WKq-r9tUvkOHGBSvHdnD0cm-CQH/view?usp=drive_link" class="btn tj-btn-primary" target="_blank" rel="noopener noreferrer">View CV<i class="flaticon-search"></i></a>
+                  <a href="assets/cv/Ishmam-Bin-Aslam-CV.pdf" class="btn tj-btn-primary" target="_blank" rel="noopener noreferrer">View CV<i class="flaticon-search"></i></a>
                   <a href="https://drive.google.com/file/d/1883oiZSlmF8sikUIP5bphD1g9BW0CtLi/view?usp=drive_link" class="btn tj-btn-primary" target="_blank" rel="noopener noreferrer">Academic<i class="flaticon-search"></i></i></a>
                   
                </div>
@@ -689,6 +692,24 @@
                   </div>
 
                   <div class="resume-widget">
+                     <!-- Robi Axiata PLC -->
+                     <div class="resume-item wow fadeInLeft" data-wow-delay=".2s">
+                        <div class="time">2026 - Present</div>
+                        <h3 class="resume-title">CIO's Intern, DevSecOps Team</h3>
+                        <div class="institute">Robi Axiata PLC</div>
+                        <br>
+                        Developing AI-driven enterprise automation solutions and scalable software for production infrastructure under the CIO's Office, using Machine Learning and full-stack engineering. Contributing to internal initiatives around automated root cause analysis and compliance auditing for enterprise systems.
+                     </div>
+                     <!-- BRAC University Adjunct Lecturer -->
+                     <a href="https://www.bracu.ac.bd/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
+                        <div class="resume-item wow fadeInLeft" data-wow-delay=".25s">
+                           <div class="time">2026 - Present</div>
+                           <h3 class="resume-title">Adjunct Lecturer</h3>
+                           <div class="institute">BRAC University, Department of Computer Science & Engineering</div>
+                           <br>
+                           Teaching undergraduate courses in Computer Vision: Fundamentals & Applications, Data Structures & Algorithms, and Operating Systems.
+                        </div>
+                     </a>
                      <!-- Bard College -->
                      <a href="https://www.bard.edu/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
                         <div class="resume-item wow fadeInLeft" data-wow-delay=".3s">
@@ -776,7 +797,7 @@
             <div class="row align-items-center">
                <div class="col-md-7">
                   <div class="video-container" id="teachingVideoContainer">
-                     <video id="teachingVideo" loop playsinline preload="auto" muted>
+                     <video id="teachingVideo" loop playsinline preload="metadata" muted>
                         <source src="assets/video/bard-class.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                      </video>
@@ -821,26 +842,64 @@
             <div class="row project-grid">
 
 
-                <!-- HR & Payroll ERP -->
+                <!-- Safia Apparels Ltd -->
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".05s">
+                    <div class="project-bubble">
+                    <a href="https://safiaapparelsltd.com" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/img/portfolio/safia-apparels-cover.jpg" alt="Safia Apparels Ltd" class="project-image">
+                        <h3>Safia Apparels Ltd — B2B Website <span style="color: orange;">Click to view Live</span></h3>
+                        <p>
+                            Premium B2B website for a knit garment manufacturer, built for European & American
+                            fashion buyers. Editorial design system, product/manufacturing showcase, and
+                            buyer inquiry flow — built with Next.js.
+                        </p>
+                    </a>
+                    </div>
+                </div>
+
+                <!-- FabriFlow -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".08s">
+                    <div class="project-bubble">
+                        <img src="assets/img/portfolio/fabriflow-cover.jpg" alt="FabriFlow IMS login screen" class="project-image">
+                        <h3>FabriFlow — Inventory Management System</h3>
+                        <p>
+                            Enterprise inventory management system for a knit garment manufacturer,
+                            covering requisitions, work orders, and procurement across departments —
+                            built with FastAPI, Next.js & PostgreSQL.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- HR & Payroll ERP -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".1s">
                     <div class="project-bubble">
                     <a href="https://hr-payroll-erp-by-ishmam.onrender.com" target="_blank" rel="noopener noreferrer">
                         <img src="assets/img/portfolio/hr-payroll-cover.jpg" alt="HR Payroll ERP" class="project-image">
                         <h3>HR & Payroll ERP — Saas System <span style="color: orange;">Click to view Live</span></h3>
                         <p>
-                            Full-stack HR & Payroll compliance ERP built for Bangladesh's RMG & industrial sector. 
-                            Features payroll engine (Gazette 2023), attendance with OT/late tracking, 
-                            leave management (BLA 2006), PDF payslips, and configurable reports — 
+                            Full-stack HR & Payroll compliance ERP built for Bangladesh's RMG & industrial sector.
+                            Features payroll engine (Gazette 2023), attendance with OT/late tracking,
+                            leave management (BLA 2006), PDF payslips, and configurable reports —
                             built with React, Node.js, PostgreSQL & Prisma.
                         </p>
-                    </a>
-                    <a href="https://github.com/ishmamCodes/hr-payroll-erp" target="_blank" style="color: orange; text-decoration: underline;">
-                        View on GitHub
                     </a>
                     </div>
                 </div>
 
-                
+                <!-- TraceKnot -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".12s">
+                    <div class="project-bubble">
+                        <img src="assets/img/portfolio/traceknot-cover.jpg" alt="TraceKnot login screen" class="project-image">
+                        <h3>TraceKnot — Shipment Intelligence</h3>
+                        <p>
+                            Cargo shipment tracking platform built for a Bangladesh-based FMCG importer.
+                            Live carrier tracking, delay/customs alerts, and export reporting for
+                            logistics teams — built with Next.js & Supabase.
+                        </p>
+                    </div>
+                </div>
+
+
                <!-- Shikkha -->
                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".1s">
                   <div class="project-bubble">
@@ -854,7 +913,7 @@
                            
                         </p>
                      </a>
-                     <a href="https://youtu.be/J66pB6IO6H4?si=Qn0asFRLGjv0ojea" target="_blank" style="color: orange; text-decoration: underline;">
+                     <a href="https://youtu.be/J66pB6IO6H4?si=Qn0asFRLGjv0ojea" target="_blank" rel="noopener noreferrer" style="color: orange; text-decoration: underline;">
                         Watch Video Demo
                      </a>
                      
@@ -880,7 +939,7 @@
                         </p>
                      </a>
                   
-                     <a href="https://youtu.be/KhhCuWPV1ns" target="_blank" style="color: orange; text-decoration: underline;">
+                     <a href="https://youtu.be/KhhCuWPV1ns" target="_blank" rel="noopener noreferrer" style="color: orange; text-decoration: underline;">
                         Watch Video Demo
                      </a>
                
@@ -984,49 +1043,49 @@
                      <!-- Thesis -->
                      <div class="col-md-6 wow fadeInUp" data-wow-delay=".2s">
                         <div class="resume-item">
-                           <a href="https://drive.google.com/file/d/1GWTjPTDRmOq2PtCzYXzTl8UKcjJqeVST/view?usp=sharing" target="_blank" class="card-link"></a>
+                           <a href="https://drive.google.com/file/d/1GWTjPTDRmOq2PtCzYXzTl8UKcjJqeVST/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="card-link"></a>
                            <div class="time">2025</div>
                            <h3 class="resume-title">Thesis: Heritage Defect Detection under Data Scarcity</h3>
                            <div class="institute">BRAC University, Dhaka</div>
                            <p style="margin-top: 8px;">First AI-driven study on detecting defects in historic Sonargaon architecture in Bangladesh using a leakage‑aware YOLO–Faster, R‑CNN ensemble with Weighted Boxes Fusion Model.  
-                              <br><br><a href="https://drive.google.com/file/d/1GWTjPTDRmOq2PtCzYXzTl8UKcjJqeVST/view?usp=sharing" target="_blank">IEEE Report</a> | 
-                              <a href="https://drive.google.com/file/d/1goa8WXnErs40auYA-t9aNybWxmJhkUrG/view?usp=sharing" target="_blank">Thesis Paper</a>
+                              <br><br><a href="https://drive.google.com/file/d/1GWTjPTDRmOq2PtCzYXzTl8UKcjJqeVST/view?usp=sharing" target="_blank" rel="noopener noreferrer">IEEE Report</a> | 
+                              <a href="https://drive.google.com/file/d/1goa8WXnErs40auYA-t9aNybWxmJhkUrG/view?usp=sharing" target="_blank" rel="noopener noreferrer">Thesis Paper</a>
                            </p>
                         </div>
                      </div>
                      <!-- Review Paper 1 -->
                      <div class="col-md-6 wow fadeInUp" data-wow-delay=".3s">
                         <div class="resume-item">
-                           <a href="https://drive.google.com/file/d/1c9WZ16-kEFpIoZdW81sVgzynY0ESvxtF/view?usp=sharing" target="_blank" class="card-link"></a>
+                           <a href="https://drive.google.com/file/d/1c9WZ16-kEFpIoZdW81sVgzynY0ESvxtF/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="card-link"></a>
                            <div class="time">2023</div>
                            <h3 class="resume-title">ML vs. Cognitive Architecture <br> in HRI for Space Missions</h3>
                            <div class="institute">Bard College, USA</div>
                            <p style="margin-top: 8px;">Comparative analysis of machine learning and cognitive architectures for communication and ethical reasoning in space exploration.  
-                             <br> <br><a href="https://drive.google.com/file/d/1c9WZ16-kEFpIoZdW81sVgzynY0ESvxtF/view?usp=sharing" target="_blank">Review Paper</a>
+                             <br> <br><a href="https://drive.google.com/file/d/1c9WZ16-kEFpIoZdW81sVgzynY0ESvxtF/view?usp=sharing" target="_blank" rel="noopener noreferrer">Review Paper</a>
                            </p>
                         </div>
                      </div>
                      <!-- Review Paper 2 -->
                      <div class="col-md-6 wow fadeInUp" data-wow-delay=".4s">
                         <div class="resume-item">
-                           <a href="https://drive.google.com/file/d/1DY1weVQl1aZRWXl3WqL6z7I_Nc-zgKUB/view?usp=sharing" target="_blank" class="card-link"></a>
+                           <a href="https://drive.google.com/file/d/1DY1weVQl1aZRWXl3WqL6z7I_Nc-zgKUB/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="card-link"></a>
                            <div class="time">2023</div>
                            <h3 class="resume-title">Human‑Robot Team in Space Expedition</h3>
                            <div class="institute">Bard College, USA</div>
                            <p style="margin-top: 8px;">Evaluated benefits and challenges of human‑robot teams in space, including performance, ethics, and maintenance.  
-                             <br> <br><a href="https://drive.google.com/file/d/1DY1weVQl1aZRWXl3WqL6z7I_Nc-zgKUB/view?usp=sharing" target="_blank">Review Paper</a>
+                             <br> <br><a href="https://drive.google.com/file/d/1DY1weVQl1aZRWXl3WqL6z7I_Nc-zgKUB/view?usp=sharing" target="_blank" rel="noopener noreferrer">Review Paper</a>
                            </p>
                         </div>
                      </div>
                      <!-- Review Paper 3 -->
                      <div class="col-md-6 wow fadeInUp" data-wow-delay=".5s">
                         <div class="resume-item">
-                           <a href="https://drive.google.com/file/d/1bnup7nAz2JGE7wEkQtMMcQMW1DwumNzO/view?usp=sharing" target="_blank" class="card-link"></a>
+                           <a href="https://drive.google.com/file/d/1bnup7nAz2JGE7wEkQtMMcQMW1DwumNzO/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="card-link"></a>
                            <div class="time">2023</div>
                            <h3 class="resume-title">Design for Human‑Robot Team in Space</h3>
                            <div class="institute">Bard College, USA</div>
                            <p style="margin-top: 8px;">Explored robot morphology, emotional cues, and gender to enhance team dynamics and well‑being in space.  
-                             <br><br> <a href="https://drive.google.com/file/d/1bnup7nAz2JGE7wEkQtMMcQMW1DwumNzO/view?usp=sharing" target="_blank">Review Paper</a>
+                             <br><br> <a href="https://drive.google.com/file/d/1bnup7nAz2JGE7wEkQtMMcQMW1DwumNzO/view?usp=sharing" target="_blank" rel="noopener noreferrer">Review Paper</a>
                            </p>
                         </div>
                      </div>
@@ -1036,139 +1095,6 @@
          </div>
       </section>
       <!-- RESEARCH SECTION END -->
-
-      <!-- start: Portfolio Popup details (unchanged, kept for compatibility but not used) -->
-      <!-- Shikkha Popup -->
-      <div id="portfolio-shikkha" class="popup_content_area zoom-anim-dialog mfp-hide">
-         <div class="popup_modal_img">
-            <img src="./assets/img/portfolio/shikkha-detail.jpg" alt="" />
-         </div>
-         <div class="popup_modal_content">
-            <div class="portfolio_info">
-               <div class="portfolio_info_text">
-                  <h2 class="title">Shikkha – AI Educational Platform</h2>
-                  <div class="desc">
-                     <p>Full‑stack platform using Node.js, React, JavaScript. Features course management, exams, messaging, marketplace, and an AI‑powered assistant.</p>
-                  </div>
-                  <a href="https://shikkhacom.vercel.app/login" target="_blank" class="btn tj-btn-primary">Live Website <i class="fal fa-arrow-right"></i></a>
-               </div>
-               <div class="portfolio_info_items">
-                  <div class="info_item"><div class="key">Category</div><div class="value">Web Development</div></div>
-                  <div class="info_item"><div class="key">Date</div><div class="value">2026</div></div>
-               </div>
-            </div>
-         </div>
-      </div>
-
-      <!-- KrishiNetwork Popup -->
-      <div id="portfolio-krishi" class="popup_content_area zoom-anim-dialog mfp-hide">
-         <div class="popup_modal_img">
-            <img src="./assets/img/portfolio/krishi-detail.jpg" alt="" />
-         </div>
-         <div class="popup_modal_content">
-            <div class="portfolio_info">
-               <div class="portfolio_info_text">
-                  <h2 class="title">KrishiNetwork – AI Agriculture Platform</h2>
-                  <div class="desc">
-                     <p>Connects farmers with experts; AI‑assisted query handling and image‑based crop disease detection. Built with full‑stack web technologies.</p>
-                  </div>
-                  <a href="https://github.com/ishmamCodes/KrishiNetwork.git" target="_blank" class="btn tj-btn-primary">GitHub <i class="fal fa-arrow-right"></i></a>
-                  <a href="https://drive.google.com/file/d/15Jw1KPXb8FYVZk3aRogIixRrqH2JzKqU/view?usp=sharing" target="_blank" class="btn tj-btn-primary" style="margin-left:10px;">Video Demo</a>
-               </div>
-            </div>
-         </div>
-      </div>
-
-      <!-- Medicine Robot Popup -->
-      <div id="portfolio-medicine" class="popup_content_area zoom-anim-dialog mfp-hide">
-         <div class="popup_modal_img">
-            <img src="./assets/img/portfolio/medicine-detail.jpg" alt="" />
-         </div>
-         <div class="popup_modal_content">
-            <div class="portfolio_info">
-               <div class="portfolio_info_text">
-                  <h2 class="title">Medicine Dispensing Robot</h2>
-                  <div class="desc">
-                     <p>Embedded system (Arduino/Raspberry Pi) that automates medication dispensing for elderly care.</p>
-                  </div>
-                  <a href="https://drive.google.com/file/d/1d4Wk5K8WHORhP9A4rr8r1qp31SqTKBLR/view?usp=sharing" target="_blank" class="btn tj-btn-primary">Project Report</a>
-               </div>
-            </div>
-         </div>
-      </div>
-
-      <!-- Mandelbulb Popup -->
-      <div id="portfolio-mandelbulb" class="popup_content_area zoom-anim-dialog mfp-hide">
-         <div class="popup_modal_img">
-            <img src="./assets/img/portfolio/mandelbulb-detail.jpg" alt="" />
-         </div>
-         <div class="popup_modal_content">
-            <div class="portfolio_info">
-               <div class="portfolio_info_text">
-                  <h2 class="title">Mandelbulb Visualization</h2>
-                  <div class="desc">
-                     <p>Real‑time 3D fractal rendering using OpenGL and C++. Part of Computer Graphics coursework.</p>
-                  </div>
-                  <a href="https://github.com/ishmamCodes/Mandlebulb-Project.git" target="_blank" class="btn tj-btn-primary">GitHub</a>
-               </div>
-            </div>
-         </div>
-      </div>
-
-      <!-- Sydney Rail Popup -->
-      <div id="portfolio-sydney" class="popup_content_area zoom-anim-dialog mfp-hide">
-         <div class="popup_modal_img">
-            <img src="./assets/img/portfolio/sydney-detail.jpg" alt="" />
-         </div>
-         <div class="popup_modal_content">
-            <div class="portfolio_info">
-               <div class="portfolio_info_text">
-                  <h2 class="title">Sydney Rail Network Design</h2>
-                  <div class="desc">
-                     <p>Metropolitan communication network designed with Cisco Packet Tracer using VLSM, static and RIP v2 routing, and redundancy.</p>
-                  </div>
-                  <a href="https://drive.google.com/drive/folders/142e1qJeSehQPX7Rm7wrOEs_wqvoXTH1Q?usp=sharing" target="_blank" class="btn tj-btn-primary">Project Files</a>
-               </div>
-            </div>
-         </div>
-      </div>
-
-      <!-- 3D Shooter Popup -->
-      <div id="portfolio-shooter" class="popup_content_area zoom-anim-dialog mfp-hide">
-         <div class="popup_modal_img">
-            <img src="./assets/img/portfolio/shooter-detail.jpg" alt="" />
-         </div>
-         <div class="popup_modal_content">
-            <div class="portfolio_info">
-               <div class="portfolio_info_text">
-                  <h2 class="title">3D Shooter Game</h2>
-                  <div class="desc">
-                     <p>Interactive 3D shooter developed with OpenGL and Python, featuring camera control, lighting, and collision handling.</p>
-                  </div>
-                  <a href="https://github.com/ishmamCodes/3D-Shooter-Game.git" target="_blank" class="btn tj-btn-primary">GitHub</a>
-               </div>
-            </div>
-         </div>
-      </div>
-
-      <!-- Memory Game Popup -->
-      <div id="portfolio-memory" class="popup_content_area zoom-anim-dialog mfp-hide">
-         <div class="popup_modal_img">
-            <img src="./assets/img/portfolio/memory-detail.jpg" alt="" />
-         </div>
-         <div class="popup_modal_content">
-            <div class="portfolio_info">
-               <div class="portfolio_info_text">
-                  <h2 class="title">Advanced Memory Game</h2>
-                  <div class="desc">
-                     <p>Interactive memory game built with Processing; features dynamic difficulty and real‑time score tracking.</p>
-                  </div>
-                  <a href="https://github.com/ishmamCodes/Memory-Game-Using-Processing.git" target="_blank" class="btn tj-btn-primary">GitHub</a>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- end: Portfolio Popup -->
 
       <!-- EXTRA CURRICULAR ACTIVITIES SECTION (with bubble) -->
       <section class="resume-section bubble-section" id="activities-section">
@@ -1183,7 +1109,7 @@
                      <!-- Mindful Photography -->
                      <div class="col-md-6 wow fadeInUp" data-wow-delay=".2s">
                         <div class="resume-item">
-                           <a href="https://docs.google.com/presentation/d/1NZMyVcCtmLm63zxsuiE_gOzgaJ3ChDSv/edit?usp=sharing&ouid=114731888901336723810&rtpof=true&sd=true" target="_blank" class="card-link"></a>
+                           <a href="https://docs.google.com/presentation/d/1NZMyVcCtmLm63zxsuiE_gOzgaJ3ChDSv/edit?usp=sharing&ouid=114731888901336723810&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="card-link"></a>
                            <div class="time">2023</div>
                            <h3 class="resume-title">Mindful Photography Exhibition</h3>
                            <div class="institute">Bard College, USA</div>
@@ -1191,7 +1117,7 @@
                               curated storytelling of human connection developed through the Professional and Spiritual Photography course.
                               
                               <br><br>
-                              <a href="https://docs.google.com/presentation/d/1NZMyVcCtmLm63zxsuiE_gOzgaJ3ChDSv/edit?usp=sharing&ouid=114731888901336723810&rtpof=true&sd=true" target="_blank">View Exhibition</a>
+                              <a href="https://docs.google.com/presentation/d/1NZMyVcCtmLm63zxsuiE_gOzgaJ3ChDSv/edit?usp=sharing&ouid=114731888901336723810&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer">View Exhibition</a>
                            </p>
                         </div>
                      </div>
@@ -1199,12 +1125,12 @@
                      <!-- Free Internet for Dhaka Students -->
                      <div class="col-md-6 wow fadeInUp" data-wow-delay=".3s">
                         <div class="resume-item">
-                           <a href="https://docs.google.com/document/d/1Dr1ragcLd1bq7qvbv8RtSxo9fDBJMI9XOTJ2wQ4K--o/edit?usp=sharing" target="_blank" class="card-link"></a>
+                           <a href="https://docs.google.com/document/d/1Dr1ragcLd1bq7qvbv8RtSxo9fDBJMI9XOTJ2wQ4K--o/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="card-link"></a>
                            <div class="time">2024</div>
                            <h3 class="resume-title">Free Internet for Students</h3>
                            <div class="institute">Philanthropic Initiative with ISP</div>
                            <p style="margin-top: 8px;">Collaborated with an internet service provider to prepare & propose a distribution model to share free internet access to students across Dhaka, Bangladesh. 
-                              <br><br><a href="https://docs.google.com/document/d/1Dr1ragcLd1bq7qvbv8RtSxo9fDBJMI9XOTJ2wQ4K--o/edit?usp=sharing" target="_blank">Project Report</a>
+                              <br><br><a href="https://docs.google.com/document/d/1Dr1ragcLd1bq7qvbv8RtSxo9fDBJMI9XOTJ2wQ4K--o/edit?usp=sharing" target="_blank" rel="noopener noreferrer">Project Report</a>
                            </p>
                         </div>
                      </div>
@@ -1212,13 +1138,13 @@
                      <!-- House Captain -->
                      <div class="col-md-6 wow fadeInUp" data-wow-delay=".4s">
                         <div class="resume-item">
-                           <a href="https://acc.edu.bd/" target="_blank" class="card-link"></a>
+                           <a href="https://acc.edu.bd/" target="_blank" rel="noopener noreferrer" class="card-link"></a>
                            <div class="time">2018 – 2020</div>
                            <h3 class="resume-title">House Captain</h3>
                            <div class="institute">Adamjee Cantonment College</div>
                            <p style="margin-top: 8px;">Selected among 6500 students; represented college in national events, conducted sports, training, discipline and academic goals.</p>
                            <br>
-                           <div class="institute"><a href="https://acc.edu.bd/" target="_blank">Houses of Adamjee</a></div>
+                           <div class="institute"><a href="https://acc.edu.bd/" target="_blank" rel="noopener noreferrer">Houses of Adamjee</a></div>
                         </div>
                      </div>
 
@@ -1226,13 +1152,13 @@
                      <div class="col-md-6 wow fadeInUp" data-wow-delay=".5s">
                         <div class="resume-item">
                            <!-- No direct link, so we can link to Bard's site or just remove overlay -->
-                           <a href="https://www.bard.edu/" target="_blank" class="card-link"></a>
+                           <a href="https://www.bard.edu/" target="_blank" rel="noopener noreferrer" class="card-link"></a>
                            <div class="time">2023</div>
                            <h3 class="resume-title">Bard College Tennis Team</h3>
                            <div class="institute">New York, USA</div>
                            <p style="margin-top: 8px;">Selected as a member of the Bard Tennis team during the OSUN Student exchange program after completing rigorous physical and health tests.</p>
                            <br>
-                           <div class="institute"><a href="https://www.instagram.com/bardtennis/" target="_blank">Bard Tennis</a></div>
+                           <div class="institute"><a href="https://www.instagram.com/bardtennis/" target="_blank" rel="noopener noreferrer">Bard Tennis</a></div>
                         </div>
                      </div>
                   </div>
@@ -1417,7 +1343,7 @@
                   </nav>
                </div>
                <div class="copy-text">
-                  <p>&copy; 2025 All rights reserved by <a href="https://github.com/ishmamCodes" target="_blank">Ishmam Bin Aslam</a></p>
+                  <p>&copy; 2025 All rights reserved by <a href="https://github.com/ishmamCodes" target="_blank" rel="noopener noreferrer">Ishmam Bin Aslam</a></p>
                </div>
             </div>
          </div>
