@@ -24,14 +24,9 @@
    <!-- CSS here -->
    <link rel="stylesheet" href="assets/css/animate.min.css" />
    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-   <link rel="stylesheet" href="assets/css/font-awesome-pro.min.css" />
    <link rel="stylesheet" href="assets/css/flaticon_gerold.css" />
-   <link rel="stylesheet" href="assets/css/nice-select.css" />
    <link rel="stylesheet" href="assets/css/backToTop.css" />
-   <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
-   <link rel="stylesheet" href="assets/css/swiper.min.css" />
    <link rel="stylesheet" href="assets/css/odometer-theme-default.css" />
-   <link rel="stylesheet" href="assets/css/magnific-popup.css" />
    <link rel="stylesheet" href="assets/css/main.css" />
    <link rel="stylesheet" href="assets/css/light-mode.css" />
    <link rel="stylesheet" href="assets/css/responsive.css" />
@@ -42,43 +37,66 @@
          (--tj-theme-primary: #8750f7, --tj-bg family with blue undertones) —
          that default is exactly what reads as "generic AI-generated SaaS."
          Replaced with a warm-neutral ground (near-black espresso, no blue/
-         violet undertone) and a single sage-green accent chosen for
-         color-wheel contrast against that warm base — verified >= 6:1
+         violet undertone) and a single antique-gold accent — a more formal,
+         editorial register than the earlier sage-green pass — chosen for
+         color-wheel contrast against that warm base — verified >= 7:1
          contrast against both the page background and card surfaces. */
       :root {
-         --tj-theme-primary: #6fa37a;
-         --tj-theme-primary-1: #588568;
-         --tj-theme-primary-2: #8fc29b;
-         --tj-theme-primary-3: #4f8261;
-         --tj-theme-secondary: #241f18;
-         --tj-theme-accent-1: #17140f;
-         --tj-theme-accent-2: #1e1a15;
-         --tj-black-2: #17140f;
-         --tj-bg: #17140f;
-         --tj-bg-2: #1b1712;
-         --tj-bg-3: #201b15;
-         --tj-bg-4: #241f18;
-         --tj-border: #3d372f;
-         --tj-border1: #4a4238;
+         --tj-theme-primary: #c9a15a;
+         --tj-theme-primary-1: #a9803f;
+         --tj-theme-primary-2: #ddbb78;
+         --tj-theme-primary-3: #b8935a;
+         --tj-theme-secondary: #4f4435;
+         --tj-theme-accent-1: #423a2b;
+         --tj-theme-accent-2: #483e32;
+         --tj-black-2: #423a2b;
+         --tj-bg: #423a2b;
+         --tj-bg-2: #463b2f;
+         --tj-bg-3: #4b3f31;
+         --tj-bg-4: #4f4435;
+         --tj-border: #655b4e;
+         --tj-border1: #736657;
          --tj-heading-primary: #f3efe7;
-         --tj-heading-secondary: #6fa37a;
+         --tj-heading-secondary: #c9a15a;
          --tj-off-white: #f3efe7;
-         --tj-grey-4: #2a2620;
-         --tj-grey-6: #211d17;
+         --tj-grey-4: #534b3f;
+         --tj-grey-6: #4b4234;
+         /* Defined once and shared via var() below instead of embedding
+            this ~3.4KB data URI as literal duplicate text in two separate
+            rules — same bytes downloaded once instead of twice. */
+         --circuit-pattern: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22320%22%20height%3D%22320%22%20viewBox%3D%220%200%20320%20320%22%3E%0A%20%20%3Cg%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.4%22%20stroke-linecap%3D%22square%22%20stroke-opacity%3D%220.09%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M20%2C40%20L20%2C120%20L95%2C120%20L95%2C205%20L170%2C205%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M260%2C25%20L260%2C95%20L205%2C95%20L205%2C155%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M35%2C255%20L115%2C255%20L115%2C195%20L185%2C195%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M275%2C180%20L275%2C265%20L225%2C265%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M10%2C185%20L65%2C185%20L65%2C140%20L20%2C140%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M300%2C120%20L245%2C120%20L245%2C60%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M150%2C10%20L150%2C45%20L120%2C45%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M55%2C300%20L55%2C275%20L10%2C275%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M235%2C300%20L235%2C240%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.11%22%20stroke%3D%22none%22%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2220%22%20cy%3D%2240%22%20r%3D%223.2%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2295%22%20cy%3D%22120%22%20r%3D%223.2%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22170%22%20cy%3D%22205%22%20r%3D%224%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22260%22%20cy%3D%2225%22%20r%3D%223.2%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22205%22%20cy%3D%22155%22%20r%3D%223.2%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22115%22%20cy%3D%22255%22%20r%3D%223.2%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22185%22%20cy%3D%22195%22%20r%3D%223.2%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22275%22%20cy%3D%22180%22%20r%3D%223.2%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22225%22%20cy%3D%22265%22%20r%3D%223.6%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2265%22%20cy%3D%22140%22%20r%3D%223.2%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22245%22%20cy%3D%2260%22%20r%3D%223.2%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%2210%22%20r%3D%222.8%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2255%22%20cy%3D%22275%22%20r%3D%223.2%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22235%22%20cy%3D%22240%22%20r%3D%223.2%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20fill%3D%22none%22%20stroke%3D%22%23ffffff%22%20stroke-width%3D%221.2%22%20stroke-opacity%3D%220.08%22%3E%0A%20%20%20%20%3Crect%20x%3D%22100%22%20y%3D%2240%22%20width%3D%2242%22%20height%3D%2226%22%20rx%3D%221.5%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M108%2C40%20L108%2C32%20M118%2C40%20L118%2C32%20M128%2C40%20L128%2C32%20M134%2C40%20L134%2C32%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M108%2C66%20L108%2C74%20M118%2C66%20L118%2C74%20M128%2C66%20L128%2C74%20M134%2C66%20L134%2C74%22/%3E%0A%20%20%20%20%3Crect%20x%3D%22205%22%20y%3D%22222%22%20width%3D%2238%22%20height%3D%2224%22%20rx%3D%221.5%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M212%2C222%20L212%2C214%20M222%2C222%20L222%2C214%20M232%2C222%20L232%2C214%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M212%2C246%20L212%2C254%20M222%2C246%20L222%2C254%20M232%2C246%20L232%2C254%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20fill%3D%22%23ffffff%22%20fill-opacity%3D%220.06%22%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22150%22%20cy%3D%22150%22%20r%3D%221.4%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22280%22%20cy%3D%22280%22%20r%3D%221.4%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2230%22%20cy%3D%22200%22%20r%3D%221.4%22/%3E%0A%20%20%20%20%3Ccircle%20cx%3D%22190%22%20cy%3D%2290%22%20r%3D%221.4%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E");
       }
 
       /* Template's primary button hardcodes white text for a purple fill;
-         our sage fill needs dark text to clear 4.5:1 contrast (white on
-         sage is only ~2.9:1). */
+         our gold fill needs dark text to clear 4.5:1 contrast (white on
+         gold is only ~2.4:1). */
       .tj-btn-primary,
       .tj-btn-primary i {
          color: #17140f;
       }
 
-      /* ===== GLOBAL BACKGROUND ===== */
+      /* ===== GLOBAL BACKGROUND =====
+         The circuit-board motif lives on each section's OWN background
+         (see .bubble-section / .hero-section below) — an element's own
+         background-image paints on top of its backdrop-filter blur (blur
+         only affects what's rendered *behind* the element), so the
+         pattern stays crisp there, and normal children always paint above
+         their parent's own background, so it can never sit on top of
+         text/content. The gaps *between* sections use a different, more
+         understated motif on purpose — an Art Deco gold diamond trellis —
+         so the circuit-board look reads as "this is a panel of content,"
+         not as generic page wallpaper repeated everywhere. */
       body {
-         background: linear-gradient(145deg, #14110c 0%, #1e1a15 50%, #17140f 100%);
-         background-attachment: fixed;
+         background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2048%2048%22%3E%0A%20%20%3Cg%20stroke%3D%22%23ddbb78%22%20stroke-width%3D%221%22%20stroke-opacity%3D%220.13%22%20fill%3D%22none%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2C48%20L48%2C0%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2C0%20L48%2C48%22/%3E%0A%20%20%3C/g%3E%0A%20%20%3Cg%20fill%3D%22%23ddbb78%22%20fill-opacity%3D%220.17%22%3E%0A%20%20%20%20%3Cpath%20d%3D%22M24.0%2C21.0%20L27.0%2C24.0%20L24.0%2C27.0%20L21.0%2C24.0%20Z%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2C-3%20L3%2C0%20L0%2C3%20L-3%2C0%20Z%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M48%2C45%20L51%2C48%20L48%2C51%20L45%2C48%20Z%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M0%2C51%20L3%2C48%20L0%2C45%20L-3%2C48%20Z%22/%3E%0A%20%20%20%20%3Cpath%20d%3D%22M48%2C3%20L51%2C0%20L48%2C-3%20L45%2C0%20Z%22/%3E%0A%20%20%3C/g%3E%0A%3C/svg%3E"), linear-gradient(145deg, #413727 0%, #483e32 50%, #423a2b 100%);
+         background-repeat: repeat, no-repeat;
+         background-size: 48px 48px, cover;
+         /* background-attachment: fixed was here — it forces the browser
+            to recompute/repaint this background on every scroll frame in
+            most engines, one of the most well-documented causes of janky
+            scrolling. Scrolls with content now (the default), which is
+            also more correct: this pattern lives in the gaps *between*
+            sections, so it should move with the sections, not float
+            fixed in the viewport while they scroll past it. */
          min-height: 100vh;
       }
 
@@ -102,6 +120,11 @@
          border-radius: 50%;
          opacity: 0.5;
          animation: rise 10s infinite ease-in;
+         /* Was animating `bottom` (a layout property — forces a reflow on
+            every frame, for 20 elements, continuously, forever). Moved the
+            whole rise to `transform` below, which the compositor can run
+            without touching layout or paint at all. */
+         will-change: transform;
       }
       .bubble:nth-child(1) { left: 10%; width: 20px; height: 20px; animation-duration: 8s; }
       .bubble:nth-child(2) { left: 20%; width: 30px; height: 30px; animation-duration: 12s; animation-delay: 1s; }
@@ -124,39 +147,130 @@
       .bubble:nth-child(19) { left: 5%; width: 27px; height: 27px; animation-duration: 8.8s; animation-delay: 2.9s; }
       .bubble:nth-child(20) { left: 68%; width: 37px; height: 37px; animation-duration: 12.2s; animation-delay: 0.4s; }
       @keyframes rise {
-         0% { bottom: -100px; transform: translateX(0); }
-         50% { transform: translateX(100px); }
-         100% { bottom: 1080px; transform: translateX(-200px); }
+         0% { transform: translate(0, 0); }
+         50% { transform: translate(100px, -640px); }
+         100% { transform: translate(-200px, -1180px); }
+      }
+
+      /* ===== PRELOADER CIRCUIT LOADER =====
+         Circuit-board line art on the loading screen, with bright gold
+         "runner" segments traveling along the traces on a loop
+         (stroke-dasharray/dashoffset, each path's cycle length and
+         duration computed from its actual geometry so the glow moves at a
+         consistent visual speed regardless of trace length) plus an SVG
+         Gaussian-blur filter for the glow itself. A secondary static fill
+         layer (no glow) covers the gaps between the primary glowing
+         traces so there's no empty dead space on the loading screen. */
+      .circuit-loader-svg {
+         position: absolute;
+         inset: 0;
+         width: 100%;
+         height: 100%;
+         z-index: 1;
+         pointer-events: none;
+      }
+      .circuit-runner {
+         stroke-dashoffset: 0;
+      }
+      @keyframes circuit-travel-0 { to { stroke-dashoffset: -124.0; } }
+      @keyframes circuit-travel-1 { to { stroke-dashoffset: -333.0; } }
+      @keyframes circuit-travel-2 { to { stroke-dashoffset: -290.0; } }
+      @keyframes circuit-travel-3 { to { stroke-dashoffset: -290.0; } }
+      @keyframes circuit-travel-4 { to { stroke-dashoffset: -212.0; } }
+      @keyframes circuit-travel-5 { to { stroke-dashoffset: -376.0; } }
+      @keyframes circuit-travel-6 { to { stroke-dashoffset: -238.0; } }
+      @keyframes circuit-travel-7 { to { stroke-dashoffset: -200.0; } }
+      @keyframes circuit-travel-8 { to { stroke-dashoffset: -261.0; } }
+      @keyframes circuit-travel-9 { to { stroke-dashoffset: -341.0; } }
+      @keyframes circuit-travel-10 { to { stroke-dashoffset: -324.0; } }
+      @keyframes circuit-travel-11 { to { stroke-dashoffset: -228.0; } }
+      @keyframes circuit-travel-12 { to { stroke-dashoffset: -402.0; } }
+      @keyframes circuit-travel-13 { to { stroke-dashoffset: -450.0; } }
+      @keyframes circuit-travel-14 { to { stroke-dashoffset: -503.0; } }
+      @keyframes circuit-travel-15 { to { stroke-dashoffset: -415.0; } }
+      @keyframes circuit-travel-16 { to { stroke-dashoffset: -433.0; } }
+      @keyframes circuit-travel-17 { to { stroke-dashoffset: -236.0; } }
+      @keyframes circuit-travel-18 { to { stroke-dashoffset: -348.0; } }
+      @keyframes circuit-travel-19 { to { stroke-dashoffset: -530.0; } }
+      @keyframes circuit-travel-20 { to { stroke-dashoffset: -208.0; } }
+      @keyframes circuit-travel-21 { to { stroke-dashoffset: -547.0; } }
+      @keyframes circuit-travel-22 { to { stroke-dashoffset: -536.0; } }
+      @keyframes circuit-travel-23 { to { stroke-dashoffset: -417.0; } }
+      @keyframes circuit-travel-24 { to { stroke-dashoffset: -248.0; } }
+      @keyframes circuit-travel-25 { to { stroke-dashoffset: -302.0; } }
+      @keyframes circuit-travel-26 { to { stroke-dashoffset: -302.0; } }
+      @keyframes circuit-travel-27 { to { stroke-dashoffset: -194.0; } }
+      @keyframes circuit-travel-28 { to { stroke-dashoffset: -233.0; } }
+      @keyframes circuit-travel-29 { to { stroke-dashoffset: -289.0; } }
+      @keyframes circuit-travel-30 { to { stroke-dashoffset: -615.0; } }
+      @keyframes circuit-travel-31 { to { stroke-dashoffset: -250.0; } }
+      @keyframes circuit-travel-32 { to { stroke-dashoffset: -376.0; } }
+      @keyframes circuit-travel-33 { to { stroke-dashoffset: -220.0; } }
+      @keyframes circuit-travel-34 { to { stroke-dashoffset: -387.0; } }
+      @keyframes circuit-travel-35 { to { stroke-dashoffset: -169.0; } }
+      @keyframes circuit-travel-36 { to { stroke-dashoffset: -404.0; } }
+      @keyframes circuit-travel-37 { to { stroke-dashoffset: -149.0; } }
+      @keyframes circuit-travel-38 { to { stroke-dashoffset: -151.0; } }
+      @keyframes circuit-travel-39 { to { stroke-dashoffset: -280.0; } }
+      @keyframes circuit-travel-40 { to { stroke-dashoffset: -321.0; } }
+      @keyframes circuit-travel-41 { to { stroke-dashoffset: -258.0; } }
+      @keyframes circuit-travel-42 { to { stroke-dashoffset: -521.0; } }
+      @keyframes circuit-travel-43 { to { stroke-dashoffset: -178.0; } }
+      @keyframes circuit-travel-44 { to { stroke-dashoffset: -463.0; } }
+
+      /* Static elements paint below positioned ones regardless of DOM
+         order, so the "Loading" text needs its own stacking context to
+         stay above the circuit-loader-svg (position:absolute, z-index:1). */
+      .preloader-heading {
+         position: relative;
+         z-index: 2;
       }
 
       /* ===== HEADER – dynamic black transparent (darker shade of background) ===== */
       .tj-header-area {
-         background: rgba(20, 17, 12, 0.7) !important;  /* warm espresso, transparent */
-         backdrop-filter: blur(8px);
-         -webkit-backdrop-filter: blur(8px);
+         /* Was backdrop-filter: blur(8px) — a *fixed*-position element
+            has to re-blur everything scrolling behind it on every single
+            frame for as long as the page scrolls, the single worst case
+            for this property. Removed and raised the opacity to
+            compensate; still reads as a translucent dark bar, just
+            without continuously re-computing a blur underneath it. */
+         background: rgba(65, 55, 39, 0.9) !important;
          transition: background 0.3s;
          z-index: 100;
       }
       .tj-header-area.header-sticky {
-         background: rgba(12, 10, 7, 0.88) !important;   /* even darker on sticky */
+         background: rgba(57, 48, 33, 0.88) !important;   /* even darker on sticky */
       }
 
-      /* ===== SECTION BUBBLES ===== */
+      /* ===== SECTIONS ===== */
       .bubble-section {
-         background: rgba(30, 26, 20, 0.45);
-         backdrop-filter: blur(10px);
-         -webkit-backdrop-filter: blur(10px);
-         border-radius: 50px;
+         background-color: rgba(73, 63, 49, 0.45);
+         background-image: var(--circuit-pattern);
+         background-repeat: repeat;
+         background-size: 320px 320px;
+         /* Blur cut from 10px to 6px — still reads as frosted glass, cuts
+            the per-frame compositing cost on every one of these panels. */
+         backdrop-filter: blur(6px);
+         -webkit-backdrop-filter: blur(6px);
+         border-radius: 18px;
          padding: 60px 0;
          margin: 50px 0;
          box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.8);
          border: 1px solid rgba(255, 255, 255, 0.08);
          animation: float 7s ease-in-out infinite;
+         will-change: transform;
          transition: transform 0.2s;
          position: relative;
+         /* Clips the flowing streak below to this panel's rounded
+            corners instead of spilling past them. */
+         overflow: hidden;
          z-index: 1;
          .red-text {
-            color: #8FC29B;
+            /* Bard College's actual institutional red (#AD1A1F) — a
+               deliberate exception to the one-accent rule: this names a
+               specific outside institution, so its own brand color is the
+               correct signal here, not decoration. */
+            color: #AD1A1F;
             font-size: 115%;
             font-weight: inherit;
             vertical-align: baseline;
@@ -166,6 +280,34 @@
          0% { transform: translateY(0px); }
          50% { transform: translateY(-8px); }
          100% { transform: translateY(0px); }
+      }
+
+      /* ===== FLOWING CIRCUIT LIGHT (replaces the static gold glow) =====
+         A soft diagonal band of light sweeps across each panel on a loop,
+         so it reads as current traveling through the zigzag traces rather
+         than a fixed highlight sitting on top of them. Pure `transform`
+         animation — no SVG, no filter, no repaint of the pattern itself —
+         so it doesn't reintroduce the cost we just cut. */
+      .bubble-section::before,
+      .hero-section::before {
+         content: "";
+         position: absolute;
+         inset: -30% -20%;
+         background: linear-gradient(100deg, transparent 42%, rgba(221, 187, 120, 0.16) 50%, transparent 58%);
+         transform: translateX(-35%);
+         animation: circuit-flow 9s linear infinite;
+         pointer-events: none;
+         z-index: 0;
+         will-change: transform;
+      }
+      @keyframes circuit-flow {
+         from { transform: translateX(-35%); }
+         to { transform: translateX(35%); }
+      }
+      .bubble-section > .container,
+      .hero-section > .container {
+         position: relative;
+         z-index: 1;
       }
       /* make sure text remains readable */
       .bubble-section * {
@@ -180,12 +322,17 @@
 
       /* ---- HERO SECTION DARKER BACKGROUND (overrides bubble-section) ---- */
       .hero-section {
-         background: rgba(10, 9, 6, 0.95) !important; /* much darker, almost black */
+         background-color: rgba(55, 49, 33, 0.95) !important; /* much darker, almost black */
+         background-image: var(--circuit-pattern) !important;
+         background-repeat: repeat !important;
+         background-size: 320px 320px !important;
+         position: relative;
+         overflow: hidden;
       }
 
       /* ---- FOOTER BLACK TRANSPARENT ---- */
       .tj-footer-area {
-         background: rgba(12, 10, 7, 0.75) !important;
+         background: rgba(57, 48, 33, 0.75) !important;
          backdrop-filter: blur(4px);
          -webkit-backdrop-filter: blur(4px);
          border-top: 1px solid rgba(255,255,255,0.05);
@@ -238,17 +385,21 @@
       /* Make resume-item clickable via overlay link (bubble style) */
       .resume-item {
          position: relative;
-         background: rgba(30, 26, 20, 0.7);
+         /* Was backdrop-filter: blur(4px) — harmless on one element, but
+            this card repeats 8x on the page, each blurring independently.
+            What's "behind" each card is just the section's own already-
+            blurred panel background, so the extra blur bought nothing
+            visible; raised the opacity slightly instead. */
+         background: rgba(73, 63, 49, 0.85);
          border-radius: 12px;
          padding: 25px;
          border: 1px solid rgba(255, 255, 255, 0.08);
          transition: transform 0.2s, border-color 0.2s;
-         backdrop-filter: blur(4px);
          width: 100%;
       }
       .resume-item:hover {
          transform: translateY(-4px);
-         border-color: rgba(111, 163, 122, 0.4);
+         border-color: rgba(201, 161, 90, 0.4);
       }
       .resume-item .card-link {
          position: absolute;
@@ -270,22 +421,22 @@
 
       /* ===== LINKS IN RESEARCH & ECA (underlined text) ===== */
       .resume-item a:not(.card-link) {
-         color: #8FC29B;  /* sage accent */
+         color: #DDBB78;  /* sage accent */
          text-decoration: underline;
          text-underline-offset: 4px;
          text-decoration-color: rgba(143, 194, 155, 0.5);
          transition: color 0.2s;
       }
       .resume-item a:not(.card-link):hover {
-         color: #A9D6B4;
+         color: #E8CFA0;
       }
 
-      /* ===== VIDEO TEXT BUBBLE ===== */
+      /* ===== VIDEO TEXT PANEL ===== */
       .video-text-bubble {
-         background: rgba(18, 15, 11, 0.82);
-         backdrop-filter: blur(12px);
-         -webkit-backdrop-filter: blur(12px);
-         border-radius: 30px;
+         background: rgba(62, 52, 38, 0.86);
+         backdrop-filter: blur(6px);
+         -webkit-backdrop-filter: blur(6px);
+         border-radius: 14px;
          padding: 30px;
          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
          border: 1px solid rgba(243, 239, 231, 0.1);
@@ -325,62 +476,35 @@
 
 
 
-      /* 2. Funfact items as separate transparent bubbles */
-      .funfact-item {
-         background: rgba(30, 26, 20, 0.6) !important;
-         backdrop-filter: blur(4px);
-         -webkit-backdrop-filter: blur(4px);
-         border-radius: 30px !important;
-         padding: 20px 15px !important;
-         border: 1px solid rgba(243, 239, 231, 0.1) !important;
-         box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5) !important;
-         transition: transform 0.2s;
-         margin: 10px 0;
-         width: 100%;
-      }
-      .funfact-item:hover {
-         transform: translateY(-4px);
-         border-color: rgba(111, 163, 122, 0.4);
-      }
-      /* adjust number/text alignment inside bubble */
-      .funfact-item .number {
-         font-size: 2.5rem;
-         font-weight: 700;
-         margin-right: 15px;
-      }
-      .funfact-item .text {
-         font-size: 1rem;
-         line-height: 1.4;
-      }
-
-      /* 3. Hero paragraph inside a bubble */
+      /* Hero bio panel */
       .hero-text-bubble {
          margin: 20px 0 10px -10px;
-         background: rgba(30, 26, 20, 0.7);
+         background: rgba(73, 63, 49, 0.7);
          backdrop-filter: blur(4px);
          -webkit-backdrop-filter: blur(4px);
-         border-radius: 25px;
+         border-radius: 14px;
          padding: 25px;
          border: 1px solid rgba(243, 239, 231, 0.1);
          box-shadow: 0 15px 25px -8px rgba(0, 0, 0, 0.6);
          color: #fff;
       }
 
-      /* 4. Video container bubble outline */
+      /* Video container outline */
       .video-container {
-         border-radius: 40px;
+         border-radius: 14px;
          overflow: hidden;
          box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.8), 0 0 0 2px rgba(255, 255, 255, 0.05);
          border: 1px solid rgba(255, 255, 255, 0.15);
          background: rgba(0,0,0,0.3);
       }
 
-      /* 5. Project bubbles (replacing portfolio grid) */
+      /* Project cards */
       .project-bubble {
-         background: rgba(30, 26, 20, 0.7);
-         backdrop-filter: blur(4px);
-         -webkit-backdrop-filter: blur(4px);
-         border-radius: 25px;
+         /* Was backdrop-filter: blur(4px) — this card repeats 12x in the
+            grid (the biggest single multiplier on the page); each one
+            blurring independently added up. Same fix as .resume-item. */
+         background: rgba(73, 63, 49, 0.85);
+         border-radius: 14px;
          padding: 20px;
          border: 1px solid rgba(243, 239, 231, 0.1);
          box-shadow: 0 15px 25px -8px rgba(0, 0, 0, 0.6);
@@ -391,8 +515,8 @@
       }
       .project-bubble:hover {
          transform: translateY(-6px);
-         border-color: rgba(111, 163, 122, 0.45);
-         background: rgba(34, 29, 23, 0.82);
+         border-color: rgba(201, 161, 90, 0.45);
+         background: rgba(77, 65, 52, 0.82);
       }
       .project-bubble a {
          text-decoration: none;
@@ -422,7 +546,7 @@
       .project-bubble .project-link-icon {
          text-align: right;
          font-size: 1.2rem;
-         color: #8FC29B;
+         color: #DDBB78;
       }
       /* remove old portfolio filter and items style, but we keep container */
       .portfolio-filter, .portfolio-box .portfolio-item, .gutter-sizer, .portfolio-sizer {
@@ -432,26 +556,83 @@
       .hero-image-box img {
       width: 70% !important;
       height: auto !important;
-      max-width: 70% !important; 
-      }  
+      max-width: 70% !important;
+      }
 
       /* Optional – adjust positioning slightly */
       .hero-image-box {
       transform: translateX(25px) !important;
       }
 
-      /* 1. Silver intro text */
-      .intro_text svg text {
-         
-      stroke: #ffffff;        /* outline color */
-      stroke-width: 2px;      /* outline thickness */
-      paint-order: stroke;    /* ensures stroke is drawn on top */            
+      /* Funfact items as separate transparent bubbles */
+      .funfact-item {
+         /* backdrop-filter: blur(4px) removed — same reasoning as
+            .resume-item / .project-bubble, 4 more repeats of it. */
+         background: rgba(73, 63, 49, 0.75) !important;
+         border-radius: 30px !important;
+         padding: 20px 15px !important;
+         border: 1px solid rgba(243, 239, 231, 0.1) !important;
+         box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5) !important;
+         transition: transform 0.2s;
+         margin: 10px 0;
+         width: 100%;
+      }
+      .funfact-item:hover {
+         transform: translateY(-4px);
+         border-color: rgba(201, 161, 90, 0.4);
+      }
+      /* adjust number/text alignment inside bubble */
+      .funfact-item .number {
+         font-size: 2.5rem;
+         font-weight: 700;
+         margin-right: 15px;
+      }
+      .funfact-item .text {
+         font-size: 1rem;
+         line-height: 1.4;
+      }
+
+      /* Silver intro text — main.css's .hero-section .intro_text svg text
+         rule (two classes) beats a bare .intro_text svg text (one class),
+         so the white outline here was silently losing to the theme's dark
+         --tj-theme-secondary stroke. Matched selector specificity to win. */
+      .hero-section .intro_text svg text {
+         stroke: #ffffff;        /* outline color */
+         stroke-width: 2px;      /* outline thickness */
+         paint-order: stroke;    /* ensures stroke is drawn on top */
+      }
+
+      /* Inline SVG icons — replaces font-awesome-pro (500KB CSS + ~450KB
+         of woff2 font files) which existed on this page solely to render
+         6 icons: linkedin, github, facebook, globe, volume-mute/up. */
+      .icon-svg {
+         width: 16px;
+         height: 16px;
+         fill: currentColor;
+      }
+      .social-icons li a svg {
+         transition: 0.3s;
+      }
+      .video-container .mute-overlay svg {
+         pointer-events: none;
       }
 
    </style>
 </head>
 
 <body>
+   <!-- Inline icon sprite (replaces font-awesome-pro for the 6 icons actually used) -->
+   <svg class="sr-only" aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden;">
+      <defs>
+         <symbol id="icon-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3V9Zm7 0h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97V21h-4V9Z"/></symbol>
+         <symbol id="icon-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.15-1.11-1.46-1.11-1.46-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5.02 0c1.9-1.3 2.74-1.02 2.74-1.02.56 1.38.21 2.4.1 2.65.65.7 1.03 1.59 1.03 2.68 0 3.84-2.35 4.68-4.58 4.93.36.31.68.92.68 1.85V21c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></symbol>
+         <symbol id="icon-facebook" viewBox="0 0 24 24"><path fill="currentColor" d="M13.5 21v-7.6h2.55l.38-2.96h-2.93V8.53c0-.86.24-1.44 1.47-1.44h1.57V4.46A21 21 0 0 0 14.3 4.3c-2.28 0-3.85 1.39-3.85 3.95v2.19H7.88v2.96h2.57V21h3.05Z"/></symbol>
+         <symbol id="icon-globe" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 3.8 5.7 3.8 9s-1.3 6.5-3.8 9c-2.5-2.5-3.8-5.7-3.8-9s1.3-6.5 3.8-9Z"/></g></symbol>
+         <symbol id="icon-volume-mute" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path d="m16 9 5 6m0-6-5 6"/></g></symbol>
+         <symbol id="icon-volume-up" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9v6h4l5 4V5L8 9H4Z"/><path d="M16.5 9a4.2 4.2 0 0 1 0 6M19 6.5a8 8 0 0 1 0 11"/></g></symbol>
+      </defs>
+   </svg>
+
    <!-- Bubble Animation Container -->
    <div class="bubbles">
       <div class="bubble"></div><div class="bubble"></div><div class="bubble"></div><div class="bubble"></div><div class="bubble"></div>
@@ -505,6 +686,847 @@
    <div class="preloader">
       <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
          <path id="preloaderSvg" d="M0,1005S175,995,500,995s500,5,500,5V0H0Z"></path>
+      </svg>
+
+      <svg class="circuit-loader-svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice">
+        <defs>
+          <filter id="circuit-glow" x="-100%" y="-100%" width="300%" height="300%">
+            <feGaussianBlur stdDeviation="4.5" result="blur"/>
+            <feMerge>
+              <feMergeNode in="blur"/>
+              <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+          </filter>
+        </defs>
+        <g fill="none" stroke="#ffffff" stroke-width="1.3" stroke-opacity="0.075">
+          <path d="M31,73 L129,73 L129,23 L164,23"/>
+          <path d="M132,28 L46,28 L46,10"/>
+          <path d="M251,48 L196,48 L196,10 L274,10"/>
+          <path d="M411,57 L329,57 L329,95 L246,95"/>
+          <path d="M536,59 L536,10 L496,10"/>
+          <path d="M593,33 L528,33 L528,10"/>
+          <path d="M733,10 L733,10 L656,10"/>
+          <path d="M867,41 L867,10 L917,10"/>
+          <path d="M962,35 L962,10 L887,10 L887,10"/>
+          <path d="M1065,52 L1065,96 L1104,96 L1104,10"/>
+          <path d="M1206,54 L1206,107 L1140,107 L1140,10"/>
+          <path d="M1292,16 L1357,16 L1357,115 L1308,115"/>
+          <path d="M1388,16 L1388,59 L1481,59 L1481,110"/>
+          <path d="M1526,20 L1526,10 L1588,10 L1588,66"/>
+          <path d="M12,159 L10,159 L10,252 L10,252"/>
+          <path d="M155,175 L218,175 L218,265"/>
+          <path d="M248,164 L248,209 L311,209 L311,256"/>
+          <path d="M413,138 L413,62 L331,62"/>
+          <path d="M538,137 L538,83 L444,83"/>
+          <path d="M596,137 L679,137 L679,76 L733,76"/>
+          <path d="M706,152 L800,152 L800,223"/>
+          <path d="M879,175 L808,175 L808,216 L879,216"/>
+          <path d="M943,127 L943,211 L884,211"/>
+          <path d="M1068,132 L1140,132 L1140,89"/>
+          <path d="M1161,168 L1225,168 L1225,78 L1268,78"/>
+          <path d="M1321,168 L1321,101 L1382,101 L1382,10"/>
+          <path d="M1441,125 L1441,204 L1401,204"/>
+          <path d="M1497,118 L1497,63 L1573,63"/>
+          <path d="M63,217 L10,217 L10,157"/>
+          <path d="M184,210 L184,263 L108,263 L108,197"/>
+          <path d="M281,212 L281,157 L328,157 L328,117"/>
+          <path d="M404,270 L484,270 L484,329"/>
+          <path d="M483,262 L581,262 L581,177"/>
+          <path d="M600,224 L524,224 L524,318 L462,318"/>
+          <path d="M768,220 L731,220 L731,158 L778,158"/>
+          <path d="M878,267 L878,363 L926,363"/>
+          <path d="M928,253 L928,352 L882,352 L882,312"/>
+          <path d="M1066,272 L1066,356 L1124,356"/>
+          <path d="M1215,238 L1215,286 L1263,286"/>
+          <path d="M1323,241 L1399,241 L1399,203 L1334,203"/>
+          <path d="M1402,259 L1345,259 L1345,311 L1440,311"/>
+          <path d="M1497,259 L1548,259 L1548,341"/>
+          <path d="M82,335 L82,247 L10,247 L10,283"/>
+          <path d="M187,360 L243,360 L243,274"/>
+          <path d="M278,335 L239,335 L239,402"/>
+          <path d="M366,338 L366,286 L415,286"/>
+          <path d="M506,356 L549,356 L549,281 L466,281"/>
+          <path d="M641,329 L641,388 L593,388 L593,341"/>
+          <path d="M709,367 L648,367 L648,299"/>
+          <path d="M860,317 L860,358 L767,358 L767,448"/>
+          <path d="M929,329 L855,329 L855,425"/>
+          <path d="M1078,322 L1078,243 L1120,243 L1120,292"/>
+          <path d="M1180,313 L1097,313 L1097,401 L1159,401"/>
+          <path d="M1282,330 L1350,330 L1350,291"/>
+          <path d="M1442,353 L1442,312 L1503,312"/>
+          <path d="M1528,328 L1566,328 L1566,266 L1590,266"/>
+          <path d="M59,435 L24,435 L24,373 L85,373"/>
+          <path d="M160,421 L204,421 L204,461"/>
+          <path d="M295,421 L226,421 L226,463 L142,463"/>
+          <path d="M377,464 L377,398 L451,398"/>
+          <path d="M475,456 L475,547 L400,547"/>
+          <path d="M644,422 L548,422 L548,362"/>
+          <path d="M708,473 L637,473 L637,552"/>
+          <path d="M820,449 L820,394 L883,394 L883,458"/>
+          <path d="M939,410 L1003,410 L1003,500 L942,500"/>
+          <path d="M1050,438 L1050,370 L1012,370"/>
+          <path d="M1160,458 L1228,458 L1228,380"/>
+          <path d="M1270,414 L1369,414 L1369,361"/>
+          <path d="M1434,457 L1492,457 L1492,502"/>
+          <path d="M1564,440 L1564,345 L1491,345 L1491,289"/>
+          <path d="M26,536 L26,443 L113,443 L113,401"/>
+          <path d="M173,533 L173,461 L224,461 L224,544"/>
+          <path d="M260,574 L344,574 L344,524"/>
+          <path d="M376,544 L376,643 L294,643 L294,692"/>
+          <path d="M514,538 L514,495 L440,495 L440,458"/>
+          <path d="M625,530 L625,592 L552,592 L552,650"/>
+          <path d="M709,511 L709,447 L785,447"/>
+          <path d="M841,527 L930,527 L930,601"/>
+          <path d="M970,544 L877,544 L877,505 L815,505"/>
+          <path d="M1052,569 L981,569 L981,525"/>
+          <path d="M1193,552 L1193,598 L1154,598 L1154,698"/>
+          <path d="M1322,510 L1322,576 L1275,576 L1275,524"/>
+          <path d="M1392,568 L1392,620 L1472,620 L1472,566"/>
+          <path d="M1503,543 L1453,543 L1453,639"/>
+          <path d="M26,635 L116,635 L116,570"/>
+          <path d="M189,638 L189,583 L129,583"/>
+          <path d="M282,621 L240,621 L240,564"/>
+          <path d="M406,612 L406,536 L323,536"/>
+          <path d="M532,660 L532,571 L624,571"/>
+          <path d="M591,623 L494,623 L494,712"/>
+          <path d="M733,619 L789,619 L789,655"/>
+          <path d="M881,613 L881,698 L790,698 L790,612"/>
+          <path d="M958,660 L920,660 L920,579 L992,579"/>
+          <path d="M1053,610 L969,610 L969,645"/>
+          <path d="M1161,655 L1161,729 L1089,729"/>
+          <path d="M1290,624 L1248,624 L1248,557"/>
+          <path d="M1430,633 L1430,540 L1367,540 L1367,599"/>
+          <path d="M1517,669 L1424,669 L1424,572"/>
+          <path d="M51,759 L10,759 L10,850"/>
+          <path d="M175,758 L255,758 L255,686"/>
+          <path d="M265,752 L265,699 L183,699"/>
+          <path d="M408,749 L352,749 L352,697 L306,697"/>
+          <path d="M483,720 L483,802 L430,802"/>
+          <path d="M630,717 L630,652 L691,652"/>
+          <path d="M749,743 L793,743 L793,707 L887,707"/>
+          <path d="M864,748 L864,670 L784,670 L784,734"/>
+          <path d="M945,756 L884,756 L884,807 L818,807"/>
+          <path d="M1086,737 L1086,680 L1146,680"/>
+          <path d="M1222,717 L1222,671 L1153,671 L1153,762"/>
+          <path d="M1309,757 L1309,846 L1370,846"/>
+          <path d="M1398,754 L1398,850 L1475,850 L1475,890"/>
+          <path d="M1502,715 L1502,794 L1544,794 L1544,711"/>
+          <path d="M85,872 L42,872 L42,785 L10,785"/>
+          <path d="M186,820 L132,820 L132,890 L74,890"/>
+          <path d="M260,834 L260,890 L295,890 L295,890"/>
+          <path d="M378,842 L378,890 L288,890"/>
+          <path d="M475,847 L475,890 L399,890 L399,812"/>
+          <path d="M654,853 L654,780 L701,780 L701,723"/>
+          <path d="M713,836 L713,756 L791,756"/>
+          <path d="M826,855 L826,792 L897,792"/>
+          <path d="M957,864 L996,864 L996,890 L945,890"/>
+          <path d="M1080,866 L1136,866 L1136,890"/>
+          <path d="M1182,837 L1124,837 L1124,801"/>
+          <path d="M1319,871 L1319,890 L1253,890 L1253,890"/>
+          <path d="M1429,832 L1344,832 L1344,885 L1281,885"/>
+          <path d="M1559,829 L1590,829 L1590,890 L1590,890"/>
+        </g>
+        <g fill="none" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.10">
+          <path d="M47,32 L10,32 L10,10 L10,10 L10,75"/>
+          <path d="M233,40 L65,40 L65,10 L200,10 L200,10"/>
+          <path d="M377,95 L508,95 L508,10 L434,10"/>
+          <path d="M584,67 L584,208 L733,208"/>
+          <path d="M798,60 L706,60 L706,10 L776,10"/>
+          <path d="M953,97 L814,97 L814,172 L896,172 L896,252"/>
+          <path d="M1122,105 L1122,239 L1226,239"/>
+          <path d="M1315,70 L1387,70 L1387,10 L1455,10"/>
+          <path d="M1498,107 L1590,107 L1590,170 L1484,170"/>
+          <path d="M62,218 L154,218 L154,397 L224,397"/>
+          <path d="M231,223 L231,395 L383,395"/>
+          <path d="M434,232 L351,232 L351,87"/>
+          <path d="M594,251 L673,251 L673,390 L489,390"/>
+          <path d="M769,276 L769,387 L881,387 L881,245 L796,245"/>
+          <path d="M946,208 L886,208 L886,338 L746,338 L746,511"/>
+          <path d="M1098,221 L1098,99 L1268,99 L1268,222"/>
+          <path d="M1270,207 L1270,85 L1143,85 L1143,269"/>
+          <path d="M1453,247 L1453,148 L1590,148"/>
+          <path d="M64,460 L64,589 L10,589 L10,754"/>
+          <path d="M261,398 L106,398 L106,561 L200,561 L200,679"/>
+          <path d="M458,411 L579,411 L579,324"/>
+          <path d="M594,437 L740,437 L740,275 L617,275 L617,391"/>
+          <path d="M737,463 L624,463 L624,309 L435,309 L435,389"/>
+          <path d="M978,391 L978,537 L898,537 L898,474 L770,474"/>
+          <path d="M1123,456 L1035,456 L1035,616"/>
+          <path d="M1285,416 L1441,416 L1441,562"/>
+          <path d="M1514,457 L1514,329 L1340,329"/>
+          <path d="M72,628 L10,628 L10,760"/>
+          <path d="M256,606 L256,532 L349,532 L349,466"/>
+          <path d="M418,609 L279,609 L279,759"/>
+          <path d="M596,631 L596,782 L416,782 L416,612 L530,612"/>
+          <path d="M768,565 L856,565 L856,403"/>
+          <path d="M990,616 L1165,616 L1165,527 L1277,527"/>
+          <path d="M1099,618 L1215,618 L1215,514"/>
+          <path d="M1294,566 L1426,566 L1426,718 L1529,718"/>
+          <path d="M1486,564 L1486,637 L1390,637"/>
+          <path d="M42,750 L42,890 L155,890 L155,739"/>
+          <path d="M220,810 L151,810 L151,890"/>
+          <path d="M381,815 L305,815 L305,890"/>
+          <path d="M633,762 L481,762 L481,890"/>
+          <path d="M733,756 L733,627 L636,627 L636,532"/>
+          <path d="M995,741 L995,610 L868,610"/>
+          <path d="M1168,748 L1292,748 L1292,890 L1142,890 L1142,785"/>
+          <path d="M1298,769 L1298,831 L1182,831"/>
+          <path d="M1448,814 L1448,717 L1297,717 L1297,597 L1202,597"/>
+        </g>
+        <g fill="#ffffff" fill-opacity="0.12">
+          <circle cx="47" cy="32" r="3"/>
+          <circle cx="10" cy="32" r="3"/>
+          <circle cx="10" cy="10" r="3"/>
+          <circle cx="10" cy="75" r="3"/>
+          <circle cx="233" cy="40" r="3"/>
+          <circle cx="65" cy="40" r="3"/>
+          <circle cx="65" cy="10" r="3"/>
+          <circle cx="200" cy="10" r="3"/>
+          <circle cx="377" cy="95" r="3"/>
+          <circle cx="508" cy="95" r="3"/>
+          <circle cx="508" cy="10" r="3"/>
+          <circle cx="434" cy="10" r="3"/>
+          <circle cx="584" cy="67" r="3"/>
+          <circle cx="584" cy="208" r="3"/>
+          <circle cx="733" cy="208" r="3"/>
+          <circle cx="798" cy="60" r="3"/>
+          <circle cx="706" cy="60" r="3"/>
+          <circle cx="706" cy="10" r="3"/>
+          <circle cx="776" cy="10" r="3"/>
+          <circle cx="953" cy="97" r="3"/>
+          <circle cx="814" cy="97" r="3"/>
+          <circle cx="814" cy="172" r="3"/>
+          <circle cx="896" cy="172" r="3"/>
+          <circle cx="896" cy="252" r="3"/>
+          <circle cx="1122" cy="105" r="3"/>
+          <circle cx="1122" cy="239" r="3"/>
+          <circle cx="1226" cy="239" r="3"/>
+          <circle cx="1315" cy="70" r="3"/>
+          <circle cx="1387" cy="70" r="3"/>
+          <circle cx="1387" cy="10" r="3"/>
+          <circle cx="1455" cy="10" r="3"/>
+          <circle cx="1498" cy="107" r="3"/>
+          <circle cx="1590" cy="107" r="3"/>
+          <circle cx="1590" cy="170" r="3"/>
+          <circle cx="1484" cy="170" r="3"/>
+          <circle cx="62" cy="218" r="3"/>
+          <circle cx="154" cy="218" r="3"/>
+          <circle cx="154" cy="397" r="3"/>
+          <circle cx="224" cy="397" r="3"/>
+          <circle cx="231" cy="223" r="3"/>
+          <circle cx="231" cy="395" r="3"/>
+          <circle cx="383" cy="395" r="3"/>
+          <circle cx="434" cy="232" r="3"/>
+          <circle cx="351" cy="232" r="3"/>
+          <circle cx="351" cy="87" r="3"/>
+          <circle cx="594" cy="251" r="3"/>
+          <circle cx="673" cy="251" r="3"/>
+          <circle cx="673" cy="390" r="3"/>
+          <circle cx="489" cy="390" r="3"/>
+          <circle cx="769" cy="276" r="3"/>
+          <circle cx="769" cy="387" r="3"/>
+          <circle cx="881" cy="387" r="3"/>
+          <circle cx="881" cy="245" r="3"/>
+          <circle cx="796" cy="245" r="3"/>
+          <circle cx="946" cy="208" r="3"/>
+          <circle cx="886" cy="208" r="3"/>
+          <circle cx="886" cy="338" r="3"/>
+          <circle cx="746" cy="338" r="3"/>
+          <circle cx="746" cy="511" r="3"/>
+          <circle cx="1098" cy="221" r="3"/>
+          <circle cx="1098" cy="99" r="3"/>
+          <circle cx="1268" cy="99" r="3"/>
+          <circle cx="1268" cy="222" r="3"/>
+          <circle cx="1270" cy="207" r="3"/>
+          <circle cx="1270" cy="85" r="3"/>
+          <circle cx="1143" cy="85" r="3"/>
+          <circle cx="1143" cy="269" r="3"/>
+          <circle cx="1453" cy="247" r="3"/>
+          <circle cx="1453" cy="148" r="3"/>
+          <circle cx="1590" cy="148" r="3"/>
+          <circle cx="64" cy="460" r="3"/>
+          <circle cx="64" cy="589" r="3"/>
+          <circle cx="10" cy="589" r="3"/>
+          <circle cx="10" cy="754" r="3"/>
+          <circle cx="261" cy="398" r="3"/>
+          <circle cx="106" cy="398" r="3"/>
+          <circle cx="106" cy="561" r="3"/>
+          <circle cx="200" cy="561" r="3"/>
+          <circle cx="200" cy="679" r="3"/>
+          <circle cx="458" cy="411" r="3"/>
+          <circle cx="579" cy="411" r="3"/>
+          <circle cx="579" cy="324" r="3"/>
+          <circle cx="594" cy="437" r="3"/>
+          <circle cx="740" cy="437" r="3"/>
+          <circle cx="740" cy="275" r="3"/>
+          <circle cx="617" cy="275" r="3"/>
+          <circle cx="617" cy="391" r="3"/>
+          <circle cx="737" cy="463" r="3"/>
+          <circle cx="624" cy="463" r="3"/>
+          <circle cx="624" cy="309" r="3"/>
+          <circle cx="435" cy="309" r="3"/>
+          <circle cx="435" cy="389" r="3"/>
+          <circle cx="978" cy="391" r="3"/>
+          <circle cx="978" cy="537" r="3"/>
+          <circle cx="898" cy="537" r="3"/>
+          <circle cx="898" cy="474" r="3"/>
+          <circle cx="770" cy="474" r="3"/>
+          <circle cx="1123" cy="456" r="3"/>
+          <circle cx="1035" cy="456" r="3"/>
+          <circle cx="1035" cy="616" r="3"/>
+          <circle cx="1285" cy="416" r="3"/>
+          <circle cx="1441" cy="416" r="3"/>
+          <circle cx="1441" cy="562" r="3"/>
+          <circle cx="1514" cy="457" r="3"/>
+          <circle cx="1514" cy="329" r="3"/>
+          <circle cx="1340" cy="329" r="3"/>
+          <circle cx="72" cy="628" r="3"/>
+          <circle cx="10" cy="628" r="3"/>
+          <circle cx="10" cy="760" r="3"/>
+          <circle cx="256" cy="606" r="3"/>
+          <circle cx="256" cy="532" r="3"/>
+          <circle cx="349" cy="532" r="3"/>
+          <circle cx="349" cy="466" r="3"/>
+          <circle cx="418" cy="609" r="3"/>
+          <circle cx="279" cy="609" r="3"/>
+          <circle cx="279" cy="759" r="3"/>
+          <circle cx="596" cy="631" r="3"/>
+          <circle cx="596" cy="782" r="3"/>
+          <circle cx="416" cy="782" r="3"/>
+          <circle cx="416" cy="612" r="3"/>
+          <circle cx="530" cy="612" r="3"/>
+          <circle cx="768" cy="565" r="3"/>
+          <circle cx="856" cy="565" r="3"/>
+          <circle cx="856" cy="403" r="3"/>
+          <circle cx="990" cy="616" r="3"/>
+          <circle cx="1165" cy="616" r="3"/>
+          <circle cx="1165" cy="527" r="3"/>
+          <circle cx="1277" cy="527" r="3"/>
+          <circle cx="1099" cy="618" r="3"/>
+          <circle cx="1215" cy="618" r="3"/>
+          <circle cx="1215" cy="514" r="3"/>
+          <circle cx="1294" cy="566" r="3"/>
+          <circle cx="1426" cy="566" r="3"/>
+          <circle cx="1426" cy="718" r="3"/>
+          <circle cx="1529" cy="718" r="3"/>
+          <circle cx="1486" cy="564" r="3"/>
+          <circle cx="1486" cy="637" r="3"/>
+          <circle cx="1390" cy="637" r="3"/>
+          <circle cx="42" cy="750" r="3"/>
+          <circle cx="42" cy="890" r="3"/>
+          <circle cx="155" cy="890" r="3"/>
+          <circle cx="155" cy="739" r="3"/>
+          <circle cx="220" cy="810" r="3"/>
+          <circle cx="151" cy="810" r="3"/>
+          <circle cx="151" cy="890" r="3"/>
+          <circle cx="381" cy="815" r="3"/>
+          <circle cx="305" cy="815" r="3"/>
+          <circle cx="305" cy="890" r="3"/>
+          <circle cx="633" cy="762" r="3"/>
+          <circle cx="481" cy="762" r="3"/>
+          <circle cx="481" cy="890" r="3"/>
+          <circle cx="733" cy="756" r="3"/>
+          <circle cx="733" cy="627" r="3"/>
+          <circle cx="636" cy="627" r="3"/>
+          <circle cx="636" cy="532" r="3"/>
+          <circle cx="995" cy="741" r="3"/>
+          <circle cx="995" cy="610" r="3"/>
+          <circle cx="868" cy="610" r="3"/>
+          <circle cx="1168" cy="748" r="3"/>
+          <circle cx="1292" cy="748" r="3"/>
+          <circle cx="1292" cy="890" r="3"/>
+          <circle cx="1142" cy="890" r="3"/>
+          <circle cx="1142" cy="785" r="3"/>
+          <circle cx="1298" cy="769" r="3"/>
+          <circle cx="1298" cy="831" r="3"/>
+          <circle cx="1182" cy="831" r="3"/>
+          <circle cx="1448" cy="814" r="3"/>
+          <circle cx="1448" cy="717" r="3"/>
+          <circle cx="1297" cy="717" r="3"/>
+          <circle cx="1297" cy="597" r="3"/>
+          <circle cx="1202" cy="597" r="3"/>
+          <circle cx="31" cy="73" r="3"/>
+          <circle cx="129" cy="73" r="3"/>
+          <circle cx="129" cy="23" r="3"/>
+          <circle cx="164" cy="23" r="3"/>
+          <circle cx="132" cy="28" r="3"/>
+          <circle cx="46" cy="28" r="3"/>
+          <circle cx="46" cy="10" r="3"/>
+          <circle cx="251" cy="48" r="3"/>
+          <circle cx="196" cy="48" r="3"/>
+          <circle cx="196" cy="10" r="3"/>
+          <circle cx="274" cy="10" r="3"/>
+          <circle cx="411" cy="57" r="3"/>
+          <circle cx="329" cy="57" r="3"/>
+          <circle cx="329" cy="95" r="3"/>
+          <circle cx="246" cy="95" r="3"/>
+          <circle cx="536" cy="59" r="3"/>
+          <circle cx="536" cy="10" r="3"/>
+          <circle cx="496" cy="10" r="3"/>
+          <circle cx="593" cy="33" r="3"/>
+          <circle cx="528" cy="33" r="3"/>
+          <circle cx="528" cy="10" r="3"/>
+          <circle cx="733" cy="10" r="3"/>
+          <circle cx="656" cy="10" r="3"/>
+          <circle cx="867" cy="41" r="3"/>
+          <circle cx="867" cy="10" r="3"/>
+          <circle cx="917" cy="10" r="3"/>
+          <circle cx="962" cy="35" r="3"/>
+          <circle cx="962" cy="10" r="3"/>
+          <circle cx="887" cy="10" r="3"/>
+          <circle cx="1065" cy="52" r="3"/>
+          <circle cx="1065" cy="96" r="3"/>
+          <circle cx="1104" cy="96" r="3"/>
+          <circle cx="1104" cy="10" r="3"/>
+          <circle cx="1206" cy="54" r="3"/>
+          <circle cx="1206" cy="107" r="3"/>
+          <circle cx="1140" cy="107" r="3"/>
+          <circle cx="1140" cy="10" r="3"/>
+          <circle cx="1292" cy="16" r="3"/>
+          <circle cx="1357" cy="16" r="3"/>
+          <circle cx="1357" cy="115" r="3"/>
+          <circle cx="1308" cy="115" r="3"/>
+          <circle cx="1388" cy="16" r="3"/>
+          <circle cx="1388" cy="59" r="3"/>
+          <circle cx="1481" cy="59" r="3"/>
+          <circle cx="1481" cy="110" r="3"/>
+          <circle cx="1526" cy="20" r="3"/>
+          <circle cx="1526" cy="10" r="3"/>
+          <circle cx="1588" cy="10" r="3"/>
+          <circle cx="1588" cy="66" r="3"/>
+          <circle cx="12" cy="159" r="3"/>
+          <circle cx="10" cy="159" r="3"/>
+          <circle cx="10" cy="252" r="3"/>
+          <circle cx="155" cy="175" r="3"/>
+          <circle cx="218" cy="175" r="3"/>
+          <circle cx="218" cy="265" r="3"/>
+          <circle cx="248" cy="164" r="3"/>
+          <circle cx="248" cy="209" r="3"/>
+          <circle cx="311" cy="209" r="3"/>
+          <circle cx="311" cy="256" r="3"/>
+          <circle cx="413" cy="138" r="3"/>
+          <circle cx="413" cy="62" r="3"/>
+          <circle cx="331" cy="62" r="3"/>
+          <circle cx="538" cy="137" r="3"/>
+          <circle cx="538" cy="83" r="3"/>
+          <circle cx="444" cy="83" r="3"/>
+          <circle cx="596" cy="137" r="3"/>
+          <circle cx="679" cy="137" r="3"/>
+          <circle cx="679" cy="76" r="3"/>
+          <circle cx="733" cy="76" r="3"/>
+          <circle cx="706" cy="152" r="3"/>
+          <circle cx="800" cy="152" r="3"/>
+          <circle cx="800" cy="223" r="3"/>
+          <circle cx="879" cy="175" r="3"/>
+          <circle cx="808" cy="175" r="3"/>
+          <circle cx="808" cy="216" r="3"/>
+          <circle cx="879" cy="216" r="3"/>
+          <circle cx="943" cy="127" r="3"/>
+          <circle cx="943" cy="211" r="3"/>
+          <circle cx="884" cy="211" r="3"/>
+          <circle cx="1068" cy="132" r="3"/>
+          <circle cx="1140" cy="132" r="3"/>
+          <circle cx="1140" cy="89" r="3"/>
+          <circle cx="1161" cy="168" r="3"/>
+          <circle cx="1225" cy="168" r="3"/>
+          <circle cx="1225" cy="78" r="3"/>
+          <circle cx="1268" cy="78" r="3"/>
+          <circle cx="1321" cy="168" r="3"/>
+          <circle cx="1321" cy="101" r="3"/>
+          <circle cx="1382" cy="101" r="3"/>
+          <circle cx="1382" cy="10" r="3"/>
+          <circle cx="1441" cy="125" r="3"/>
+          <circle cx="1441" cy="204" r="3"/>
+          <circle cx="1401" cy="204" r="3"/>
+          <circle cx="1497" cy="118" r="3"/>
+          <circle cx="1497" cy="63" r="3"/>
+          <circle cx="1573" cy="63" r="3"/>
+          <circle cx="63" cy="217" r="3"/>
+          <circle cx="10" cy="217" r="3"/>
+          <circle cx="10" cy="157" r="3"/>
+          <circle cx="184" cy="210" r="3"/>
+          <circle cx="184" cy="263" r="3"/>
+          <circle cx="108" cy="263" r="3"/>
+          <circle cx="108" cy="197" r="3"/>
+          <circle cx="281" cy="212" r="3"/>
+          <circle cx="281" cy="157" r="3"/>
+          <circle cx="328" cy="157" r="3"/>
+          <circle cx="328" cy="117" r="3"/>
+          <circle cx="404" cy="270" r="3"/>
+          <circle cx="484" cy="270" r="3"/>
+          <circle cx="484" cy="329" r="3"/>
+          <circle cx="483" cy="262" r="3"/>
+          <circle cx="581" cy="262" r="3"/>
+          <circle cx="581" cy="177" r="3"/>
+          <circle cx="600" cy="224" r="3"/>
+          <circle cx="524" cy="224" r="3"/>
+          <circle cx="524" cy="318" r="3"/>
+          <circle cx="462" cy="318" r="3"/>
+          <circle cx="768" cy="220" r="3"/>
+          <circle cx="731" cy="220" r="3"/>
+          <circle cx="731" cy="158" r="3"/>
+          <circle cx="778" cy="158" r="3"/>
+          <circle cx="878" cy="267" r="3"/>
+          <circle cx="878" cy="363" r="3"/>
+          <circle cx="926" cy="363" r="3"/>
+          <circle cx="928" cy="253" r="3"/>
+          <circle cx="928" cy="352" r="3"/>
+          <circle cx="882" cy="352" r="3"/>
+          <circle cx="882" cy="312" r="3"/>
+          <circle cx="1066" cy="272" r="3"/>
+          <circle cx="1066" cy="356" r="3"/>
+          <circle cx="1124" cy="356" r="3"/>
+          <circle cx="1215" cy="238" r="3"/>
+          <circle cx="1215" cy="286" r="3"/>
+          <circle cx="1263" cy="286" r="3"/>
+          <circle cx="1323" cy="241" r="3"/>
+          <circle cx="1399" cy="241" r="3"/>
+          <circle cx="1399" cy="203" r="3"/>
+          <circle cx="1334" cy="203" r="3"/>
+          <circle cx="1402" cy="259" r="3"/>
+          <circle cx="1345" cy="259" r="3"/>
+          <circle cx="1345" cy="311" r="3"/>
+          <circle cx="1440" cy="311" r="3"/>
+          <circle cx="1497" cy="259" r="3"/>
+          <circle cx="1548" cy="259" r="3"/>
+          <circle cx="1548" cy="341" r="3"/>
+          <circle cx="82" cy="335" r="3"/>
+          <circle cx="82" cy="247" r="3"/>
+          <circle cx="10" cy="247" r="3"/>
+          <circle cx="10" cy="283" r="3"/>
+          <circle cx="187" cy="360" r="3"/>
+          <circle cx="243" cy="360" r="3"/>
+          <circle cx="243" cy="274" r="3"/>
+          <circle cx="278" cy="335" r="3"/>
+          <circle cx="239" cy="335" r="3"/>
+          <circle cx="239" cy="402" r="3"/>
+          <circle cx="366" cy="338" r="3"/>
+          <circle cx="366" cy="286" r="3"/>
+          <circle cx="415" cy="286" r="3"/>
+          <circle cx="506" cy="356" r="3"/>
+          <circle cx="549" cy="356" r="3"/>
+          <circle cx="549" cy="281" r="3"/>
+          <circle cx="466" cy="281" r="3"/>
+          <circle cx="641" cy="329" r="3"/>
+          <circle cx="641" cy="388" r="3"/>
+          <circle cx="593" cy="388" r="3"/>
+          <circle cx="593" cy="341" r="3"/>
+          <circle cx="709" cy="367" r="3"/>
+          <circle cx="648" cy="367" r="3"/>
+          <circle cx="648" cy="299" r="3"/>
+          <circle cx="860" cy="317" r="3"/>
+          <circle cx="860" cy="358" r="3"/>
+          <circle cx="767" cy="358" r="3"/>
+          <circle cx="767" cy="448" r="3"/>
+          <circle cx="929" cy="329" r="3"/>
+          <circle cx="855" cy="329" r="3"/>
+          <circle cx="855" cy="425" r="3"/>
+          <circle cx="1078" cy="322" r="3"/>
+          <circle cx="1078" cy="243" r="3"/>
+          <circle cx="1120" cy="243" r="3"/>
+          <circle cx="1120" cy="292" r="3"/>
+          <circle cx="1180" cy="313" r="3"/>
+          <circle cx="1097" cy="313" r="3"/>
+          <circle cx="1097" cy="401" r="3"/>
+          <circle cx="1159" cy="401" r="3"/>
+          <circle cx="1282" cy="330" r="3"/>
+          <circle cx="1350" cy="330" r="3"/>
+          <circle cx="1350" cy="291" r="3"/>
+          <circle cx="1442" cy="353" r="3"/>
+          <circle cx="1442" cy="312" r="3"/>
+          <circle cx="1503" cy="312" r="3"/>
+          <circle cx="1528" cy="328" r="3"/>
+          <circle cx="1566" cy="328" r="3"/>
+          <circle cx="1566" cy="266" r="3"/>
+          <circle cx="1590" cy="266" r="3"/>
+          <circle cx="59" cy="435" r="3"/>
+          <circle cx="24" cy="435" r="3"/>
+          <circle cx="24" cy="373" r="3"/>
+          <circle cx="85" cy="373" r="3"/>
+          <circle cx="160" cy="421" r="3"/>
+          <circle cx="204" cy="421" r="3"/>
+          <circle cx="204" cy="461" r="3"/>
+          <circle cx="295" cy="421" r="3"/>
+          <circle cx="226" cy="421" r="3"/>
+          <circle cx="226" cy="463" r="3"/>
+          <circle cx="142" cy="463" r="3"/>
+          <circle cx="377" cy="464" r="3"/>
+          <circle cx="377" cy="398" r="3"/>
+          <circle cx="451" cy="398" r="3"/>
+          <circle cx="475" cy="456" r="3"/>
+          <circle cx="475" cy="547" r="3"/>
+          <circle cx="400" cy="547" r="3"/>
+          <circle cx="644" cy="422" r="3"/>
+          <circle cx="548" cy="422" r="3"/>
+          <circle cx="548" cy="362" r="3"/>
+          <circle cx="708" cy="473" r="3"/>
+          <circle cx="637" cy="473" r="3"/>
+          <circle cx="637" cy="552" r="3"/>
+          <circle cx="820" cy="449" r="3"/>
+          <circle cx="820" cy="394" r="3"/>
+          <circle cx="883" cy="394" r="3"/>
+          <circle cx="883" cy="458" r="3"/>
+          <circle cx="939" cy="410" r="3"/>
+          <circle cx="1003" cy="410" r="3"/>
+          <circle cx="1003" cy="500" r="3"/>
+          <circle cx="942" cy="500" r="3"/>
+          <circle cx="1050" cy="438" r="3"/>
+          <circle cx="1050" cy="370" r="3"/>
+          <circle cx="1012" cy="370" r="3"/>
+          <circle cx="1160" cy="458" r="3"/>
+          <circle cx="1228" cy="458" r="3"/>
+          <circle cx="1228" cy="380" r="3"/>
+          <circle cx="1270" cy="414" r="3"/>
+          <circle cx="1369" cy="414" r="3"/>
+          <circle cx="1369" cy="361" r="3"/>
+          <circle cx="1434" cy="457" r="3"/>
+          <circle cx="1492" cy="457" r="3"/>
+          <circle cx="1492" cy="502" r="3"/>
+          <circle cx="1564" cy="440" r="3"/>
+          <circle cx="1564" cy="345" r="3"/>
+          <circle cx="1491" cy="345" r="3"/>
+          <circle cx="1491" cy="289" r="3"/>
+          <circle cx="26" cy="536" r="3"/>
+          <circle cx="26" cy="443" r="3"/>
+          <circle cx="113" cy="443" r="3"/>
+          <circle cx="113" cy="401" r="3"/>
+          <circle cx="173" cy="533" r="3"/>
+          <circle cx="173" cy="461" r="3"/>
+          <circle cx="224" cy="461" r="3"/>
+          <circle cx="224" cy="544" r="3"/>
+          <circle cx="260" cy="574" r="3"/>
+          <circle cx="344" cy="574" r="3"/>
+          <circle cx="344" cy="524" r="3"/>
+          <circle cx="376" cy="544" r="3"/>
+          <circle cx="376" cy="643" r="3"/>
+          <circle cx="294" cy="643" r="3"/>
+          <circle cx="294" cy="692" r="3"/>
+          <circle cx="514" cy="538" r="3"/>
+          <circle cx="514" cy="495" r="3"/>
+          <circle cx="440" cy="495" r="3"/>
+          <circle cx="440" cy="458" r="3"/>
+          <circle cx="625" cy="530" r="3"/>
+          <circle cx="625" cy="592" r="3"/>
+          <circle cx="552" cy="592" r="3"/>
+          <circle cx="552" cy="650" r="3"/>
+          <circle cx="709" cy="511" r="3"/>
+          <circle cx="709" cy="447" r="3"/>
+          <circle cx="785" cy="447" r="3"/>
+          <circle cx="841" cy="527" r="3"/>
+          <circle cx="930" cy="527" r="3"/>
+          <circle cx="930" cy="601" r="3"/>
+          <circle cx="970" cy="544" r="3"/>
+          <circle cx="877" cy="544" r="3"/>
+          <circle cx="877" cy="505" r="3"/>
+          <circle cx="815" cy="505" r="3"/>
+          <circle cx="1052" cy="569" r="3"/>
+          <circle cx="981" cy="569" r="3"/>
+          <circle cx="981" cy="525" r="3"/>
+          <circle cx="1193" cy="552" r="3"/>
+          <circle cx="1193" cy="598" r="3"/>
+          <circle cx="1154" cy="598" r="3"/>
+          <circle cx="1154" cy="698" r="3"/>
+          <circle cx="1322" cy="510" r="3"/>
+          <circle cx="1322" cy="576" r="3"/>
+          <circle cx="1275" cy="576" r="3"/>
+          <circle cx="1275" cy="524" r="3"/>
+          <circle cx="1392" cy="568" r="3"/>
+          <circle cx="1392" cy="620" r="3"/>
+          <circle cx="1472" cy="620" r="3"/>
+          <circle cx="1472" cy="566" r="3"/>
+          <circle cx="1503" cy="543" r="3"/>
+          <circle cx="1453" cy="543" r="3"/>
+          <circle cx="1453" cy="639" r="3"/>
+          <circle cx="26" cy="635" r="3"/>
+          <circle cx="116" cy="635" r="3"/>
+          <circle cx="116" cy="570" r="3"/>
+          <circle cx="189" cy="638" r="3"/>
+          <circle cx="189" cy="583" r="3"/>
+          <circle cx="129" cy="583" r="3"/>
+          <circle cx="282" cy="621" r="3"/>
+          <circle cx="240" cy="621" r="3"/>
+          <circle cx="240" cy="564" r="3"/>
+          <circle cx="406" cy="612" r="3"/>
+          <circle cx="406" cy="536" r="3"/>
+          <circle cx="323" cy="536" r="3"/>
+          <circle cx="532" cy="660" r="3"/>
+          <circle cx="532" cy="571" r="3"/>
+          <circle cx="624" cy="571" r="3"/>
+          <circle cx="591" cy="623" r="3"/>
+          <circle cx="494" cy="623" r="3"/>
+          <circle cx="494" cy="712" r="3"/>
+          <circle cx="733" cy="619" r="3"/>
+          <circle cx="789" cy="619" r="3"/>
+          <circle cx="789" cy="655" r="3"/>
+          <circle cx="881" cy="613" r="3"/>
+          <circle cx="881" cy="698" r="3"/>
+          <circle cx="790" cy="698" r="3"/>
+          <circle cx="790" cy="612" r="3"/>
+          <circle cx="958" cy="660" r="3"/>
+          <circle cx="920" cy="660" r="3"/>
+          <circle cx="920" cy="579" r="3"/>
+          <circle cx="992" cy="579" r="3"/>
+          <circle cx="1053" cy="610" r="3"/>
+          <circle cx="969" cy="610" r="3"/>
+          <circle cx="969" cy="645" r="3"/>
+          <circle cx="1161" cy="655" r="3"/>
+          <circle cx="1161" cy="729" r="3"/>
+          <circle cx="1089" cy="729" r="3"/>
+          <circle cx="1290" cy="624" r="3"/>
+          <circle cx="1248" cy="624" r="3"/>
+          <circle cx="1248" cy="557" r="3"/>
+          <circle cx="1430" cy="633" r="3"/>
+          <circle cx="1430" cy="540" r="3"/>
+          <circle cx="1367" cy="540" r="3"/>
+          <circle cx="1367" cy="599" r="3"/>
+          <circle cx="1517" cy="669" r="3"/>
+          <circle cx="1424" cy="669" r="3"/>
+          <circle cx="1424" cy="572" r="3"/>
+          <circle cx="51" cy="759" r="3"/>
+          <circle cx="10" cy="759" r="3"/>
+          <circle cx="10" cy="850" r="3"/>
+          <circle cx="175" cy="758" r="3"/>
+          <circle cx="255" cy="758" r="3"/>
+          <circle cx="255" cy="686" r="3"/>
+          <circle cx="265" cy="752" r="3"/>
+          <circle cx="265" cy="699" r="3"/>
+          <circle cx="183" cy="699" r="3"/>
+          <circle cx="408" cy="749" r="3"/>
+          <circle cx="352" cy="749" r="3"/>
+          <circle cx="352" cy="697" r="3"/>
+          <circle cx="306" cy="697" r="3"/>
+          <circle cx="483" cy="720" r="3"/>
+          <circle cx="483" cy="802" r="3"/>
+          <circle cx="430" cy="802" r="3"/>
+          <circle cx="630" cy="717" r="3"/>
+          <circle cx="630" cy="652" r="3"/>
+          <circle cx="691" cy="652" r="3"/>
+          <circle cx="749" cy="743" r="3"/>
+          <circle cx="793" cy="743" r="3"/>
+          <circle cx="793" cy="707" r="3"/>
+          <circle cx="887" cy="707" r="3"/>
+          <circle cx="864" cy="748" r="3"/>
+          <circle cx="864" cy="670" r="3"/>
+          <circle cx="784" cy="670" r="3"/>
+          <circle cx="784" cy="734" r="3"/>
+          <circle cx="945" cy="756" r="3"/>
+          <circle cx="884" cy="756" r="3"/>
+          <circle cx="884" cy="807" r="3"/>
+          <circle cx="818" cy="807" r="3"/>
+          <circle cx="1086" cy="737" r="3"/>
+          <circle cx="1086" cy="680" r="3"/>
+          <circle cx="1146" cy="680" r="3"/>
+          <circle cx="1222" cy="717" r="3"/>
+          <circle cx="1222" cy="671" r="3"/>
+          <circle cx="1153" cy="671" r="3"/>
+          <circle cx="1153" cy="762" r="3"/>
+          <circle cx="1309" cy="757" r="3"/>
+          <circle cx="1309" cy="846" r="3"/>
+          <circle cx="1370" cy="846" r="3"/>
+          <circle cx="1398" cy="754" r="3"/>
+          <circle cx="1398" cy="850" r="3"/>
+          <circle cx="1475" cy="850" r="3"/>
+          <circle cx="1475" cy="890" r="3"/>
+          <circle cx="1502" cy="715" r="3"/>
+          <circle cx="1502" cy="794" r="3"/>
+          <circle cx="1544" cy="794" r="3"/>
+          <circle cx="1544" cy="711" r="3"/>
+          <circle cx="85" cy="872" r="3"/>
+          <circle cx="42" cy="872" r="3"/>
+          <circle cx="42" cy="785" r="3"/>
+          <circle cx="10" cy="785" r="3"/>
+          <circle cx="186" cy="820" r="3"/>
+          <circle cx="132" cy="820" r="3"/>
+          <circle cx="132" cy="890" r="3"/>
+          <circle cx="74" cy="890" r="3"/>
+          <circle cx="260" cy="834" r="3"/>
+          <circle cx="260" cy="890" r="3"/>
+          <circle cx="295" cy="890" r="3"/>
+          <circle cx="378" cy="842" r="3"/>
+          <circle cx="378" cy="890" r="3"/>
+          <circle cx="288" cy="890" r="3"/>
+          <circle cx="475" cy="847" r="3"/>
+          <circle cx="475" cy="890" r="3"/>
+          <circle cx="399" cy="890" r="3"/>
+          <circle cx="399" cy="812" r="3"/>
+          <circle cx="654" cy="853" r="3"/>
+          <circle cx="654" cy="780" r="3"/>
+          <circle cx="701" cy="780" r="3"/>
+          <circle cx="701" cy="723" r="3"/>
+          <circle cx="713" cy="836" r="3"/>
+          <circle cx="713" cy="756" r="3"/>
+          <circle cx="791" cy="756" r="3"/>
+          <circle cx="826" cy="855" r="3"/>
+          <circle cx="826" cy="792" r="3"/>
+          <circle cx="897" cy="792" r="3"/>
+          <circle cx="957" cy="864" r="3"/>
+          <circle cx="996" cy="864" r="3"/>
+          <circle cx="996" cy="890" r="3"/>
+          <circle cx="945" cy="890" r="3"/>
+          <circle cx="1080" cy="866" r="3"/>
+          <circle cx="1136" cy="866" r="3"/>
+          <circle cx="1136" cy="890" r="3"/>
+          <circle cx="1182" cy="837" r="3"/>
+          <circle cx="1124" cy="837" r="3"/>
+          <circle cx="1124" cy="801" r="3"/>
+          <circle cx="1319" cy="871" r="3"/>
+          <circle cx="1319" cy="890" r="3"/>
+          <circle cx="1253" cy="890" r="3"/>
+          <circle cx="1429" cy="832" r="3"/>
+          <circle cx="1344" cy="832" r="3"/>
+          <circle cx="1344" cy="885" r="3"/>
+          <circle cx="1281" cy="885" r="3"/>
+          <circle cx="1559" cy="829" r="3"/>
+          <circle cx="1590" cy="829" r="3"/>
+          <circle cx="1590" cy="890" r="3"/>
+        </g>
+        <g fill="none" stroke="#ddbb78" stroke-width="2.4" stroke-linecap="round" filter="url(#circuit-glow)">
+          <path class="circuit-runner" d="M47,32 L10,32 L10,10 L10,10 L10,75" style="stroke-dasharray:30.0 94.0; animation: circuit-travel-0 1.6s linear infinite; animation-delay:-0.0s;"/>
+          <path class="circuit-runner" d="M233,40 L65,40 L65,10 L200,10 L200,10" style="stroke-dasharray:49.9 283.1; animation: circuit-travel-1 1.75s linear infinite; animation-delay:-0.53s;"/>
+          <path class="circuit-runner" d="M377,95 L508,95 L508,10 L434,10" style="stroke-dasharray:43.5 246.5; animation: circuit-travel-2 1.6s linear infinite; animation-delay:-1.06s;"/>
+          <path class="circuit-runner" d="M584,67 L584,208 L733,208" style="stroke-dasharray:43.5 246.5; animation: circuit-travel-3 1.6s linear infinite; animation-delay:-1.59s;"/>
+          <path class="circuit-runner" d="M798,60 L706,60 L706,10 L776,10" style="stroke-dasharray:31.8 180.2; animation: circuit-travel-4 1.6s linear infinite; animation-delay:-0.52s;"/>
+          <path class="circuit-runner" d="M953,97 L814,97 L814,172 L896,172 L896,252" style="stroke-dasharray:56.4 319.6; animation: circuit-travel-5 1.98s linear infinite; animation-delay:-0.67s;"/>
+          <path class="circuit-runner" d="M1122,105 L1122,239 L1226,239" style="stroke-dasharray:35.7 202.3; animation: circuit-travel-6 1.6s linear infinite; animation-delay:-1.58s;"/>
+          <path class="circuit-runner" d="M1315,70 L1387,70 L1387,10 L1455,10" style="stroke-dasharray:30.0 170.0; animation: circuit-travel-7 1.6s linear infinite; animation-delay:-0.51s;"/>
+          <path class="circuit-runner" d="M1498,107 L1590,107 L1590,170 L1484,170" style="stroke-dasharray:39.1 221.8; animation: circuit-travel-8 1.6s linear infinite; animation-delay:-1.04s;"/>
+          <path class="circuit-runner" d="M62,218 L154,218 L154,397 L224,397" style="stroke-dasharray:51.1 289.9; animation: circuit-travel-9 1.79s linear infinite; animation-delay:-1.19s;"/>
+          <path class="circuit-runner" d="M231,223 L231,395 L383,395" style="stroke-dasharray:48.6 275.4; animation: circuit-travel-10 1.71s linear infinite; animation-delay:-0.17s;"/>
+          <path class="circuit-runner" d="M434,232 L351,232 L351,87" style="stroke-dasharray:34.2 193.8; animation: circuit-travel-11 1.6s linear infinite; animation-delay:-1.03s;"/>
+          <path class="circuit-runner" d="M594,251 L673,251 L673,390 L489,390" style="stroke-dasharray:60.3 341.7; animation: circuit-travel-12 2.12s linear infinite; animation-delay:-0.0s;"/>
+          <path class="circuit-runner" d="M769,276 L769,387 L881,387 L881,245 L796,245" style="stroke-dasharray:67.5 382.5; animation: circuit-travel-13 2.37s linear infinite; animation-delay:-2.15s;"/>
+          <path class="circuit-runner" d="M946,208 L886,208 L886,338 L746,338 L746,511" style="stroke-dasharray:75.5 427.6; animation: circuit-travel-14 2.65s linear infinite; animation-delay:-2.12s;"/>
+          <path class="circuit-runner" d="M1098,221 L1098,99 L1268,99 L1268,222" style="stroke-dasharray:62.2 352.8; animation: circuit-travel-15 2.18s linear infinite; animation-delay:-1.41s;"/>
+          <path class="circuit-runner" d="M1270,207 L1270,85 L1143,85 L1143,269" style="stroke-dasharray:65.0 368.1; animation: circuit-travel-16 2.28s linear infinite; animation-delay:-1.64s;"/>
+          <path class="circuit-runner" d="M1453,247 L1453,148 L1590,148" style="stroke-dasharray:35.4 200.6; animation: circuit-travel-17 1.6s linear infinite; animation-delay:-1.01s;"/>
+          <path class="circuit-runner" d="M64,460 L64,589 L10,589 L10,754" style="stroke-dasharray:52.2 295.8; animation: circuit-travel-18 1.83s linear infinite; animation-delay:-0.39s;"/>
+          <path class="circuit-runner" d="M261,398 L106,398 L106,561 L200,561 L200,679" style="stroke-dasharray:79.5 450.5; animation: circuit-travel-19 2.79s linear infinite; animation-delay:-1.7s;"/>
+          <path class="circuit-runner" d="M458,411 L579,411 L579,324" style="stroke-dasharray:31.2 176.8; animation: circuit-travel-20 1.6s linear infinite; animation-delay:-1.0s;"/>
+          <path class="circuit-runner" d="M594,437 L740,437 L740,275 L617,275 L617,391" style="stroke-dasharray:82.0 464.9; animation: circuit-travel-21 2.88s linear infinite; animation-delay:-2.49s;"/>
+          <path class="circuit-runner" d="M737,463 L624,463 L624,309 L435,309 L435,389" style="stroke-dasharray:80.4 455.6; animation: circuit-travel-22 2.82s linear infinite; animation-delay:-0.38s;"/>
+          <path class="circuit-runner" d="M978,391 L978,537 L898,537 L898,474 L770,474" style="stroke-dasharray:62.5 354.4; animation: circuit-travel-23 2.19s linear infinite; animation-delay:-1.24s;"/>
+          <path class="circuit-runner" d="M1123,456 L1035,456 L1035,616" style="stroke-dasharray:37.2 210.8; animation: circuit-travel-24 1.6s linear infinite; animation-delay:-1.52s;"/>
+          <path class="circuit-runner" d="M1285,416 L1441,416 L1441,562" style="stroke-dasharray:45.3 256.7; animation: circuit-travel-25 1.6s linear infinite; animation-delay:-0.45s;"/>
+          <path class="circuit-runner" d="M1514,457 L1514,329 L1340,329" style="stroke-dasharray:45.3 256.7; animation: circuit-travel-26 1.6s linear infinite; animation-delay:-0.98s;"/>
+          <path class="circuit-runner" d="M72,628 L10,628 L10,760" style="stroke-dasharray:30.0 164.0; animation: circuit-travel-27 1.6s linear infinite; animation-delay:-1.51s;"/>
+          <path class="circuit-runner" d="M256,606 L256,532 L349,532 L349,466" style="stroke-dasharray:34.9 198.1; animation: circuit-travel-28 1.6s linear infinite; animation-delay:-0.44s;"/>
+          <path class="circuit-runner" d="M418,609 L279,609 L279,759" style="stroke-dasharray:43.4 245.7; animation: circuit-travel-29 1.6s linear infinite; animation-delay:-0.97s;"/>
+          <path class="circuit-runner" d="M596,631 L596,782 L416,782 L416,612 L530,612" style="stroke-dasharray:92.2 522.8; animation: circuit-travel-30 3.24s linear infinite; animation-delay:-2.94s;"/>
+          <path class="circuit-runner" d="M768,565 L856,565 L856,403" style="stroke-dasharray:37.5 212.5; animation: circuit-travel-31 1.6s linear infinite; animation-delay:-0.43s;"/>
+          <path class="circuit-runner" d="M990,616 L1165,616 L1165,527 L1277,527" style="stroke-dasharray:56.4 319.6; animation: circuit-travel-32 1.98s linear infinite; animation-delay:-1.12s;"/>
+          <path class="circuit-runner" d="M1099,618 L1215,618 L1215,514" style="stroke-dasharray:33.0 187.0; animation: circuit-travel-33 1.6s linear infinite; animation-delay:-1.49s;"/>
+          <path class="circuit-runner" d="M1294,566 L1426,566 L1426,718 L1529,718" style="stroke-dasharray:58.0 328.9; animation: circuit-travel-34 2.04s linear infinite; animation-delay:-1.7s;"/>
+          <path class="circuit-runner" d="M1486,564 L1486,637 L1390,637" style="stroke-dasharray:30.0 139.0; animation: circuit-travel-35 1.6s linear infinite; animation-delay:-0.95s;"/>
+          <path class="circuit-runner" d="M42,750 L42,890 L155,890 L155,739" style="stroke-dasharray:60.6 343.4; animation: circuit-travel-36 2.13s linear infinite; animation-delay:-2.04s;"/>
+          <path class="circuit-runner" d="M220,810 L151,810 L151,890" style="stroke-dasharray:30.0 119.0; animation: circuit-travel-37 1.6s linear infinite; animation-delay:-0.41s;"/>
+          <path class="circuit-runner" d="M381,815 L305,815 L305,890" style="stroke-dasharray:30.0 121.0; animation: circuit-travel-38 1.6s linear infinite; animation-delay:-0.94s;"/>
+          <path class="circuit-runner" d="M633,762 L481,762 L481,890" style="stroke-dasharray:42.0 238.0; animation: circuit-travel-39 1.6s linear infinite; animation-delay:-1.47s;"/>
+          <path class="circuit-runner" d="M733,756 L733,627 L636,627 L636,532" style="stroke-dasharray:48.1 272.9; animation: circuit-travel-40 1.69s linear infinite; animation-delay:-0.92s;"/>
+          <path class="circuit-runner" d="M995,741 L995,610 L868,610" style="stroke-dasharray:38.7 219.3; animation: circuit-travel-41 1.6s linear infinite; animation-delay:-0.93s;"/>
+          <path class="circuit-runner" d="M1168,748 L1292,748 L1292,890 L1142,890 L1142,785" style="stroke-dasharray:78.1 442.9; animation: circuit-travel-42 2.74s linear infinite; animation-delay:-0.34s;"/>
+          <path class="circuit-runner" d="M1298,769 L1298,831 L1182,831" style="stroke-dasharray:30.0 148.0; animation: circuit-travel-43 1.6s linear infinite; animation-delay:-0.39s;"/>
+          <path class="circuit-runner" d="M1448,814 L1448,717 L1297,717 L1297,597 L1202,597" style="stroke-dasharray:69.5 393.6; animation: circuit-travel-44 2.44s linear infinite; animation-delay:-1.36s;"/>
+        </g>
       </svg>
 
       <div class="preloader-heading">
@@ -645,7 +1667,7 @@
                      <span class="hero-sub-title wow fadeInUp" data-wow-delay=".1s">Hi, I am Ishmam</span>
                      <h1 class="hero-title wow fadeInUp" data-wow-delay=".15s">CSE Graduate +<br />Data Analyst</h1>
                      <div class="hero-image-box d-md-none text-center">
-                        <img src="assets/img/hero/Ishmam Photo.png" alt="Ishmam" />
+                        <img src="assets/img/hero/Ishmam Photo.jpg" alt="Ishmam" />
                      </div>
 
                      <!-- Hero paragraph inside bubble -->
@@ -665,17 +1687,17 @@
                      <div class="button-box d-flex flex-wrap align-items-center">
                         <ul class="ul-reset social-icons">
                            <li class="wow fadeInUp" data-wow-delay=".25s">
-                              <a href="https://www.linkedin.com/in/ishmamaslam/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin-in"></i></a>
+                              <a href="https://www.linkedin.com/in/ishmamaslam/" target="_blank" rel="noopener noreferrer"><svg class="icon-svg"><use href="#icon-linkedin"/></svg></a>
                            </li>
                            <li class="wow fadeInUp" data-wow-delay=".3s">
-                              <a href="https://github.com/ishmamCodes" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i></a>
+                              <a href="https://github.com/ishmamCodes" target="_blank" rel="noopener noreferrer"><svg class="icon-svg"><use href="#icon-github"/></svg></a>
                            </li>
                            <!-- New personal website icon -->
                            <li class="wow fadeInUp" data-wow-delay=".35s">
-                              <a href="https://ishmamcodes.github.io/Ishmam-Personal-Website/" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-globe"></i></a>
+                              <a href="https://ishmamcodes.github.io/Ishmam-Personal-Website/" target="_blank" rel="noopener noreferrer"><svg class="icon-svg"><use href="#icon-globe"/></svg></a>
                            </li>
                            <li class="wow fadeInUp" data-wow-delay=".4s">
-                              <a href="https://www.facebook.com/ishmam.binaslam" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook"></i></a>
+                              <a href="https://www.facebook.com/ishmam.binaslam" target="_blank" rel="noopener noreferrer"><svg class="icon-svg"><use href="#icon-facebook"/></svg></a>
                            </li>
                         </ul>
                      </div>
@@ -683,7 +1705,7 @@
                </div>
                <div class="col-md-6 d-none d-md-block">
                   <div class="hero-image-box text-center" style="transform: translateX(30px);">
-                     <img src="assets/img/hero/Ishmam Photo.png" alt="Ishmam" />
+                     <img src="assets/img/hero/Ishmam Photo.jpg" alt="Ishmam" />
                   </div>
                </div>
             </div>
@@ -840,7 +1862,7 @@
                         Your browser does not support the video tag.
                      </video>
                      <div class="mute-overlay" id="muteToggle" title="Click to unmute">
-                        <i class="fa fa-volume-mute"></i>
+                        <svg class="icon-svg"><use href="#icon-volume-mute"/></svg>
                      </div>
                   </div>
                </div>
@@ -884,8 +1906,8 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".05s">
                     <div class="project-bubble">
                     <a href="https://safiaapparelsltd.com" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/img/portfolio/safia-apparels-cover.jpg" alt="Safia Apparels Ltd" class="project-image">
-                        <h3>Safia Apparels Ltd — B2B Website <span style="color: #8FC29B;">Click to view Live</span></h3>
+                        <img src="assets/img/portfolio/safia-apparels-cover.jpg" alt="Safia Apparels Ltd" class="project-image" loading="lazy" decoding="async">
+                        <h3>Safia Apparels Ltd — B2B Website <span style="color: #DDBB78;">Click to view Live</span></h3>
                         <p>
                             Premium B2B website for a knit garment manufacturer, built for European & American
                             fashion buyers. Editorial design system, product/manufacturing showcase, and
@@ -898,7 +1920,7 @@
                 <!-- FabriFlow -->
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".08s">
                     <div class="project-bubble">
-                        <img src="assets/img/portfolio/fabriflow-cover.jpg" alt="FabriFlow IMS login screen" class="project-image">
+                        <img src="assets/img/portfolio/fabriflow-cover.jpg" alt="FabriFlow IMS login screen" class="project-image" loading="lazy" decoding="async">
                         <h3>FabriFlow — Inventory Management System</h3>
                         <p>
                             Enterprise inventory management system for a knit garment manufacturer,
@@ -912,8 +1934,8 @@
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".1s">
                     <div class="project-bubble">
                     <a href="https://hr-payroll-erp-by-ishmam.onrender.com" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/img/portfolio/hr-payroll-cover.jpg" alt="HR Payroll ERP" class="project-image">
-                        <h3>HR & Payroll ERP — Saas System <span style="color: #8FC29B;">Click to view Live</span></h3>
+                        <img src="assets/img/portfolio/hr-payroll-cover.jpg" alt="HR Payroll ERP" class="project-image" loading="lazy" decoding="async">
+                        <h3>HR & Payroll ERP — Saas System <span style="color: #DDBB78;">Click to view Live</span></h3>
                         <p>
                             Full-stack HR & Payroll compliance ERP built for Bangladesh's RMG & industrial sector.
                             Features payroll engine (Gazette 2023), attendance with OT/late tracking,
@@ -927,7 +1949,7 @@
                 <!-- TraceKnot -->
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".12s">
                     <div class="project-bubble">
-                        <img src="assets/img/portfolio/traceknot-cover.jpg" alt="TraceKnot login screen" class="project-image">
+                        <img src="assets/img/portfolio/traceknot-cover.jpg" alt="TraceKnot login screen" class="project-image" loading="lazy" decoding="async">
                         <h3>TraceKnot — Shipment Intelligence</h3>
                         <p>
                             Cargo shipment tracking platform built for a Bangladesh-based FMCG importer.
@@ -942,8 +1964,8 @@
                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".1s">
                   <div class="project-bubble">
                      <a href="https://shikkhacom.vercel.app/login" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/img/portfolio/shikkha-cover.jpg" alt="Shikkha" class="project-image">
-                        <h3>Shikkha – AI Educational Platform <br> <span style="color: #8FC29B;">Click to View Website</span></h3>
+                        <img src="assets/img/portfolio/shikkha-cover.jpg" alt="Shikkha" class="project-image" loading="lazy" decoding="async">
+                        <h3>Shikkha – AI Educational Platform <br> <span style="color: #DDBB78;">Click to View Website</span></h3>
                         <p>
                            
                            Developed a full-stack EdTech platform with course management, AI chatbot, CV analyzer, video library,
@@ -951,7 +1973,7 @@
                            
                         </p>
                      </a>
-                     <a href="https://youtu.be/J66pB6IO6H4?si=Qn0asFRLGjv0ojea" target="_blank" rel="noopener noreferrer" style="color: #8FC29B; text-decoration: underline;">
+                     <a href="https://youtu.be/J66pB6IO6H4?si=Qn0asFRLGjv0ojea" target="_blank" rel="noopener noreferrer" style="color: #DDBB78; text-decoration: underline;">
                         Watch Video Demo
                      </a>
                      
@@ -965,9 +1987,9 @@
                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".25s">
                   <div class="project-bubble">
                      <a href="https://krishi-network-5etp.vercel.app/login" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/img/portfolio/krishi-cover.jpg" alt="KrishiNetwork" class="project-image">
+                        <img src="assets/img/portfolio/krishi-cover.jpg" alt="KrishiNetwork" class="project-image" loading="lazy" decoding="async">
                         <h3>KrishiNetwork – AI Agricultural Platform <br>
-                           <span style="color: #8FC29B;">Click to View Website</span></h3>
+                           <span style="color: #DDBB78;">Click to View Website</span></h3>
                         <p>
                            Built a full-stack agricultural platform connecting farmers with experts, featuring AI plant disease
                            detection (TensorFlow, MobileNetV2), crop advisory, equipment rentals, marketplace using MERN
@@ -977,7 +1999,7 @@
                         </p>
                      </a>
                   
-                     <a href="https://youtu.be/KhhCuWPV1ns" target="_blank" rel="noopener noreferrer" style="color: #8FC29B; text-decoration: underline;">
+                     <a href="https://youtu.be/KhhCuWPV1ns" target="_blank" rel="noopener noreferrer" style="color: #DDBB78; text-decoration: underline;">
                         Watch Video Demo
                      </a>
                
@@ -990,7 +2012,7 @@
                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
                   <div class="project-bubble">
                      <a href="https://github.com/ishmamCodes/Predicting-Movie-Rating-Categories-using-ML-AL.git" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/img/portfolio/movie.jpg" alt="Predicting Movie Ratings using ML/AL Models" class="project-image">
+                        <img src="assets/img/portfolio/movie.jpg" alt="Predicting Movie Ratings using ML/AL Models" class="project-image" loading="lazy" decoding="async">
                         <h3>Predicting Movie Ratings using ML/AL Models</h3>
                         <p>Developed movie rating predicting model 
                            using Neural Networks, Random Forest, XGBoost, Logistic Regression and Decision Tree.</p>
@@ -1004,7 +2026,7 @@
                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
                   <div class="project-bubble">
                      <a href="https://github.com/ishmamCodes/Mandlebulb-Project.git" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/img/portfolio/mandelbulb.jpg" alt="Mandelbulb" class="project-image">
+                        <img src="assets/img/portfolio/mandelbulb.jpg" alt="Mandelbulb" class="project-image" loading="lazy" decoding="async">
                         <h3>Mandelbulb Visualization</h3>
                         <p>Real time fractal rendering of Mandelbulb using OpenGL library and Python.</p>
                         <div class="project-link-icon"><i class="flaticon-up-right-arrow"></i></div>
@@ -1016,7 +2038,7 @@
                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".15s">
                   <div class="project-bubble">
                      <a href="https://drive.google.com/drive/folders/142e1qJeSehQPX7Rm7wrOEs_wqvoXTH1Q" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/img/portfolio/sydney-rail.jpg" alt="Sydney Rail" class="project-image">
+                        <img src="assets/img/portfolio/sydney-rail.jpg" alt="Sydney Rail" class="project-image" loading="lazy" decoding="async">
                         <h3>Sydney Rail Network Design</h3>
                         <p>Entire network system connecting Metropolitan communication network using VLSM, RIP v2 developed on Cisco Packet Tracer.</p>
                         <div class="project-link-icon"><i class="flaticon-up-right-arrow"></i></div>
@@ -1030,7 +2052,7 @@
                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".2s">
                   <div class="project-bubble">
                      <a href="https://drive.google.com/file/d/1d4Wk5K8WHORhP9A4rr8r1qp31SqTKBLR/view" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/img/portfolio/medicine-robot.jpg" alt="Medicine Robot" class="project-image">
+                        <img src="assets/img/portfolio/medicine-robot.jpg" alt="Medicine Robot" class="project-image" loading="lazy" decoding="async">
                         <h3>Medicine Dispensing Robot</h3>
                         <p>Automated robot medicine delivery system developed for the elderly of the society.</p>
                         <div class="project-link-icon"><i class="flaticon-up-right-arrow"></i></div>
@@ -1044,7 +2066,7 @@
                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".35s">
                   <div class="project-bubble">
                      <a href="https://github.com/ishmamCodes/3D-Shooter-Game.git" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/img/portfolio/shooter.jpg" alt="3D Shooter" class="project-image">
+                        <img src="assets/img/portfolio/shooter.jpg" alt="3D Shooter" class="project-image" loading="lazy" decoding="async">
                         <h3>3D Shooter Game</h3>
                         <p>OpenGL/Python game with lighting, collision, real‑time rendering interactive shooter game.</p>
                         <div class="project-link-icon"><i class="flaticon-up-right-arrow"></i></div>
@@ -1056,7 +2078,7 @@
                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".4s">
                   <div class="project-bubble">
                      <a href="https://github.com/ishmamCodes/Memory-Game-Using-Processing.git" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/img/portfolio/memory-game.jpg" alt="Memory Game" class="project-image">
+                        <img src="assets/img/portfolio/memory-game.jpg" alt="Memory Game" class="project-image" loading="lazy" decoding="async">
                         <h3>Memory Game</h3>
                         <p>Processing based game testing memory with dynamic difficulty.</p>
                         <div class="project-link-icon"><i class="flaticon-up-right-arrow"></i></div>
@@ -1432,11 +2454,11 @@
             if (video.muted) {
                video.muted = false;
                video.volume = 1.0;
-               muteToggle.innerHTML = '<i class="fa fa-volume-up"></i>';
+               muteToggle.innerHTML = '<svg class="icon-svg"><use href="#icon-volume-up"/></svg>';
                muteToggle.title = 'Click to mute';
             } else {
                video.muted = true;
-               muteToggle.innerHTML = '<i class="fa fa-volume-mute"></i>';
+               muteToggle.innerHTML = '<svg class="icon-svg"><use href="#icon-volume-mute"/></svg>';
                muteToggle.title = 'Click to unmute';
             }
          });
@@ -1444,10 +2466,10 @@
          // Update overlay icon if video is unmuted externally (e.g., via controls)
          video.addEventListener('volumechange', () => {
             if (video.muted) {
-               muteToggle.innerHTML = '<i class="fa fa-volume-mute"></i>';
+               muteToggle.innerHTML = '<svg class="icon-svg"><use href="#icon-volume-mute"/></svg>';
                muteToggle.title = 'Click to unmute';
             } else {
-               muteToggle.innerHTML = '<i class="fa fa-volume-up"></i>';
+               muteToggle.innerHTML = '<svg class="icon-svg"><use href="#icon-volume-up"/></svg>';
                muteToggle.title = 'Click to mute';
             }
          });
@@ -1456,22 +2478,12 @@
 
    <!-- JavaScript here (original) -->
    <script src="assets/js/jquery.min.js"></script>
-   <script src="assets/js/bootstrap.bundle.min.js"></script>
-   <script src="assets/js/nice-select.min.js"></script>
    <script src="assets/js/backToTop.js"></script>
-   <script src="assets/js/smooth-scroll.js"></script>
    <script src="assets/js/appear.min.js"></script>
    <script src="assets/js/wow.min.js"></script>
    <script src="assets/js/gsap.min.js"></script>
    <script src="assets/js/one-page-nav.js"></script>
-   <script src="assets/js/lightcase.js"></script>
-   <script src="assets/js/owl.carousel.min.js"></script>
-   <script src="assets/js/swiper.min.js"></script>
-   <script src="assets/js/imagesloaded-pkgd.js"></script>
-   <script src="assets/js/isotope.pkgd.min.js"></script>
    <script src="assets/js/odometer.min.js"></script>
-   <script src="assets/js/magnific-popup.js"></script>
-   <script src="assets/js/validate.min.js"></script>
    <script src="assets/js/main.js"></script>
 
    <!-- Fix header anchor navigation -->
