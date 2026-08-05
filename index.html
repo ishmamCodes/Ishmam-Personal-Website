@@ -35,11 +35,49 @@
    <link rel="stylesheet" href="assets/css/main.css" />
    <link rel="stylesheet" href="assets/css/light-mode.css" />
    <link rel="stylesheet" href="assets/css/responsive.css" />
-   <!-- Bubble Animation CSS + faster wow + violet gradient background + card link style + header + section bubbles -->
+   <!-- Bubble Animation CSS + faster wow + warm-neutral background + card link style + header + section bubbles -->
    <style>
+      /* ===== COLOR THEME OVERRIDE =====
+         The Gerold template defaults to a purple/blue-violet brand palette
+         (--tj-theme-primary: #8750f7, --tj-bg family with blue undertones) —
+         that default is exactly what reads as "generic AI-generated SaaS."
+         Replaced with a warm-neutral ground (near-black espresso, no blue/
+         violet undertone) and a single sage-green accent chosen for
+         color-wheel contrast against that warm base — verified >= 6:1
+         contrast against both the page background and card surfaces. */
+      :root {
+         --tj-theme-primary: #6fa37a;
+         --tj-theme-primary-1: #588568;
+         --tj-theme-primary-2: #8fc29b;
+         --tj-theme-primary-3: #4f8261;
+         --tj-theme-secondary: #241f18;
+         --tj-theme-accent-1: #17140f;
+         --tj-theme-accent-2: #1e1a15;
+         --tj-black-2: #17140f;
+         --tj-bg: #17140f;
+         --tj-bg-2: #1b1712;
+         --tj-bg-3: #201b15;
+         --tj-bg-4: #241f18;
+         --tj-border: #3d372f;
+         --tj-border1: #4a4238;
+         --tj-heading-primary: #f3efe7;
+         --tj-heading-secondary: #6fa37a;
+         --tj-off-white: #f3efe7;
+         --tj-grey-4: #2a2620;
+         --tj-grey-6: #211d17;
+      }
+
+      /* Template's primary button hardcodes white text for a purple fill;
+         our sage fill needs dark text to clear 4.5:1 contrast (white on
+         sage is only ~2.9:1). */
+      .tj-btn-primary,
+      .tj-btn-primary i {
+         color: #17140f;
+      }
+
       /* ===== GLOBAL BACKGROUND ===== */
       body {
-         background: linear-gradient(145deg, #1a1225 0%, #2a1a35 50%, #1e1428 100%);
+         background: linear-gradient(145deg, #14110c 0%, #1e1a15 50%, #17140f 100%);
          background-attachment: fixed;
          min-height: 100vh;
       }
@@ -60,7 +98,7 @@
          bottom: -100px;
          width: 40px;
          height: 40px;
-         background: rgba(255, 255, 255, 0.1);
+         background: rgba(243, 239, 231, 0.1);
          border-radius: 50%;
          opacity: 0.5;
          animation: rise 10s infinite ease-in;
@@ -93,19 +131,19 @@
 
       /* ===== HEADER – dynamic black transparent (darker shade of background) ===== */
       .tj-header-area {
-         background: rgba(11, 6, 17, 0.7) !important;  /* dark violet, transparent */
+         background: rgba(20, 17, 12, 0.7) !important;  /* warm espresso, transparent */
          backdrop-filter: blur(8px);
          -webkit-backdrop-filter: blur(8px);
          transition: background 0.3s;
          z-index: 100;
       }
       .tj-header-area.header-sticky {
-         background: rgba(5, 2, 8, 0.85) !important;   /* even darker on sticky */
+         background: rgba(12, 10, 7, 0.88) !important;   /* even darker on sticky */
       }
 
       /* ===== SECTION BUBBLES ===== */
       .bubble-section {
-         background: rgba(30, 20, 40, 0.4);
+         background: rgba(30, 26, 20, 0.45);
          backdrop-filter: blur(10px);
          -webkit-backdrop-filter: blur(10px);
          border-radius: 50px;
@@ -118,7 +156,7 @@
          position: relative;
          z-index: 1;
          .red-text {
-            color: #AD1A1F;
+            color: #8FC29B;
             font-size: 115%;
             font-weight: inherit;
             vertical-align: baseline;
@@ -142,12 +180,12 @@
 
       /* ---- HERO SECTION DARKER BACKGROUND (overrides bubble-section) ---- */
       .hero-section {
-         background: rgba(0, 0, 0, 0.95) !important; /* much darker, almost black */
+         background: rgba(10, 9, 6, 0.95) !important; /* much darker, almost black */
       }
 
       /* ---- FOOTER BLACK TRANSPARENT ---- */
       .tj-footer-area {
-         background: rgba(0, 0, 0, 0.7) !important;
+         background: rgba(12, 10, 7, 0.75) !important;
          backdrop-filter: blur(4px);
          -webkit-backdrop-filter: blur(4px);
          border-top: 1px solid rgba(255,255,255,0.05);
@@ -200,7 +238,7 @@
       /* Make resume-item clickable via overlay link (bubble style) */
       .resume-item {
          position: relative;
-         background: rgba(20, 15, 30, 0.7);
+         background: rgba(30, 26, 20, 0.7);
          border-radius: 12px;
          padding: 25px;
          border: 1px solid rgba(255, 255, 255, 0.08);
@@ -210,7 +248,7 @@
       }
       .resume-item:hover {
          transform: translateY(-4px);
-         border-color: rgba(200, 180, 255, 0.3);
+         border-color: rgba(111, 163, 122, 0.4);
       }
       .resume-item .card-link {
          position: absolute;
@@ -232,25 +270,25 @@
 
       /* ===== LINKS IN RESEARCH & ECA (underlined text) ===== */
       .resume-item a:not(.card-link) {
-         color: #ffb86b;  /* warm orange */
+         color: #8FC29B;  /* sage accent */
          text-decoration: underline;
          text-underline-offset: 4px;
-         text-decoration-color: rgba(255, 180, 100, 0.5);
+         text-decoration-color: rgba(143, 194, 155, 0.5);
          transition: color 0.2s;
       }
       .resume-item a:not(.card-link):hover {
-         color: #ffd966;
+         color: #A9D6B4;
       }
 
       /* ===== VIDEO TEXT BUBBLE ===== */
       .video-text-bubble {
-         background: rgba(10, 5, 15, 0.8);
+         background: rgba(18, 15, 11, 0.82);
          backdrop-filter: blur(12px);
          -webkit-backdrop-filter: blur(12px);
          border-radius: 30px;
          padding: 30px;
          box-shadow: 0 15px 30px rgba(0, 0, 0, 0.7);
-         border: 1px solid rgba(255, 255, 255, 0.1);
+         border: 1px solid rgba(243, 239, 231, 0.1);
          color: #fff;
       }
 
@@ -289,12 +327,12 @@
 
       /* 2. Funfact items as separate transparent bubbles */
       .funfact-item {
-         background: rgba(20, 15, 30, 0.6) !important;
+         background: rgba(30, 26, 20, 0.6) !important;
          backdrop-filter: blur(4px);
          -webkit-backdrop-filter: blur(4px);
          border-radius: 30px !important;
          padding: 20px 15px !important;
-         border: 1px solid rgba(255, 255, 255, 0.1) !important;
+         border: 1px solid rgba(243, 239, 231, 0.1) !important;
          box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.5) !important;
          transition: transform 0.2s;
          margin: 10px 0;
@@ -302,7 +340,7 @@
       }
       .funfact-item:hover {
          transform: translateY(-4px);
-         border-color: rgba(200, 180, 255, 0.3);
+         border-color: rgba(111, 163, 122, 0.4);
       }
       /* adjust number/text alignment inside bubble */
       .funfact-item .number {
@@ -318,12 +356,12 @@
       /* 3. Hero paragraph inside a bubble */
       .hero-text-bubble {
          margin: 20px 0 10px -10px;
-         background: rgba(20, 15, 30, 0.7);
+         background: rgba(30, 26, 20, 0.7);
          backdrop-filter: blur(4px);
          -webkit-backdrop-filter: blur(4px);
          border-radius: 25px;
          padding: 25px;
-         border: 1px solid rgba(255, 255, 255, 0.1);
+         border: 1px solid rgba(243, 239, 231, 0.1);
          box-shadow: 0 15px 25px -8px rgba(0, 0, 0, 0.6);
          color: #fff;
       }
@@ -339,12 +377,12 @@
 
       /* 5. Project bubbles (replacing portfolio grid) */
       .project-bubble {
-         background: rgba(20, 15, 30, 0.7);
+         background: rgba(30, 26, 20, 0.7);
          backdrop-filter: blur(4px);
          -webkit-backdrop-filter: blur(4px);
          border-radius: 25px;
          padding: 20px;
-         border: 1px solid rgba(255, 255, 255, 0.1);
+         border: 1px solid rgba(243, 239, 231, 0.1);
          box-shadow: 0 15px 25px -8px rgba(0, 0, 0, 0.6);
          transition: transform 0.2s, border-color 0.2s, background 0.2s;
          height: 100%;
@@ -353,8 +391,8 @@
       }
       .project-bubble:hover {
          transform: translateY(-6px);
-         border-color: rgba(200, 180, 255, 0.4);
-         background: rgba(30, 22, 45, 0.8);
+         border-color: rgba(111, 163, 122, 0.45);
+         background: rgba(34, 29, 23, 0.82);
       }
       .project-bubble a {
          text-decoration: none;
@@ -384,7 +422,7 @@
       .project-bubble .project-link-icon {
          text-align: right;
          font-size: 1.2rem;
-         color: #ffb86b;
+         color: #8FC29B;
       }
       /* remove old portfolio filter and items style, but we keep container */
       .portfolio-filter, .portfolio-box .portfolio-item, .gutter-sizer, .portfolio-sizer {
@@ -847,7 +885,7 @@
                     <div class="project-bubble">
                     <a href="https://safiaapparelsltd.com" target="_blank" rel="noopener noreferrer">
                         <img src="assets/img/portfolio/safia-apparels-cover.jpg" alt="Safia Apparels Ltd" class="project-image">
-                        <h3>Safia Apparels Ltd — B2B Website <span style="color: orange;">Click to view Live</span></h3>
+                        <h3>Safia Apparels Ltd — B2B Website <span style="color: #8FC29B;">Click to view Live</span></h3>
                         <p>
                             Premium B2B website for a knit garment manufacturer, built for European & American
                             fashion buyers. Editorial design system, product/manufacturing showcase, and
@@ -875,7 +913,7 @@
                     <div class="project-bubble">
                     <a href="https://hr-payroll-erp-by-ishmam.onrender.com" target="_blank" rel="noopener noreferrer">
                         <img src="assets/img/portfolio/hr-payroll-cover.jpg" alt="HR Payroll ERP" class="project-image">
-                        <h3>HR & Payroll ERP — Saas System <span style="color: orange;">Click to view Live</span></h3>
+                        <h3>HR & Payroll ERP — Saas System <span style="color: #8FC29B;">Click to view Live</span></h3>
                         <p>
                             Full-stack HR & Payroll compliance ERP built for Bangladesh's RMG & industrial sector.
                             Features payroll engine (Gazette 2023), attendance with OT/late tracking,
@@ -905,7 +943,7 @@
                   <div class="project-bubble">
                      <a href="https://shikkhacom.vercel.app/login" target="_blank" rel="noopener noreferrer">
                         <img src="assets/img/portfolio/shikkha-cover.jpg" alt="Shikkha" class="project-image">
-                        <h3>Shikkha – AI Educational Platform <br> <span style="color: orange;">Click to View Website</span></h3>
+                        <h3>Shikkha – AI Educational Platform <br> <span style="color: #8FC29B;">Click to View Website</span></h3>
                         <p>
                            
                            Developed a full-stack EdTech platform with course management, AI chatbot, CV analyzer, video library,
@@ -913,7 +951,7 @@
                            
                         </p>
                      </a>
-                     <a href="https://youtu.be/J66pB6IO6H4?si=Qn0asFRLGjv0ojea" target="_blank" rel="noopener noreferrer" style="color: orange; text-decoration: underline;">
+                     <a href="https://youtu.be/J66pB6IO6H4?si=Qn0asFRLGjv0ojea" target="_blank" rel="noopener noreferrer" style="color: #8FC29B; text-decoration: underline;">
                         Watch Video Demo
                      </a>
                      
@@ -929,7 +967,7 @@
                      <a href="https://krishi-network-5etp.vercel.app/login" target="_blank" rel="noopener noreferrer">
                         <img src="assets/img/portfolio/krishi-cover.jpg" alt="KrishiNetwork" class="project-image">
                         <h3>KrishiNetwork – AI Agricultural Platform <br>
-                           <span style="color: orange;">Click to View Website</span></h3>
+                           <span style="color: #8FC29B;">Click to View Website</span></h3>
                         <p>
                            Built a full-stack agricultural platform connecting farmers with experts, featuring AI plant disease
                            detection (TensorFlow, MobileNetV2), crop advisory, equipment rentals, marketplace using MERN
@@ -939,7 +977,7 @@
                         </p>
                      </a>
                   
-                     <a href="https://youtu.be/KhhCuWPV1ns" target="_blank" rel="noopener noreferrer" style="color: orange; text-decoration: underline;">
+                     <a href="https://youtu.be/KhhCuWPV1ns" target="_blank" rel="noopener noreferrer" style="color: #8FC29B; text-decoration: underline;">
                         Watch Video Demo
                      </a>
                

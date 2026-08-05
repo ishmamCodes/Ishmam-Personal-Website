@@ -764,7 +764,7 @@ body.loaded {
 	z-index: 100;
 	opacity: 0;
 	transition: 0.3s;
-	box-shadow: 0 0 30px rgba(135, 80, 247, 0.2);
+	box-shadow: 0 0 30px rgba(111, 163, 122, 0.2);
 }
 .tj-header-area.header-2.sticky {
 	top: 0;
