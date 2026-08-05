@@ -201,9 +201,17 @@
 		scrollTo: function(target, callback) {
 			var offset = $(target).offset().top;
 
-			$('html, body').animate({
-				scrollTop: offset
-			}, this.config.scrollSpeed, this.config.easing, callback);
+			// Native compositor-driven smooth scroll instead of jQuery's
+			// animate(), which sets scrollTop from a JS timer on every
+			// frame — synchronous main-thread work that stutters as soon
+			// as anything else (animations, layout) is competing for the
+			// same thread. window.scrollTo({behavior:'smooth'}) hands the
+			// whole animation to the browser/compositor.
+			window.scrollTo({ top: offset, behavior: 'smooth' });
+
+			if (callback) {
+				setTimeout(callback, this.config.scrollSpeed);
+			}
 		},
 
 		unbindInterval: function() {

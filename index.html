@@ -257,9 +257,6 @@
          margin: 50px 0;
          box-shadow: 0 25px 50px -10px rgba(0, 0, 0, 0.8);
          border: 1px solid rgba(255, 255, 255, 0.08);
-         animation: float 7s ease-in-out infinite;
-         will-change: transform;
-         transition: transform 0.2s;
          position: relative;
          /* Clips the flowing streak below to this panel's rounded
             corners instead of spilling past them. */
@@ -276,12 +273,6 @@
             vertical-align: baseline;
                   }
       }
-      @keyframes float {
-         0% { transform: translateY(0px); }
-         50% { transform: translateY(-8px); }
-         100% { transform: translateY(0px); }
-      }
-
       /* ===== FLOWING CIRCUIT LIGHT (replaces the static gold glow) =====
          A soft diagonal band of light sweeps across each panel on a loop,
          so it reads as current traveling through the zigzag traces rather
@@ -479,7 +470,7 @@
       /* Hero bio panel */
       .hero-text-bubble {
          margin: 20px 0 10px -10px;
-         background: rgba(73, 63, 49, 0.7);
+         background: rgba(73, 63, 49, 0.92);
          backdrop-filter: blur(4px);
          -webkit-backdrop-filter: blur(4px);
          border-radius: 14px;
@@ -548,11 +539,6 @@
          font-size: 1.2rem;
          color: #DDBB78;
       }
-      /* remove old portfolio filter and items style, but we keep container */
-      .portfolio-filter, .portfolio-box .portfolio-item, .gutter-sizer, .portfolio-sizer {
-         /* we will replace content, so these styles are no longer needed */
-      }
-
       .hero-image-box img {
       width: 70% !important;
       height: auto !important;
@@ -617,6 +603,12 @@
          pointer-events: none;
       }
 
+      /* ===== FASTER WOW REVEALS =====
+         animate.min.css's .animated default (1s) reads as a slow fade;
+         cut to make content feel like it's appearing, not drifting in. */
+      .wow.animated {
+         animation-duration: 0.35s !important;
+      }
    </style>
 </head>
 
@@ -1664,19 +1656,22 @@
                   <div class="hero-content-box">
                      <br>
                      <br>
-                     <span class="hero-sub-title wow fadeInUp" data-wow-delay=".1s">Hi, I am Ishmam</span>
-                     <h1 class="hero-title wow fadeInUp" data-wow-delay=".15s">CSE Graduate +<br />Data Analyst</h1>
+                     <span class="hero-sub-title wow fadeInUp" data-wow-delay="0.03s">Hi, I am Ishmam</span>
+                     <h1 class="hero-title wow fadeInUp" data-wow-delay="0.05s">CSE Graduate +<br />Data Analyst</h1>
                      <div class="hero-image-box d-md-none text-center">
                         <img src="assets/img/hero/Ishmam Photo.jpg" alt="Ishmam" />
                      </div>
 
                      <!-- Hero paragraph inside bubble -->
-                     <div class="hero-text-bubble wow fadeInUp" data-wow-delay=".2s">
+                     <div class="hero-text-bubble wow fadeInUp" data-wow-delay="0.07s">
                         <p>
             
                            
-                           Recent CSE graduate with a CGPA of 3.96 from BRACU (Vice Chancellor's List) 
-                           and and recipient of fully funded International Exchange Scholarship at Bard College, NY, USA. 
+                           CSE graduate (CGPA 3.96/4.00) with international academic exposure at Bard College, NY, USA. 
+                           Currently serving as Adjunct Lecturer at Brac University & CIO's Intern at Robi Axiata PLC, developing 
+                           AI-driven enterprise automation solutions and scalable software using Machine Learning, Full-Stack Development, 
+                           and Enterprise Software Engineering.
+                           <br><br>
                            Specialized in AI, Computer Vision, ML, HRI, web development, 
                            embedded systems and delivering innovative digital solutions addressing real world problems.
 
@@ -1686,17 +1681,17 @@
 
                      <div class="button-box d-flex flex-wrap align-items-center">
                         <ul class="ul-reset social-icons">
-                           <li class="wow fadeInUp" data-wow-delay=".25s">
+                           <li class="wow fadeInUp" data-wow-delay="0.08s">
                               <a href="https://www.linkedin.com/in/ishmamaslam/" target="_blank" rel="noopener noreferrer"><svg class="icon-svg"><use href="#icon-linkedin"/></svg></a>
                            </li>
-                           <li class="wow fadeInUp" data-wow-delay=".3s">
+                           <li class="wow fadeInUp" data-wow-delay="0.1s">
                               <a href="https://github.com/ishmamCodes" target="_blank" rel="noopener noreferrer"><svg class="icon-svg"><use href="#icon-github"/></svg></a>
                            </li>
                            <!-- New personal website icon -->
-                           <li class="wow fadeInUp" data-wow-delay=".35s">
+                           <li class="wow fadeInUp" data-wow-delay="0.12s">
                               <a href="https://ishmamcodes.github.io/Ishmam-Personal-Website/" target="_blank" rel="noopener noreferrer"><svg class="icon-svg"><use href="#icon-globe"/></svg></a>
                            </li>
-                           <li class="wow fadeInUp" data-wow-delay=".4s">
+                           <li class="wow fadeInUp" data-wow-delay="0.13s">
                               <a href="https://www.facebook.com/ishmam.binaslam" target="_blank" rel="noopener noreferrer"><svg class="icon-svg"><use href="#icon-facebook"/></svg></a>
                            </li>
                         </ul>
@@ -1747,13 +1742,13 @@
             <div class="row">
                <!-- Experience Column (Left) -->
                <div class="col-md-6">
-                  <div class="section-header wow fadeInUp" data-wow-delay=".2s">
+                  <div class="section-header wow fadeInUp" data-wow-delay="0.07s">
                      <h2 class="section-title"><i class="flaticon-recommendation"></i> My Experience</h2>
                   </div>
 
                   <div class="resume-widget">
                      <!-- Robi Axiata PLC -->
-                     <div class="resume-item wow fadeInLeft" data-wow-delay=".2s">
+                     <div class="resume-item wow fadeInLeft" data-wow-delay="0.07s">
                         <div class="time">2026 - Present</div>
                         <h3 class="resume-title">CIO's Intern, DevSecOps Team</h3>
                         <div class="institute">Robi Axiata PLC</div>
@@ -1762,7 +1757,7 @@
                      </div>
                      <!-- BRAC University Adjunct Lecturer -->
                      <a href="https://www.bracu.ac.bd/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
-                        <div class="resume-item wow fadeInLeft" data-wow-delay=".25s">
+                        <div class="resume-item wow fadeInLeft" data-wow-delay="0.08s">
                            <div class="time">2026 - Present</div>
                            <h3 class="resume-title">Adjunct Lecturer</h3>
                            <div class="institute">BRAC University, Department of Computer Science & Engineering</div>
@@ -1772,7 +1767,7 @@
                      </a>
                      <!-- Bard College -->
                      <a href="https://www.bard.edu/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
-                        <div class="resume-item wow fadeInLeft" data-wow-delay=".3s">
+                        <div class="resume-item wow fadeInLeft" data-wow-delay="0.1s">
                            <div class="time">2023</div>
                            <h3 class="resume-title">Exchange Student & CS Club Instructor</h3>
                            <div class="institute">Bard College, NY, USA</div><br>
@@ -1783,7 +1778,7 @@
                      </a>
                      <!-- BRAC University Tutor -->
                      <a href="https://www.bracu.ac.bd/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
-                        <div class="resume-item wow fadeInLeft" data-wow-delay=".4s">
+                        <div class="resume-item wow fadeInLeft" data-wow-delay="0.13s">
                            <div class="time">2024 - 2025</div>
                            <h3 class="resume-title">Student Tutor</h3>
                            <div class="institute">BRAC University, Dhaka</div> 
@@ -1793,7 +1788,7 @@
                         </div>
                      </a>
                      <!-- Research Assistant (informal) -->
-                     <div class="resume-item wow fadeInLeft" data-wow-delay=".5s">
+                     <div class="resume-item wow fadeInLeft" data-wow-delay="0.17s">
                         <div class="time">2023 - 2025</div>
                         <h3 class="resume-title">Undergraduate Researches</h3>Bard College & BRAC University<br><br>
                         <div class="institute">Conducted undergraduate research applying Computer Vision addressing Bangladesh's 
@@ -1804,14 +1799,14 @@
 
                <!-- Education Column (Right) -->
                <div class="col-md-6">
-                  <div class="section-header wow fadeInUp" data-wow-delay=".2s">
+                  <div class="section-header wow fadeInUp" data-wow-delay="0.07s">
                      <h2 class="section-title"><i class="flaticon-graduation-cap"></i> My Education</h2>
                   </div>
 
                   <div class="resume-widget">
                      <!-- BRAC University -->
                      <a href="https://www.bracu.ac.bd/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
-                        <div class="resume-item wow fadeInRight" data-wow-delay=".3s" align="center">
+                        <div class="resume-item wow fadeInRight" data-wow-delay="0.1s" align="center">
                            <div class="time">Fall 21 - Fall 25</div>
                            <h3 class="resume-title">BSc in Computer Science & Engineering</h3>
                            <div class="institute">BRAC University, Dhaka<br><br> CGPA 3.96/4.00 <br> Vice Chancellor's List <br>Highest Distinction
@@ -1823,7 +1818,7 @@
 
                      <!-- Adamjee Cantonment College -->
                      <a href="https://acc.edu.bd/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
-                        <div class="resume-item wow fadeInRight" data-wow-delay=".4s" align="center">
+                        <div class="resume-item wow fadeInRight" data-wow-delay="0.13s" align="center">
                            <div class="time">2018 - 2020</div>
                            <h3 class="resume-title">Higher Secondary Certificate</h3>
                            <div class="institute">Adamjee Cantonment College <br>
@@ -1835,7 +1830,7 @@
 
                      <!-- Bangladesh International School & College -->
                      <a href="https://bisc.com.bd/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
-                        <div class="resume-item wow fadeInRight" data-wow-delay=".5s" align="center">
+                        <div class="resume-item wow fadeInRight" data-wow-delay="0.17s" align="center">
                            <div class="time">2016 - 2018</div>
                            <h3 class="resume-title">Secondary School Certificate</h3>
                            <div class="institute">Bangladesh International School & College <br>
@@ -1868,10 +1863,10 @@
                </div>
                <div class="col-md-5">
                   <div class="video-text-bubble">
-                     <h3 class="section-title wow fadeInUp" data-wow-delay=".1s">
+                     <h3 class="section-title wow fadeInUp" data-wow-delay="0.03s">
                         Teaching at <span class="red-text">Bard College!</span>
                       </h3>
-                     <p class="wow fadeInUp" data-wow-delay=".2s" style="font-size: 1.1rem;">
+                     <p class="wow fadeInUp" data-wow-delay="0.07s" style="font-size: 1.1rem;">
                         Conducting an introductory Python class for beginners at Bard CSC focusing on fundamental programming concepts, 
                         interactive problem solving sessions, and creative implementations of Python in real world applications.
                         Created a supportive environment for first-time coders, helping students build confidence and develop a strong foundation
@@ -1891,8 +1886,8 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="section-header text-center">
-                     <h2 class="section-title wow fadeInUp" data-wow-delay=".1s">My Recent Projects</h2>
-                     <p class="wow fadeInUp" data-wow-delay=".2s">
+                     <h2 class="section-title wow fadeInUp" data-wow-delay="0.03s">My Recent Projects</h2>
+                     <p class="wow fadeInUp" data-wow-delay="0.07s">
                         A selection of my academic and personal projects <br> Click on the bubble to launch or learn more about the project
                      </p>
                   </div>
@@ -1903,7 +1898,7 @@
 
 
                 <!-- Safia Apparels Ltd -->
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".05s">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.02s">
                     <div class="project-bubble">
                     <a href="https://safiaapparelsltd.com" target="_blank" rel="noopener noreferrer">
                         <img src="assets/img/portfolio/safia-apparels-cover.jpg" alt="Safia Apparels Ltd" class="project-image" loading="lazy" decoding="async">
@@ -1918,7 +1913,7 @@
                 </div>
 
                 <!-- FabriFlow -->
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".08s">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.03s">
                     <div class="project-bubble">
                         <img src="assets/img/portfolio/fabriflow-cover.jpg" alt="FabriFlow IMS login screen" class="project-image" loading="lazy" decoding="async">
                         <h3>FabriFlow — Inventory Management System</h3>
@@ -1931,7 +1926,7 @@
                 </div>
 
                 <!-- HR & Payroll ERP -->
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".1s">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.03s">
                     <div class="project-bubble">
                     <a href="https://hr-payroll-erp-by-ishmam.onrender.com" target="_blank" rel="noopener noreferrer">
                         <img src="assets/img/portfolio/hr-payroll-cover.jpg" alt="HR Payroll ERP" class="project-image" loading="lazy" decoding="async">
@@ -1947,7 +1942,7 @@
                 </div>
 
                 <!-- TraceKnot -->
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".12s">
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.04s">
                     <div class="project-bubble">
                         <img src="assets/img/portfolio/traceknot-cover.jpg" alt="TraceKnot login screen" class="project-image" loading="lazy" decoding="async">
                         <h3>TraceKnot — Shipment Intelligence</h3>
@@ -1961,7 +1956,7 @@
 
 
                <!-- Shikkha -->
-               <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".1s">
+               <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.03s">
                   <div class="project-bubble">
                      <a href="https://shikkhacom.vercel.app/login" target="_blank" rel="noopener noreferrer">
                         <img src="assets/img/portfolio/shikkha-cover.jpg" alt="Shikkha" class="project-image" loading="lazy" decoding="async">
@@ -1984,7 +1979,7 @@
 
                <!-- KrishiNetwork -->
 
-               <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".25s">
+               <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.08s">
                   <div class="project-bubble">
                      <a href="https://krishi-network-5etp.vercel.app/login" target="_blank" rel="noopener noreferrer">
                         <img src="assets/img/portfolio/krishi-cover.jpg" alt="KrishiNetwork" class="project-image" loading="lazy" decoding="async">
@@ -2009,7 +2004,7 @@
 
 
                <!-- AI/ML-->
-               <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+               <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                   <div class="project-bubble">
                      <a href="https://github.com/ishmamCodes/Predicting-Movie-Rating-Categories-using-ML-AL.git" target="_blank" rel="noopener noreferrer">
                         <img src="assets/img/portfolio/movie.jpg" alt="Predicting Movie Ratings using ML/AL Models" class="project-image" loading="lazy" decoding="async">
@@ -2023,7 +2018,7 @@
 
                
                <!-- Mandelbulb -->
-               <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".3s">
+               <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.1s">
                   <div class="project-bubble">
                      <a href="https://github.com/ishmamCodes/Mandlebulb-Project.git" target="_blank" rel="noopener noreferrer">
                         <img src="assets/img/portfolio/mandelbulb.jpg" alt="Mandelbulb" class="project-image" loading="lazy" decoding="async">
@@ -2035,7 +2030,7 @@
                </div>
 
                <!-- Sydney Rail -->
-               <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".15s">
+               <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.05s">
                   <div class="project-bubble">
                      <a href="https://drive.google.com/drive/folders/142e1qJeSehQPX7Rm7wrOEs_wqvoXTH1Q" target="_blank" rel="noopener noreferrer">
                         <img src="assets/img/portfolio/sydney-rail.jpg" alt="Sydney Rail" class="project-image" loading="lazy" decoding="async">
@@ -2049,7 +2044,7 @@
 
 
                <!-- Medicine Robot -->
-               <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".2s">
+               <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.07s">
                   <div class="project-bubble">
                      <a href="https://drive.google.com/file/d/1d4Wk5K8WHORhP9A4rr8r1qp31SqTKBLR/view" target="_blank" rel="noopener noreferrer">
                         <img src="assets/img/portfolio/medicine-robot.jpg" alt="Medicine Robot" class="project-image" loading="lazy" decoding="async">
@@ -2063,7 +2058,7 @@
 
 
                <!-- 3D Shooter -->
-               <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".35s">
+               <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.12s">
                   <div class="project-bubble">
                      <a href="https://github.com/ishmamCodes/3D-Shooter-Game.git" target="_blank" rel="noopener noreferrer">
                         <img src="assets/img/portfolio/shooter.jpg" alt="3D Shooter" class="project-image" loading="lazy" decoding="async">
@@ -2075,7 +2070,7 @@
                </div>
 
                <!-- Memory Game -->
-               <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay=".4s">
+               <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.13s">
                   <div class="project-bubble">
                      <a href="https://github.com/ishmamCodes/Memory-Game-Using-Processing.git" target="_blank" rel="noopener noreferrer">
                         <img src="assets/img/portfolio/memory-game.jpg" alt="Memory Game" class="project-image" loading="lazy" decoding="async">
@@ -2095,13 +2090,13 @@
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                  <div class="section-header text-center wow fadeInUp" data-wow-delay=".1s">
+                  <div class="section-header text-center wow fadeInUp" data-wow-delay="0.03s">
                      <h2 class="section-title no-wrap"><i class="flaticon-recommendation"></i> Research & Review Papers</h2>
                   </div>
 
                   <div class="row research-grid">
                      <!-- Thesis -->
-                     <div class="col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                     <div class="col-md-6 wow fadeInUp" data-wow-delay="0.07s">
                         <div class="resume-item">
                            <a href="https://drive.google.com/file/d/1GWTjPTDRmOq2PtCzYXzTl8UKcjJqeVST/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="card-link"></a>
                            <div class="time">2025</div>
@@ -2114,7 +2109,7 @@
                         </div>
                      </div>
                      <!-- Review Paper 1 -->
-                     <div class="col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                     <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="resume-item">
                            <a href="https://drive.google.com/file/d/1c9WZ16-kEFpIoZdW81sVgzynY0ESvxtF/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="card-link"></a>
                            <div class="time">2023</div>
@@ -2126,7 +2121,7 @@
                         </div>
                      </div>
                      <!-- Review Paper 2 -->
-                     <div class="col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                     <div class="col-md-6 wow fadeInUp" data-wow-delay="0.13s">
                         <div class="resume-item">
                            <a href="https://drive.google.com/file/d/1DY1weVQl1aZRWXl3WqL6z7I_Nc-zgKUB/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="card-link"></a>
                            <div class="time">2023</div>
@@ -2138,7 +2133,7 @@
                         </div>
                      </div>
                      <!-- Review Paper 3 -->
-                     <div class="col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                     <div class="col-md-6 wow fadeInUp" data-wow-delay="0.17s">
                         <div class="resume-item">
                            <a href="https://drive.google.com/file/d/1bnup7nAz2JGE7wEkQtMMcQMW1DwumNzO/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="card-link"></a>
                            <div class="time">2023</div>
@@ -2161,13 +2156,13 @@
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                  <div class="section-header text-center wow fadeInUp" data-wow-delay=".1s">
+                  <div class="section-header text-center wow fadeInUp" data-wow-delay="0.03s">
                      <h2 class="section-title"><i class="flaticon-trophy"></i> Extra‑Curricular Activities</h2>
                   </div>
 
                   <div class="row eca-grid">
                      <!-- Mindful Photography -->
-                     <div class="col-md-6 wow fadeInUp" data-wow-delay=".2s">
+                     <div class="col-md-6 wow fadeInUp" data-wow-delay="0.07s">
                         <div class="resume-item">
                            <a href="https://docs.google.com/presentation/d/1NZMyVcCtmLm63zxsuiE_gOzgaJ3ChDSv/edit?usp=sharing&ouid=114731888901336723810&rtpof=true&sd=true" target="_blank" rel="noopener noreferrer" class="card-link"></a>
                            <div class="time">2023</div>
@@ -2183,7 +2178,7 @@
                      </div>
 
                      <!-- Free Internet for Dhaka Students -->
-                     <div class="col-md-6 wow fadeInUp" data-wow-delay=".3s">
+                     <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="resume-item">
                            <a href="https://docs.google.com/document/d/1Dr1ragcLd1bq7qvbv8RtSxo9fDBJMI9XOTJ2wQ4K--o/edit?usp=sharing" target="_blank" rel="noopener noreferrer" class="card-link"></a>
                            <div class="time">2024</div>
@@ -2196,7 +2191,7 @@
                      </div>
 
                      <!-- House Captain -->
-                     <div class="col-md-6 wow fadeInUp" data-wow-delay=".4s">
+                     <div class="col-md-6 wow fadeInUp" data-wow-delay="0.13s">
                         <div class="resume-item">
                            <a href="https://acc.edu.bd/" target="_blank" rel="noopener noreferrer" class="card-link"></a>
                            <div class="time">2018 – 2020</div>
@@ -2209,7 +2204,7 @@
                      </div>
 
                      <!-- Bard College Tennis Team -->
-                     <div class="col-md-6 wow fadeInUp" data-wow-delay=".5s">
+                     <div class="col-md-6 wow fadeInUp" data-wow-delay="0.17s">
                         <div class="resume-item">
                            <!-- No direct link, so we can link to Bard's site or just remove overlay -->
                            <a href="https://www.bard.edu/" target="_blank" rel="noopener noreferrer" class="card-link"></a>
@@ -2234,8 +2229,8 @@
             <div class="row">
                <div class="col-md-12">
                   <div class="section-header text-center">
-                     <h2 class="section-title wow fadeInUp" data-wow-delay=".1s">My Skills</h2>
-                     <p class="wow fadeInUp" data-wow-delay=".2s">
+                     <h2 class="section-title wow fadeInUp" data-wow-delay="0.03s">My Skills</h2>
+                     <p class="wow fadeInUp" data-wow-delay="0.07s">
                         Technologies and tools I work with.
                      </p>
                   </div>
@@ -2246,95 +2241,95 @@
                <div class="col-md-12">
                   <div class="skills-widget d-flex flex-wrap justify-content-center align-items-center">
                      <!-- Programming Languages -->
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".1s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.03s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/python.svg" alt="Python" /></div></div>
                         <p>Python</p>
                      </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".15s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.05s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/java.svg" alt="Java" /></div></div>
                         <p>Java</p>
                      </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".2s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.07s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/cpp.svg" alt="C++" /></div></div>
                         <p>C++</p>
                      </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".25s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.08s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/c.svg" alt="C" /></div></div>
                         <p>C</p>
                      </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".3s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.1s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/html.svg" alt="HTML" /></div></div>
                         <p>HTML</p>
                      </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".35s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.12s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/processing.svg" alt="Processing" /></div></div>
                         <p>Processing</p>
                      </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".4s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.13s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/sql.svg" alt="SQL" /></div></div>
                         <p>SQL</p>
                      </div>
                      <!-- Web Technologies -->
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".45s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.15s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/react.svg" alt="React" /></div></div>
                         <p>React</p>
                      </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".5s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.17s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/nodejs.svg" alt="Node.js" /></div></div>
                         <p>Node.js</p>
                      </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".55s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.18s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/css.svg" alt="CSS" /></div></div>
                         <p>CSS</p>
                      </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".6s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.2s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/figma.svg" alt="Figma" /></div></div>
                         <p>Figma</p>
                      </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".65s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.22s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/mern.svg" alt="MERN" /></div></div>
                         <p>MERN</p>
                      </div>
                      <!-- Embedded Systems -->
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".7s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.23s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/arduino.svg" alt="Arduino" /></div></div>
                         <p>Arduino</p>
                      </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".75s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.25s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/raspberrypi.svg" alt="Raspberry Pi" /></div></div>
                         <p>Raspberry Pi</p>
                      </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".8s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.27s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/stm32.svg" alt="STM32" /></div></div>
                         <p>STM32</p>
                      </div>
                      <!-- Other -->
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".85s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.28s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/fullstack.svg" alt="Full-Stack" /></div></div>
                         <p>Full-Stack Dev</p>
                      </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".9s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.3s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/game.svg" alt="Game Development" /></div></div>
                         <p>Game Development</p>
                      </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay=".95s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.32s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/git.svg" alt="Git" /></div></div>
                         <p>Git</p>
                      </div>
                      <!-- NEW SKILLS: AI, ML, Unity, Django (using existing icons) -->
-                     <div class="skill-item wow fadeInUp" data-wow-delay="1.0s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.33s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/react.svg" alt="AI" /></div></div>
                         <p>AI</p>
                      </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay="1.05s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.35s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/python.svg" alt="ML" /></div></div>
                         <p>ML</p>
                      </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay="1.1s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.37s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/unity.svg" alt="Unity" /></div></div>
                         <p>Unity</p>
                      </div>
-                     <div class="skill-item wow fadeInUp" data-wow-delay="1.15s">
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.38s">
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/django.svg" alt="Django" /></div></div>
                         <p>Django</p>
                      </div>
@@ -2354,7 +2349,7 @@
                      <ul class="ul-reset d-flex flex-column flex-md-row justify-content-between align-items-start text-start">
                         
                         <!-- Email (phone removed) -->
-                        <li class="d-flex align-items-center position-relative wow fadeInRight m-3" data-wow-delay=".3s">
+                        <li class="d-flex align-items-center position-relative wow fadeInRight m-3" data-wow-delay="0.1s">
                            <div class="icon-box me-2"><i class="flaticon-mail-inbox-app"></i></div>
                            <div class="text-box">
                               <p class="mb-0">Email</p>
@@ -2365,7 +2360,7 @@
                    
 
                         <!-- Address (Dhaka) -->
-                        <li class="d-flex align-items-center position-relative wow fadeInRight m-3" data-wow-delay=".4s">
+                        <li class="d-flex align-items-center position-relative wow fadeInRight m-3" data-wow-delay="0.13s">
                            <div class="icon-box me-2"><i class="flaticon-location"></i></div>
                            <div class="text-box">
                               <p class="mb-0">Based in</p>

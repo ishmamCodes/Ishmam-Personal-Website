@@ -53,7 +53,8 @@ Description: Gerold - Personal Portfolio HTML5 Template
   	/  Sticky Header
   	/------------------------------------------------------*/
 		var lastScrollTop = 0;
-		$(window).scroll(function () {
+		var stickyHeaderTicking = false;
+		function updateStickyHeader() {
 			var scroll = $(window).scrollTop();
 
 			if (scroll > 300) {
@@ -69,6 +70,13 @@ Description: Gerold - Personal Portfolio HTML5 Template
 			}
 
 			lastScrollTop = scroll;
+			stickyHeaderTicking = false;
+		}
+		$(window).on("scroll", function () {
+			if (!stickyHeaderTicking) {
+				stickyHeaderTicking = true;
+				window.requestAnimationFrame(updateStickyHeader);
+			}
 		});
 
 		/*------------------------------------------------------
@@ -105,7 +113,21 @@ Description: Gerold - Personal Portfolio HTML5 Template
 		// from index.html accordingly.
 	});
 
-	$(window).on("load", function () {
+	function onWindowLoad(fn) {
+		// jQuery's $(window).on("load") is a plain addEventListener for the
+		// native "load" event — unlike $(document).ready(), it has no
+		// "already fired" fallback. On a fast/cached load the browser can
+		// fire "load" before this script even attaches the listener, so
+		// the handler (which removes the preloader overlay) silently never
+		// runs and the full-screen preloader is stuck covering the page.
+		if (document.readyState === "complete") {
+			fn();
+		} else {
+			$(window).on("load", fn);
+		}
+	}
+
+	onWindowLoad(function () {
 		/*------------------------------------------------------
   	/  WoW Js
   	/------------------------------------------------------*/
