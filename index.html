@@ -5,7 +5,7 @@
    <meta charset="utf-8" />
    <meta http-equiv="x-ua-compatible" content="ie=edge" />
    <meta name="viewport" content="width=device-width, initial-scale=1" />
-   <meta name="description" content="Ishmam Bin Aslam - CSE Graduate & Data Analyst. Portfolio featuring AI/ML, Computer Vision, and full-stack web development projects." />
+   <meta name="description" content="Ishmam Bin Aslam - Software Engineer & Adjunct Lecturer. Portfolio featuring enterprise AI, ML research, Computer Vision, and full-stack projects." />
 
    <!-- Security headers (client-side hardening; GitHub Pages cannot set HTTP response headers) -->
    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; frame-ancestors 'none'; upgrade-insecure-requests" />
@@ -606,6 +606,58 @@
       /* ===== FASTER WOW REVEALS =====
          animate.min.css's .animated default (1s) reads as a slow fade;
          cut to make content feel like it's appearing, not drifting in. */
+      /* Keep "Software Engineer +" on one row; shrink the title on
+         narrow phones so the unbroken line never overflows the screen. */
+      .hero-title-line {
+         white-space: nowrap;
+      }
+      /* The title's gradient fill is background-clip:text, which only
+         paints inside the h1's box — any part of the nowrap line that
+         overflows the column (the "+") rendered invisible. Size the box
+         to its content and scale the font with the viewport so the line
+         fits its half-width column. */
+      .hero-content-box {
+         container-type: inline-size;
+      }
+      .hero-section .hero-title {
+         width: max-content;
+         /* Font sized from the column's own width (cqi), so the full
+            "Software Engineer | AI" line always fits on one row at any
+            screen size. */
+         font-size: min(60px, 100cqi / 12.5);
+      }
+
+      /* ===== SOFT SKILLS ===== */
+      .soft-skills-header {
+         margin-top: 60px;
+      }
+      .soft-skill-card {
+         height: 100%;
+         background: rgba(73, 63, 49, 0.85);
+         border: 1px solid rgba(243, 239, 231, 0.1);
+         border-top: 3px solid var(--tj-theme-primary);
+         border-radius: 14px;
+         padding: 22px 20px;
+         box-shadow: 0 15px 25px -8px rgba(0, 0, 0, 0.6);
+         transition: transform 0.2s, border-color 0.2s;
+      }
+      .soft-skill-card:hover {
+         transform: translateY(-4px);
+         border-color: rgba(201, 161, 90, 0.45);
+         border-top-color: var(--tj-theme-primary-2);
+      }
+      .bubble-section .soft-skill-card h3 {
+         font-size: 1.15rem;
+         margin-bottom: 8px;
+         color: #DDBB78;
+      }
+      .soft-skill-card p {
+         font-size: 0.92rem;
+         line-height: 1.5;
+         margin: 0;
+         opacity: 0.88;
+      }
+
       .wow.animated {
          animation-duration: 0.35s !important;
       }
@@ -1575,7 +1627,7 @@
                <div class="header-button">
 
                   <a href="assets/cv/Ishmam-Bin-Aslam-CV.pdf" class="btn tj-btn-primary" target="_blank" rel="noopener noreferrer">View CV<i class="flaticon-search"></i></a>
-                  <a href="https://drive.google.com/file/d/1883oiZSlmF8sikUIP5bphD1g9BW0CtLi/view?usp=drive_link" class="btn tj-btn-primary" target="_blank" rel="noopener noreferrer">Academic <i class="flaticon-search"></i></a>
+                  <a href="https://drive.google.com/file/d/1ssM1Ymlx6T2aMLg2pkK62ioq0JBscYjb/view?usp=drive_link" class="btn tj-btn-primary" target="_blank" rel="noopener noreferrer">Academic <i class="flaticon-search"></i></a>
                
 
                </div>
@@ -1624,7 +1676,7 @@
                <div class="header-button">
                   
                   <a href="assets/cv/Ishmam-Bin-Aslam-CV.pdf" class="btn tj-btn-primary" target="_blank" rel="noopener noreferrer">View CV<i class="flaticon-search"></i></a>
-                  <a href="https://drive.google.com/file/d/1883oiZSlmF8sikUIP5bphD1g9BW0CtLi/view?usp=drive_link" class="btn tj-btn-primary" target="_blank" rel="noopener noreferrer">Academic<i class="flaticon-search"></i></i></a>
+                  <a href="https://drive.google.com/file/d/1ssM1Ymlx6T2aMLg2pkK62ioq0JBscYjb/view?usp=drive_link" class="btn tj-btn-primary" target="_blank" rel="noopener noreferrer">Academic<i class="flaticon-search"></i></i></a>
                   
                </div>
 
@@ -1657,7 +1709,7 @@
                      <br>
                      <br>
                      <span class="hero-sub-title wow fadeInUp" data-wow-delay="0.03s">Hi, I am Ishmam</span>
-                     <h1 class="hero-title wow fadeInUp" data-wow-delay="0.05s">CSE Graduate +<br />Data Analyst</h1>
+                     <h1 class="hero-title wow fadeInUp" data-wow-delay="0.05s"><span class="hero-title-line">Software Engineer | AI </span><br />+ Adjunct Lecturer</h1>
                      <div class="hero-image-box d-md-none text-center">
                         <img src="assets/img/hero/Ishmam Photo.jpg" alt="Ishmam" />
                      </div>
@@ -1667,10 +1719,9 @@
                         <p>
             
                            
-                           CSE graduate (CGPA 3.96/4.00) with international academic exposure at Bard College, NY, USA. 
-                           Currently serving as Adjunct Lecturer at Brac University & CIO's Intern at Robi Axiata PLC, developing 
-                           AI-driven enterprise automation solutions and scalable software using Machine Learning, Full-Stack Development, 
-                           and Enterprise Software Engineering.
+                           BRAC University CSE graduate (CGPA 3.96/4.00) with international academic exposure at Bard College, NY, USA.
+                           Currently a Software Engineer in the Enterprise AI Automation Team at Robi Axiata PLC, developing enterprise AI solutions in Root Cause Analysis,
+                           Anomaly Detection and Compliance Governance, with prior experience as an Adjunct Lecturer at BRAC University.
                            <br><br>
                            Specialized in AI, Computer Vision, ML, HRI, web development, 
                            embedded systems and delivering innovative digital solutions addressing real world problems.
@@ -1708,8 +1759,8 @@
                <div class="row">
                   <div class="col-6 col-lg-3">
                      <div class="funfact-item d-flex flex-column flex-sm-row flex-wrap align-items-center">
-                        <div class="number"><span class="odometer" data-count="1">0</span>+</div>
-                        <div class="text">Years of <br />Experience</div>
+                        <div class="number"><span class="odometer" data-count="3">0</span>+</div>
+                        <div class="text">Courses <br />Taught</div>
                      </div>
                   </div>
                   <div class="col-6 col-lg-3">
@@ -1747,6 +1798,18 @@
                   </div>
 
 
+                     <div class="resume-widget">
+                        <!-- Robi Axiata PLC -->
+                        <div class="resume-item wow fadeInLeft" data-wow-delay="0.07s">
+                           <div class="time">Oct 2026 – Present</div>
+                           <h3 class="resume-title">Software Engineer</h3>
+                           <div class="institute">Robi Axiata PLC · Enterprise AI Automation Team</div>
+                           <br>
+                           Built an enterprise compliance automation platform covering server auditing, account management, security policy enforcement, TLS, Cookie, Header Security and violation detection across production infrastructure.
+                           <br><br>
+                           Collaborated on an AI-driven Root Cause Analysis engine with automated data pipelines performing anomaly detection and failure trend analysis across high volume server data, cutting manual diagnostic cycles for operations teams.
+                     </div>
+
                      <!-- BRAC University Adjunct Lecturer -->
                      <a href="https://www.bracu.ac.bd/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
                         <div class="resume-item wow fadeInLeft" data-wow-delay="0.08s">
@@ -1754,36 +1817,28 @@
                            <h3 class="resume-title">Adjunct Lecturer</h3>
                            <div class="institute">BRAC University, Department of Computer Science & Engineering</div>
                            <br>
-                           Teaching undergraduate courses in Computer Vision: Fundamentals & Applications, Data Structures & Algorithms, and Operating Systems.
+                           Teaching undergraduate courses in Computer Vision: Fundamentals & Applications (CSE463), Data Structures & Algorithms (CSE220), and Operating Systems (CSE321).
                         </div>
                      </a>
-
-                     <div class="resume-widget">
-                        <!-- Robi Axiata PLC -->
-                        <div class="resume-item wow fadeInLeft" data-wow-delay="0.07s">
-                           <div class="time">2026 </div>
-                           <h3 class="resume-title">CIO's Intern, DevSecOps & AI Automation</h3>
-                           <div class="institute">Robi Axiata PLC</div>
-                           <br>
-                           Developing AI-driven enterprise automation solutions and scalable software for production infrastructure under the CIO's Office, using Machine Learning and full-stack engineering. Contributing to internal initiatives around automated root cause analysis and compliance auditing for enterprise systems.
-                     </div>
 
                      <!-- Bard College -->
                      <a href="https://www.bard.edu/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
                         <div class="resume-item wow fadeInLeft" data-wow-delay="0.1s">
-                           <div class="time">2023</div>
+                           <div class="time">Sep 2023 – Jan 2024</div>
                            <h3 class="resume-title">Exchange Student & CS Club Instructor</h3>
                            <div class="institute">Bard College, NY, USA</div><br>
                            CGPA 4.00/4.00
                            <br> Selected for the fully funded OSUN Student Exchange Program from applicants across 19+ countries with full funding
                            and conducted “Introduction to Python” classes. 
+                           <br><br> Represented Bangladesh at international tech forums including NYC Tech Week & Supermomos, and coordinated
+                           travel, budget and logistics for student participation from campus to New York City.
                         </div>
                      </a>
                      <!-- BRAC University Tutor -->
                      <a href="https://www.bracu.ac.bd/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
                         <div class="resume-item wow fadeInLeft" data-wow-delay="0.13s">
                            <div class="time">2024 - 2025</div>
-                           <h3 class="resume-title">Student Tutor</h3>
+                           <h3 class="resume-title">Teaching Assistant</h3>
                            <div class="institute">BRAC University, Dhaka</div> 
                            <br>
                            Mentored undergraduate students in core CS courses through academic tutoring and assisted faculty with grading and conducting lab classes
@@ -1810,7 +1865,7 @@
                      <!-- BRAC University -->
                      <a href="https://www.bracu.ac.bd/" target="_blank" rel="noopener noreferrer" style="text-decoration: none; color: inherit;">
                         <div class="resume-item wow fadeInRight" data-wow-delay="0.1s" align="center">
-                           <div class="time">Fall 21 - Fall 25</div>
+                           <div class="time">2021 - 2026</div>
                            <h3 class="resume-title">BSc in Computer Science & Engineering</h3>
                            <div class="institute">BRAC University, Dhaka<br><br> CGPA 3.96/4.00 <br> Vice Chancellor's List <br>Highest Distinction
                            
@@ -1900,6 +1955,22 @@
             <div class="row project-grid">
 
 
+                <!-- HR & Payroll ERP -->
+                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.03s">
+                    <div class="project-bubble">
+                    <a href="https://hr-payroll-erp-by-ishmam.onrender.com" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/img/portfolio/hr-payroll-cover.jpg" alt="HR Payroll ERP" class="project-image" loading="lazy" decoding="async">
+                        <h3>HR & Payroll ERP — Saas System <span style="color: #DDBB78;">Click to view Live</span></h3>
+                        <p>
+                            Full-stack HR & Payroll compliance ERP built for Bangladesh's RMG & industrial sector.
+                            Features payroll engine (Gazette 2023), attendance with OT/late tracking,
+                            leave management (BLA 2006), PDF payslips, and configurable reports —
+                            built with React, Node.js, PostgreSQL & Prisma.
+                        </p>
+                    </a>
+                    </div>
+                </div>
+
                 <!-- Safia Apparels Ltd -->
                 <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.02s">
                     <div class="project-bubble">
@@ -1925,22 +1996,6 @@
                             covering requisitions, work orders, and procurement across departments —
                             built with FastAPI, Next.js & PostgreSQL.
                         </p>
-                    </div>
-                </div>
-
-                <!-- HR & Payroll ERP -->
-                <div class="col-md-6 col-lg-4 wow fadeInUp" data-wow-delay="0.03s">
-                    <div class="project-bubble">
-                    <a href="https://hr-payroll-erp-by-ishmam.onrender.com" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/img/portfolio/hr-payroll-cover.jpg" alt="HR Payroll ERP" class="project-image" loading="lazy" decoding="async">
-                        <h3>HR & Payroll ERP — Saas System <span style="color: #DDBB78;">Click to view Live</span></h3>
-                        <p>
-                            Full-stack HR & Payroll compliance ERP built for Bangladesh's RMG & industrial sector.
-                            Features payroll engine (Gazette 2023), attendance with OT/late tracking,
-                            leave management (BLA 2006), PDF payslips, and configurable reports —
-                            built with React, Node.js, PostgreSQL & Prisma.
-                        </p>
-                    </a>
                     </div>
                 </div>
 
@@ -2336,8 +2391,121 @@
                         <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/django.svg" alt="Django" /></div></div>
                         <p>Django</p>
                      </div>
+                     <!-- CV stack (added Nov 2026) -->
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.39s">
+                        <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/nextjs.svg" alt="Next.js" /></div></div>
+                        <p>Next.js</p>
+                     </div>
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/fastapi.svg" alt="FastAPI" /></div></div>
+                        <p>FastAPI</p>
+                     </div>
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.41s">
+                        <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/express.svg" alt="Express.js" /></div></div>
+                        <p>Express.js</p>
+                     </div>
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.42s">
+                        <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/postgresql.svg" alt="PostgreSQL" /></div></div>
+                        <p>PostgreSQL</p>
+                     </div>
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.43s">
+                        <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/mysql.svg" alt="MySQL" /></div></div>
+                        <p>MySQL</p>
+                     </div>
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.44s">
+                        <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/mongodb.svg" alt="MongoDB" /></div></div>
+                        <p>MongoDB</p>
+                     </div>
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.45s">
+                        <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/docker.svg" alt="Docker" /></div></div>
+                        <p>Docker</p>
+                     </div>
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.46s">
+                        <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/redis.svg" alt="Redis/Celery" /></div></div>
+                        <p>Redis/Celery</p>
+                     </div>
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.47s">
+                        <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/n8n.svg" alt="n8n" /></div></div>
+                        <p>n8n</p>
+                     </div>
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.48s">
+                        <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/pandas.svg" alt="Pandas" /></div></div>
+                        <p>Pandas</p>
+                     </div>
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.49s">
+                        <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/numpy.svg" alt="NumPy" /></div></div>
+                        <p>NumPy</p>
+                     </div>
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/scikitlearn.svg" alt="Scikit-learn" /></div></div>
+                        <p>Scikit-learn</p>
+                     </div>
+                     <div class="skill-item wow fadeInUp" data-wow-delay="0.51s">
+                        <div class="skill-inner"><div class="icon-box"><img src="assets/img/icons/opencv.svg" alt="OpenCV" /></div></div>
+                        <p>OpenCV</p>
+                     </div>
                   </div>
                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="section-header text-center soft-skills-header">
+                     <h2 class="section-title wow fadeInUp" data-wow-delay="0.03s">Soft Skills</h2>
+                     <p class="wow fadeInUp" data-wow-delay="0.05s">How I work with people, beyond the code.</p>
+                  </div>
+               </div>
+            </div>
+            <div class="row g-4 soft-skills-grid">
+                  <div class="col-sm-6 col-lg-3">
+                     <div class="soft-skill-card wow fadeInUp" data-wow-delay="0.05s">
+                        <h3>Team Leadership</h3>
+                        <p>House Captain among 6,500+ students; led student groups and class sessions from Dhaka to New York.</p>
+                     </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-3">
+                     <div class="soft-skill-card wow fadeInUp" data-wow-delay="0.07s">
+                        <h3>Cross-functional Collaboration</h3>
+                        <p>Building enterprise AI automation alongside operations, security and infrastructure teams at Robi.</p>
+                     </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-3">
+                     <div class="soft-skill-card wow fadeInUp" data-wow-delay="0.09s">
+                        <h3>International Representation</h3>
+                        <p>Represented Bangladesh at NYC Tech Week &amp; Supermomos during the OSUN exchange.</p>
+                     </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-3">
+                     <div class="soft-skill-card wow fadeInUp" data-wow-delay="0.11s">
+                        <h3>Teaching &amp; Mentoring</h3>
+                        <p>Adjunct Lecturer, Teaching Assistant and Bard CSC Python instructor for first-time coders.</p>
+                     </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-3">
+                     <div class="soft-skill-card wow fadeInUp" data-wow-delay="0.13s">
+                        <h3>Public Speaking</h3>
+                        <p>Delivering lectures, research presentations and a live photography exhibition to diverse audiences.</p>
+                     </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-3">
+                     <div class="soft-skill-card wow fadeInUp" data-wow-delay="0.15s">
+                        <h3>Analytical Problem Solving</h3>
+                        <p>Turning messy, high-volume data into root-cause insights and research-grade ML results.</p>
+                     </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-3">
+                     <div class="soft-skill-card wow fadeInUp" data-wow-delay="0.17s">
+                        <h3>Cross-cultural Communication</h3>
+                        <p>Studied and worked alongside peers from 19+ countries on the OSUN exchange program.</p>
+                     </div>
+                  </div>
+                  <div class="col-sm-6 col-lg-3">
+                     <div class="soft-skill-card wow fadeInUp" data-wow-delay="0.19s">
+                        <h3>Planning &amp; Coordination</h3>
+                        <p>Coordinated travel, budget and logistics for student participation from campus to New York City.</p>
+                     </div>
+                  </div>
             </div>
          </div>
       </section>
@@ -2401,7 +2569,7 @@
                   </nav>
                </div>
                <div class="copy-text">
-                  <p>&copy; 2025 All rights reserved by <a href="https://github.com/ishmamCodes" target="_blank" rel="noopener noreferrer">Ishmam Bin Aslam</a></p>
+                  <p>&copy; 2026 All rights reserved by <a href="https://github.com/ishmamCodes" target="_blank" rel="noopener noreferrer">Ishmam Bin Aslam</a></p>
                </div>
             </div>
          </div>
